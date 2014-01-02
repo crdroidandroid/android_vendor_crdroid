@@ -112,9 +112,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/crdroid/config/permissions/com.crdroid.android.xml:system/etc/permissions/com.crdroid.android.xml
 
-# AdAway
+# AdBlocker Files
 PRODUCT_COPY_FILES += \
-    vendor/crdroid/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk
+    vendor/crdroid/prebuilt/common/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/crdroid/prebuilt/common/etc/hosts.og:system/etc/hosts.og
 
 # AOSP Keyboard Gestures lib
 PRODUCT_COPY_FILES += \

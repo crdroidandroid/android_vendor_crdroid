@@ -132,6 +132,11 @@ PRODUCT_PACKAGES += \
     Basic \
     libemoji
 
+# ChameleonOS Screen recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
+
 # Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher3 \

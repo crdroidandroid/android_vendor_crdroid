@@ -202,6 +202,10 @@ PRODUCT_COPY_FILES +=  \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
+# AdAway
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/app/org.adaway.apk:system/app/org.adaway.apk
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=1
 else

@@ -149,7 +149,8 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     LockClock \
     CMFota \
-    CMAccount
+    CMAccount \
+    CMHome
 
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \

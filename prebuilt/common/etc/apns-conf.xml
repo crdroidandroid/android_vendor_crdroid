@@ -177,7 +177,6 @@
   <apn carrier="Wind IT MMS" mcc="222" mnc="88" apn="mms.wind" mmsc="http://mms.wind.it" mmsproxy="212.245.244.011" mmsport="8080" type="mms" />
   <apn carrier="Fastweb" mcc="222" mnc="99" apn="apn.fastweb.it" mmsc="http://mms.fastweb.it/mms/wapenc" mmsproxy="10.0.65.9" mmsport="8080" type="default,supl,mms" />
   <apn carrier="3" mcc="222" mnc="99" apn="tre.it" mmsc="http://10.216.59.240:10021/mmsc" mmsproxy="62.13.171.3" mmsport="8799" type="default,supl,mms" />
-  <apn carrier="Vodafone Internet" mcc="226" mnc="01" apn="internet.vodafone.ro " user="internet.vodafone.ro " password="vodafone" type="default,supl" />
   <apn carrier="Vodafone RO" mcc="226" mnc="01" apn="internet.vodafone.ro" user="internet.vodafone.ro" password="vodafone" type="default,supl" />
   <apn carrier="Vodafone RO live! PRE" mcc="226" mnc="01" apn="live.pre.vodafone.com" user="live" password="vodafone" proxy="193.230.161.231" port="8080" type="default,supl" />
   <apn carrier="Vodafone RO live!" mcc="226" mnc="01" apn="live.vodafone.com" user="live" password="vodafone" proxy="193.230.161.231" port="8080" type="default,supl" />
@@ -321,7 +320,7 @@
   <apn carrier="Chess Internet" mcc="242" mnc="02" apn="netcom" user="chess" password="chess" proxy="10.254.254.10" port="8080" type="default,supl" />
   <apn carrier="Tele2 NO Internet" mcc="242" mnc="03" apn="internet.tele2.no" type="default,supl" />
   <apn carrier="Tele2 NO MMS" mcc="242" mnc="03" apn="mms.tele2.no" user="wap" password="wap" mmsc="mmsc.tele2.no" mmsproxy="192.12.40.14:8080" type="mms" />
-  <apn carrier="Tele2 MMS" mcc="242" mnc="04" apn="internet.tele2.no " mmsc="http://mmsc.tele2.no" mmsproxy="193.012.040.014" mmsport="8080" type="mms" />
+  <apn carrier="Tele2 MMS" mcc="242" mnc="04" apn="internet.tele2.no" mmsc="http://mmsc.tele2.no" mmsproxy="193.012.040.014" mmsport="8080" type="mms" />
   <apn carrier="Tele2 Internett" mcc="242" mnc="04" apn="internet.tele2.no" type="default,supl" />
   <apn carrier="NwN" mcc="242" mnc="05" apn="internet" type="default,supl" />
   <apn carrier="NwN MMS" mcc="242" mnc="05" apn="mms" mmsc="http://mms.nwn.no" mmsproxy="188.149.250.10" mmsport="80" type="mms" />
@@ -1578,6 +1577,8 @@
   <apn carrier="Cable and Wireless Panama MMS" mcc="714" mnc="01" apn="apn02.cwpanama.com.pa" mmsc="http://mms.zonamovil.com.pa:80/i.bin" mmsproxy="172.25.3.5" mmsport="8080" type="mms" />
   <apn carrier="Claro Web" mcc="714" mnc="03" apn="web.claro.com.pa" user="CLAROWEB" password="CLAROWEB" authtype="1" type="default,supl" />
   <apn carrier="Claro MMS" mcc="714" mnc="03" apn="mms.claro.com.pa" user="CLAROMMS" password="CLAROMMS" mmsc="http://www.claro.com.pa/mms" authtype="1" type="mms" />
+  <apn carrier="Digicel PA" mcc="714" mnc="04" apn="web.digicelpanama.com" type="default,supl"/>
+  <apn carrier="Movistar PA" mcc="714" mnc="020" apn="internet.movistar.pa" user="movistarpa" password="movistarpa" type="default,supl"/>
   <apn carrier="QUAM" mcc="722" mnc="01" apn="internet.movil" user="internet" password="internet" authtype="1" type="default,supl,dun" />
   <apn carrier="QUAM MMS" mcc="722" mnc="01" apn="mms.movil" user="mms" password="mms" mmsc="http://mms.quam.com.ar" mmsproxy="200.68.32.239" mmsport="9090" type="mms" />
   <apn carrier="Movistar AG" mcc="722" mnc="007" apn="internet.unifon" user="wap" password="password" type="default,supl" />
@@ -1664,7 +1665,4 @@
   <apn carrier="Movistar UY" mcc="748" mnc="07" apn="apnumt.movistar.com.uy" user="movistar" password="movistar" type="default,supl" />
   <apn carrier="Claro UY" mcc="748" mnc="10" apn="gprs.claro.com.uy" user="ctigpr" password="ctigpr999" type="default,supl" />
   <apn carrier="Claro UY MMS" mcc="748" mnc="10" apn="mms.ctimovil.com.uy" user="ctimms" password="ctimms999" mmsc="http://mms.ctimovil.com.uy" mmsproxy="170.051.255.240" mmsport="9201" type="mms" />
-  <apn carrier="Movistar PA" apn="internet.movistar.pa" user="movistarpa" password="movistarpa" type="default,supl"/>
-  <apn carrier="Claro PA" apn="web.claro.com.pa" user="CLAROWEB" password="CLAROWEB" type="default,supl" />
-  <apn carrier="Digicel PA" apn="web.digicelpanama.com" type="default,supl"/>
 </apns>

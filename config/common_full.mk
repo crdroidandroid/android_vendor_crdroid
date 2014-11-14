@@ -1,16 +1,16 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common CRDROID stuff
+$(call inherit-product, vendor/crdroid/config/common.mk)
 
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include CRDROID audio files
+include vendor/crdroid/config/crdroid_audio.mk
 
-# Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
+# Include CRDROID LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/crdroid/overlay/dictionaries
 
-# Optional CM packages
+# Optional CRDROID packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \

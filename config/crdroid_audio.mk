@@ -1,11 +1,11 @@
 #
-# CyanogenMod Audio Files
+# crDroid Android Audio Files
 #
 
-ALARM_PATH := vendor/cm/prebuilt/common/media/audio/alarms
-NOTIFICATION_PATH := vendor/cm/prebuilt/common/media/audio/notifications
-RINGTONE_PATH := vendor/cm/prebuilt/common/media/audio/ringtones
-UI_PATH := vendor/cm/prebuilt/common/media/audio/ui
+ALARM_PATH := vendor/crdroid/prebuilt/common/media/audio/alarms
+NOTIFICATION_PATH := vendor/crdroid/prebuilt/common/media/audio/notifications
+RINGTONE_PATH := vendor/crdroid/prebuilt/common/media/audio/ringtones
+UI_PATH := vendor/crdroid/prebuilt/common/media/audio/ui
 
 # Alarms
 PRODUCT_COPY_FILES += \

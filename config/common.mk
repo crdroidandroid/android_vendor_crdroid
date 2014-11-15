@@ -3,38 +3,41 @@ PRODUCT_BRAND ?= crdroid
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
-ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
+#ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
 # determine the smaller dimension
-TARGET_BOOTANIMATION_SIZE := $(shell \
-  if [ $(TARGET_SCREEN_WIDTH) -lt $(TARGET_SCREEN_HEIGHT) ]; then \
-    echo $(TARGET_SCREEN_WIDTH); \
-  else \
-    echo $(TARGET_SCREEN_HEIGHT); \
-  fi )
+#TARGET_BOOTANIMATION_SIZE := $(shell \
+#  if [ $(TARGET_SCREEN_WIDTH) -lt $(TARGET_SCREEN_HEIGHT) ]; then \
+#    echo $(TARGET_SCREEN_WIDTH); \
+#  else \
+#    echo $(TARGET_SCREEN_HEIGHT); \
+#  fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/crdroid/prebuilt/common/bootanimation))
-bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
+#bootanimation_sizes := $(subst .zip,, $(shell ls vendor/crdroid/prebuilt/common/bootanimation))
+#bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
-define check_and_set_bootanimation
-$(eval TARGET_BOOTANIMATION_NAME := $(shell \
-  if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
-    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
-      echo $(1); \
-      exit 0; \
-    fi;
-  fi;
-  echo $(TARGET_BOOTANIMATION_NAME); ))
-endef
-$(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
+#define check_and_set_bootanimation
+#$(eval TARGET_BOOTANIMATION_NAME := $(shell \
+#  if [ -z "$(TARGET_BOOTANIMATION_NAME)" ]; then
+#    if [ $(1) -le $(TARGET_BOOTANIMATION_SIZE) ]; then \
+#      echo $(1); \
+#      exit 0; \
+#    fi;
+#  fi;
+#  echo $(TARGET_BOOTANIMATION_NAME); ))
+#endef
+#$(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
 
-ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
-PRODUCT_BOOTANIMATION := vendor/crdroid/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip
-else
-PRODUCT_BOOTANIMATION := vendor/crdroid/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
-endif
-endif
+#ifeq ($(TARGET_BOOTANIMATION_HALF_RES),true)
+#PRODUCT_BOOTANIMATION := vendor/crdroid/prebuilt/common/bootanimation/halfres/$(TARGET_BOOTANIMATION_NAME).zip
+#else
+#PRODUCT_BOOTANIMATION := vendor/crdroid/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip
+#endif
+#endif
+
+# temp crDroid global bootanimation
+PRODUCT_BOOTANIMATION := vendor/crdroid/prebuilt/common/bootanimation/bootanimation.zip
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -230,25 +233,24 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/crdroid/overlay/common
 
 # version
-RELEASE = false
+CRDROID_RELEASE = false
 CRDROID_VERSION_MAJOR = 5.0
 CRDROID_VERSION_MINOR = 0
 
 # release
-ifeq ($(RELEASE),true)
-    CRDROID_VERSION := Lollipop-MileStone-$(CRDROID_VERSION_MAJOR).$(CRDROID_VERSION_MINOR)
+ifeq ($(CRDROID_RELEASE),true)
+    CRDROID_VERSION := crdroid-$(CRDROID_VERSION_MAJOR).$(CRDROID_VERSION_MINOR)-$MILESTONE-$(shell date -u +%Y%m%d)-$(CRDROID_BUILD)
 else
-    CRDROID_VERSION_STATE := $(shell date +%Y.%m.%d)
-    CRDROID_VERSION := lollipop_$(CRDROID_VERSION_MAJOR).$(CRDROID_VERSION_MINOR)_$(CRDROID_VERSION_STATE)
+    ifeq ($(CRDROID_VERSION_MINOR),0)
+       CRDROID_VERSION := crdroid-$(CRDROID_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(CRDROID_BUILD)
+    else
+       CRDROID_VERSION := crdroid-$(CRDROID_VERSION_MAJOR).$(CRDROID_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CRDROID_BUILD)
+    endif
 endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crdroid.version=$(CRDROID_VERSION)
 
 # statistics identity
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crdroid.version=$(CRDROID_VERSION) \
-    ro.crdroid.releasetype=$(CRDROID_BUILDTYPE) \
     ro.modversion=$(CRDROID_VERSION)
 
 # by default, do not update the recovery with system updates

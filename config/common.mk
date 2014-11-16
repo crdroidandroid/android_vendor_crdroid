@@ -248,10 +248,15 @@ else
     endif
 endif
 
+CRDROID_DISPLAY_VERSION := $(CRDROID_VERSION)
+
 # statistics identity
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crdroid.version=$(CRDROID_VERSION) \
     ro.modversion=$(CRDROID_VERSION)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.crdroid.display.version=$(CRDROID_DISPLAY_VERSION)
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false

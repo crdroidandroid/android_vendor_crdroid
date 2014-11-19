@@ -146,8 +146,6 @@ PRODUCT_PACKAGES += \
     Apollo \
     CMFileManager \
     LockClock \
-    CMFota \
-    CMAccount \
     CMHome
 
 # CRDROID (from CM) Hardware Abstraction Framework

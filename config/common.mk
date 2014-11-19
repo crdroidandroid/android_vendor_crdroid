@@ -217,8 +217,8 @@ PRODUCT_COPY_FILES +=  \
     vendor/crdroid/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
 
 # AdAway
-#PRODUCT_COPY_FILES += \
-#    vendor/crdroid/prebuilt/common/app/org.adaway.apk:system/app/org.adaway.apk
+PRODUCT_COPY_FILES += \
+    vendor/crdroid/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2012 The crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
      limitations under the License.
 -->
 
-<!-- This feature shows that this is device features CM NFC enhancements -->
+<!-- This feature shows that this is device features CRDROID NFC enhancements -->
 <permissions>
-    <feature name="com.cyanogenmod.nfc.enhanced" />
+    <feature name="com.crdroid.nfc.enhanced" />
 </permissions>
 

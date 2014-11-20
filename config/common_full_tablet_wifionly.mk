@@ -1,5 +1,5 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common_full.mk)
+# Inherit common CRDROID stuff
+$(call inherit-product, vendor/crdroid/config/common_full.mk)
 
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -9,5 +9,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ifeq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))
     PRODUCT_COPY_FILES += \
 #        vendor/cm/prebuilt/common/bootanimation/800.zip:system/media/bootanimation.zip
-         vendor/cm/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+         vendor/crdroid/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif

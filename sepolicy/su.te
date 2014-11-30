@@ -44,10 +44,12 @@ userdebug_or_eng(`
 ## Perms for the app
 
 userdebug_or_eng(`
-  # Translate user apps to the shell domain when using su
-  domain_auto_trans(untrusted_app, su_exec, shell)
+  typealias shell alias suclient;
 
-  allow shell sudaemon:unix_stream_socket { connectto read write setopt ioctl };
+  # Translate user apps to the shell domain when using su
+  domain_auto_trans(untrusted_app, su_exec, suclient)
+
+  allow suclient sudaemon:unix_stream_socket { connectto read write setopt ioctl };
 
   allow suclient superuser_device:dir { create rw_dir_perms setattr unlink };
   allow suclient superuser_device:sock_file { create setattr unlink write };

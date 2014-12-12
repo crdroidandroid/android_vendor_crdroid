@@ -207,11 +207,6 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# Terminal Emulator
-PRODUCT_COPY_FILES +=  \
-    vendor/crdroid/proprietary/Term.apk:system/app/Term/Term.apk \
-    vendor/crdroid/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/app/Term/lib/arm/libjackpal-androidterm4.so
-
 # AdAway
 PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk

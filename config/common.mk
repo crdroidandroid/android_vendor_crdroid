@@ -207,6 +207,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk
 
+# AOSP Keyboard Gestures lib
+PRODUCT_COPY_FILES += \
+    vendor/crdroid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 else

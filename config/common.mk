@@ -112,6 +112,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/crdroid/config/permissions/com.crdroid.android.xml:system/etc/permissions/com.crdroid.android.xml
 
+# AdAway
+PRODUCT_COPY_FILES += \
+    vendor/crdroid/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk
+
+# AOSP Keyboard Gestures lib
+PRODUCT_COPY_FILES += \
+    vendor/crdroid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
 # T-Mobile theme engine
 include vendor/crdroid/config/themes_common.mk
 
@@ -202,23 +210,10 @@ PRODUCT_PACKAGES += \
     procrank \
     Superuser \
     su
-
-# AdAway
-PRODUCT_COPY_FILES += \
-    vendor/crdroid/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk
-
-# AOSP Keyboard Gestures lib
-PRODUCT_COPY_FILES += \
-    vendor/crdroid/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=3
-else
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
-
-endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/crdroid/overlay/common
 

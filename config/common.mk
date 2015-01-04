@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
-    libemoji
+    libemoji \
+    Terminal
 
 # ChameleonOS Screen recorder
 PRODUCT_PACKAGES += \

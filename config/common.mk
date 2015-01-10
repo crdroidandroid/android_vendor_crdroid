@@ -182,6 +182,10 @@ PRODUCT_PACKAGES += \
     sqlite3 \
     strace
 
+# OmniSwitch
+PRODUCT_PACKAGES += \
+    OmniSwitch
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \

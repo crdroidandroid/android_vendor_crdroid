@@ -152,6 +152,10 @@ PRODUCT_PACKAGES += \
     mkfs.exfat
 endif
 
+# OmniSwitch
+PRODUCT_PACKAGES += \
+    OmniSwitch
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \

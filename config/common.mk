@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMHome
 
+# crDroidOTA
+PRODUCT_PACKAGES += \
+    crDroidOTA
+
 # CRDROID (from CM) Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \

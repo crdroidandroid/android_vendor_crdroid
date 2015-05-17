@@ -4,4 +4,4 @@ PRODUCT_PACKAGES += \
     ThemesProvider
 
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/org.cyanogenmod.theme.xml:system/etc/permissions/org.cyanogenmod.theme.xml
+    vendor/crdroid/config/permissions/org.crdroid.theme.xml:system/etc/permissions/org.crdroid.theme.xml

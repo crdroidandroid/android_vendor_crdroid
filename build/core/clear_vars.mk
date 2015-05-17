@@ -1,4 +1,4 @@
 #
-#CM-specific variable clears
+#CRDROID-specific variable clears
 #
 LOCAL_IGNORE_SUBDIR :=

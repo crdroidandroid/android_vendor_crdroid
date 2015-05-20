@@ -108,14 +108,14 @@ PRODUCT_PACKAGES += \
 
 # crDroid Platform Library
 PRODUCT_PACKAGES += \
-    org.crdroid.platform-res \
-    org.crdroid.platform \
-    org.crdroid.platform.xml
+    org.cyanogenmod.platform-res \
+    org.cyanogenmod.platform \
+    org.cyanogenmod.platform.xml
 
 # crDroid Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
-    org.crdroid.hardware \
-    org.crdroid.hardware.xml
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
 
 # Extra tools in crDroid
 PRODUCT_PACKAGES += \

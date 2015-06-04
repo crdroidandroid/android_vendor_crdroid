@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     Eleven \
     LockClock \
-    CMHome \
     CyanogenSetupWizard
 
 # crDroid Platform Library

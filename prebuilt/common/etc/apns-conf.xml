@@ -719,6 +719,7 @@
   <apn carrier="Cellular South" mcc="310" mnc="023" apn="internet" mmsc="http://pix.cellularsouth.com/servlets/mms" authtype="3" port="" mmsport="" type="mms" />
   <apn carrier="metropcs" mcc="310" mnc="027" apn="wap.metropcs.net" user="MDN@mymetropcs.com" password="metropcs" server="http://mms.metropcs.net/servlets/mmsc" mmsc="http://mms.metropcs.net/mmsc" mmsport="3128" type="default,supl,mms" />
   <apn carrier="MetroPCS LTE" mcc="310" mnc="260" apn="fast.metropcs.com" user="" password="" authtype="0" server="" proxy="" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" mmsproxy="" mmsport="" type="default,mms,supl" />
+  <apn carrier="MetroPCS LTE IPv6" mcc="310" mnc="260" apn="fast.metropcs.com" user="" password="" authtype="0" server="" proxy="" port="" mmsc="http://metropcs.mmsmvno.com/mms/wapenc" mmsproxy="" mmsport="" type="default,mms,supl" protocol="IPV6" />
   <apn carrier="myBlue Pix" mcc="310" mnc="030" apn="mmswap.centennialwireless.com" mmsc="http://mms.myblue.com/servlets/mms" mmsproxy="63.99.231.135" mmsport="8080" type="mms" />
   <apn carrier="Internet" mcc="310" mnc="030" apn="private.centennialwireless.com" user="privuser" password="priv" type="default,supl" />
   <apn carrier="CorrMMS" mcc="310" mnc="080" apn="corrmms" mmsc="http://mms.iot1.com/corr/mms.php" mmsproxy="66.255.55.23" mmsport="80" type="mms" />
@@ -756,7 +757,8 @@
   <apn carrier="Simple" mcc="310" mnc="260" apn="simple" mmsc="http://smpl.mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
   <apn carrier="StraightTalk T-Mobile" mcc="310" mnc="260" apn="wap.tracfone" port="8080" mmsc="http://mms.tracfone.com" type="default,supl,mms" />
   <apn carrier="Walmart Family Mobile" mcc="310" mnc="260" apn="web.omwtoday.com" mmsproxy="216.155.165.50" mmsport="8080" mmsc="http://wirelessfour.mmsmvno.com/mms/wapenc" type="default,supl,mms" />
-  <apn carrier="Wholesale" mcc="310" mnc="260" apn="wholesale" mmsc="http://wholesale.mmsmvno.com/mms/wapenc" type="default,supl,mms" />
+  <apn carrier="Ting Data" mcc="310" mnc="260" apn="wholesale" type="default,admin,fota,mms,supl,hipri,internet,dun" protocol="IPV6" roaming_protocol="IPV6" />
+  <apn carrier="Ting MMS" mcc="310" mnc="260" apn="wholesale" mmsc="http://wholesale.mmsmvno.com/mms/wapenc" type="mms" protocol="IP" roaming_protocol="IP" />
   <apn carrier="US Mobile" mcc="310" mnc="260" apn="pwg" mmsc="http://pwg.mmsmvno.com/mms/wapenc" type="default,supl,mms" />
   <apn carrier="Cingular 380 ATT" mcc="310" mnc="380" apn="proxy" proxy="wireless.cingular.com" port="80" mmsc="http://mmsc.cingular.com/" mmsproxy="wireless.cingular.com" type="default,supl,mms" />
   <apn carrier="AWS MMS" mcc="310" mnc="380" apn="proxy" mmsc="http://mmsc.mymmode.com" mmsproxy="10.250.250.55" mmsport="8080" type="mms" />

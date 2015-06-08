@@ -83,7 +83,6 @@ include vendor/crdroid/config/themes_common.mk
 # Required crDroid packages
 PRODUCT_PACKAGES += \
     Development \
-    LatinIME \
     BluetoothExt \
     Profiles
 

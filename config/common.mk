@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
 # T-Mobile theme engine
 include vendor/crdroid/config/themes_common.mk
 
+# CM platform sdk
+include vendor/crdroid/config/cm_platform_sdk.mk
+
 # Required crDroid packages
 PRODUCT_PACKAGES += \
     Development \

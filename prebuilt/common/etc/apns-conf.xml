@@ -415,9 +415,8 @@
   <apn carrier="DNA MMS" mcc="244" mnc="13" apn="mms" user="dna" password="mms" mmsc="http://mmsc.dnafinland.fi/" mmsproxy="10.1.1.2" mmsport="8080" type="mms" />
   <apn carrier="Saunalahti" mcc="244" mnc="21" apn="internet.saunalahti" type="default,supl" />
   <apn carrier="Saunalahti MMS" mcc="244" mnc="21" apn="mms.saunalahti.fi" mmsc="http://mms.saunalahti.fi:8002" mmsproxy="62.142.4.197" mmsport="8080" type="mms" />
-  <apn carrier="Sonera" mcc="244" mnc="91" apn="Internet" type="default,supl" />
-  <apn carrier="TeliaSonera Internet" mcc="244" mnc="91" apn="internet" type="default,supl" />
-  <apn carrier="Sonera MMS" mcc="244" mnc="91" apn="wap.sonera.net" mmsc="http://mms.sonera.fi:8002" mmsproxy="195.156.25.33" mmsport="8080" type="mms" />
+  <apn carrier="Sonera Internet" mcc="244" mnc="91" apn="internet" type="default,supl" />
+  <apn carrier="Sonera MMS" mcc="244" mnc="91" apn="mms" mmsc="http://mms.sonera.fi:8002" mmsproxy="195.156.25.33" mmsport="8080" type="mms" />
   <apn carrier="Omnitel MMS" mcc="246" mnc="01" apn="gprs.mms.lt" user="mms" password="mms" mmsc="http://mms.omnitel.net:8002/" mmsproxy="194.176.32.149" mmsport="8080" type="mms" />
   <apn carrier="Omnitel" mcc="246" mnc="01" apn="gprs.startas.lt" user="omni" password="omni" type="default,supl" />
   <apn carrier="Omnitel Internet" mcc="246" mnc="01" apn="omnitel" user="omni" password="omni" type="default,supl" />
@@ -1615,6 +1614,8 @@
   <apn carrier="中国移动彩信 (China Mobile)" mcc="460" mnc="07" apn="cmwap" proxy="10.0.0.172" port="80" mmsc="http://mmsc.monternet.com" mmsproxy="10.0.0.172" mmsport="80" type="mms" />
   <apn carrier="China Unicom 3G" mcc="460" mnc="09" apn="3gnet" port="80" type="default, supl"/>
   <apn carrier="China Unicom wap" mcc="460" mnc="09" apn="3gwap" proxy="10.0.0.172" port="80" mmsproxy="10.0.0.172" mmsport="80" mmsc="http://mmsc.myuni.com.cn" type="default, mms" />
+  <apn carrier="中国电信NET设置" mcc="460" mnc="11" apn="ctnet" user="ctnet@mycdma.cn" password="vnet.mobi" type="default,dun,supl,fota" />
+  <apn carrier="中国电信WAP设置" mcc="460" mnc="11" apn="ctwap" user="ctwap@mycdma.cn" password="vnet.mobi" proxy="10.0.0.200" port="80" mmsproxy="10.0.0.200" mmsport="80" mmsc="http://mmsc.vnet.mobi" type="default,mms,supl,fota" />
   <apn carrier="中国电信NET设置" mcc="460" mnc="12" apn="ctnet" user="ctnet@mycdma.cn" password="vnet.mobi" authtype="3" type="default,supl,dun" />
   <apn carrier="中国电信WAP设置" mcc="460" mnc="12" apn="ctwap" user="ctwap@mycdma.cn" password="vnet.mobi" proxy="10.0.0.200" port="80" mmsproxy="10.0.0.200" mmsport="80" mmsc="http://mmsc.vnet.mobi" authtype="3" type="default,supl,dun,mms" />
   <apn carrier="中国电信NET设置" mcc="460" mnc="13" apn="ctnet" user="ctnet@mycdma.cn" password="vnet.mobi" authtype="3" type="default,supl,dun" />

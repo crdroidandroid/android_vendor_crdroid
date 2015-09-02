@@ -19,7 +19,8 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     PhotoTable \
     SoundRecorder \
-    PhotoPhase
+    PhotoPhase \
+    CMSettingsProvider
 
 # Extra tools in CRDROID
 PRODUCT_PACKAGES += \

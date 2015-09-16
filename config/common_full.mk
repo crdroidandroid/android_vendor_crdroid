@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     SoundRecorder \
     PhotoPhase \
-    CMSettingsProvider
+    CMSettingsProvider \
+    CMResolver
 
 # Extra tools in CRDROID
 PRODUCT_PACKAGES += \

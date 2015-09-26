@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     Eleven \
     LockClock \
-    CyanogenSetupWizard
+    CyanogenSetupWizard \
+    CMSettingsProvider
 
 # crDroid Platform Library
 PRODUCT_PACKAGES += \

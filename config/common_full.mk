@@ -1,10 +1,10 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common crDroid stuff
+$(call inherit-product, vendor/crdroid/config/common.mk)
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include crDroid audio files
+include vendor/crdroid/config/crdroid_audio.mk
 
-# Optional CM packages
+# Optional crDroid packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     PhotoPhase
 
-# Extra tools in CM
+# Extra tools in crDroid
 PRODUCT_PACKAGES += \
     vim \
     zip \

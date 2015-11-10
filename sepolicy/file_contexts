@@ -18,7 +18,7 @@
 /sbin/minivold            u:object_r:vold_exec:s0
 
 #############################
-# performance-related sysfs files (CM)
+# performance-related sysfs files (crDroid)
 /sys/devices/system/cpu.*/cpufreq(/.*)? --  u:object_r:sysfs_devices_system_cpu:s0
 /sys/block/mmcblk.*/queue/scheduler  --    u:object_r:sysfs_devices_system_iosched:s0
 

@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<!-- This feature shows that this is device features CM NFC enhancements -->
+<!-- This feature shows that this is device features crDroid NFC enhancements based on CyanogenMod -->
 <permissions>
     <feature name="com.cyanogenmod.nfc.enhanced" />
 </permissions>

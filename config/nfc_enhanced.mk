@@ -1,3 +1,3 @@
-# This device supports CM enhanced NFC
+# This device supports crDroid enhanced NFC based on CyanogenMod
 PRODUCT_COPY_FILES += \
-    vendor/cm/config/permissions/com.cyanogenmod.nfc.enhanced.xml:system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml
+    vendor/crdroid/config/permissions/com.cyanogenmod.nfc.enhanced.xml:system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml

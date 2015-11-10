@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<!-- This feature shows that this is CyanogenMod -->
+<!-- This feature shows that this is crDroid based on CyanogenMod -->
 <permissions>
     <feature name="com.cyanogenmod.android" />
 </permissions>

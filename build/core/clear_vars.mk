@@ -1,5 +1,5 @@
 #
-#CM-specific variable clears
+#crDroid-specific variable clears
 #
 LOCAL_IGNORE_SUBDIR :=
 

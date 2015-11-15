@@ -124,11 +124,8 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
-    bash \
     nano \
     htop \
-    powertop \
-    lsof \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
@@ -139,7 +136,8 @@ PRODUCT_PACKAGES += \
     micro_bench \
     oprofiled \
     sqlite3 \
-    strace
+    strace \
+    pigz
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)

@@ -125,14 +125,10 @@ PRODUCT_PACKAGES += \
 # Extra tools in crDroid
 PRODUCT_PACKAGES += \
     libsepol \
-    e2fsck \
     mke2fs \
     tune2fs \
     nano \
     htop \
-    mkfs.f2fs \
-    fsck.f2fs \
-    fibmap.f2fs \
     mkfs.ntfs \
     fsck.ntfs \
     mount.ntfs \

@@ -1,0 +1,41 @@
+===================
+crDroid Maintainers
+===================
+
+===================================================
+This is crDroid maintainers list .... roms provided
+by other people are not considered as official.
+===================================================
+
+===
+HTC
+===
+
+==
+LG
+==
+
+* LG G2 (d800-d801-d802-d803-ls980-vs980) ==> Hildo Boerboom
+* LG G3 (d850-d851-d852-d855-ls990-vs985-f400) ==> Hildo Boerboom
+
+========
+MOTOROLA
+========
+
+=====
+NEXUS
+=====
+
+* Nexus 6 (shamu) ==> Pranav Vashi
+
+=======
+SAMSUNG
+=======
+
+* Galaxy S4 (jfltexx) ==> Hildo Boerboom
+* Galaxy S5 (klte) ==> Hildo Boerboom
+
+====
+SONY
+====
+

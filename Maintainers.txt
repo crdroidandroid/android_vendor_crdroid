@@ -1,0 +1,26 @@
+===================
+crDroid Maintainers
+===================
+
+===================================================
+This is crDroid maintainers list .... roms provided
+by other people are not considered as official.
+===================================================
+
+==
+LG
+==
+
+* Lg G3 (d850-d851-d852-d855) ==> Hildo Boerboom
+
+========
+MOTOROLA
+========
+
+* Moto G 2014 LTE (thea) ==> Cristiano Matos
+
+====
+SONY
+====
+
+* Sony Xperia Z3 (leo) ==> David Viteri

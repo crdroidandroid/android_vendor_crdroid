@@ -62,6 +62,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/etc/init.local.rc:root/init.crdroid.rc
 
+# crDroid Maintainers list
+PRODUCT_COPY_FILES += \
+    vendor/crdroid/Maintainers.txt:system/etc/Maintainers.txt
+
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties

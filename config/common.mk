@@ -203,7 +203,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/crdroid/overlay/common
 # crDroid version
 CRDROID_RELEASE = false
 CRDROID_VERSION_MAJOR = 6.0
-CRDROID_VERSION_MINOR = 0
+CRDROID_VERSION_MINOR = 1
 
 # Release
 ifeq ($(CRDROID_RELEASE),true)

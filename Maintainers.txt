@@ -11,13 +11,25 @@ by other people are not considered as official.
 GOOGLE
 ==========
 
-* Moto Nexus 6 (shamu) ==> Jerome Genevrois
+* Nexus 4 (mako) ==> Hildo Boerboom
+* Nexus 5 (hammerhead) ==> Hildo Boerboom
+* Nexus 5x (bullhead) ==> Hildo Boerboom
+* Nexus 6 (shamu) ==> Jerome Genevrois
+
+==========
+HTC
+==========
+
+* Htc One (m7) ==> Hildo Boerboom
+* Htc One (m8 m8d) ==> Hildo Boerboom
 
 ==========
 LG
 ==========
 
-* Lg G3 (d850-d851-d852-d855) ==> Hildo Boerboom
+* LG G2 (d80x ls980 vs980) ==> Hildo Boerboom
+* LG G3 (d85x ls990 vs985 f400) ==> Hildo Boerboom
+* LG G4 (h815) ==> Hildo Boerboom
 
 ==========
 MOTOROLA
@@ -29,6 +41,13 @@ MOTOROLA
 * Moto G 2013 (falcon) ==> Benoit Grain
 * Moto G 2014 (titan) ==> Vatsal Koradia
 * Moto G 2014 LTE (thea) ==> Cristiano Matos
+* Moto X 2014 (victara) ==> Benoit Grain
+
+==========
+SAMSUNG
+==========
+
+* Samsung Galaxy S4 (jfltexx) ==> Jerome Genevrois
 
 ==========
 SONY

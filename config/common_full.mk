@@ -15,7 +15,8 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     PhotoTable \
     SoundRecorder \
-    PhotoPhase
+    PhotoPhase \
+    Screencast
 
 # Extra tools in crDroid
 PRODUCT_PACKAGES += \

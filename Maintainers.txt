@@ -53,4 +53,5 @@ SAMSUNG
 SONY
 ==========
 
+* Sony Xperia Z1 (honami) ==> David Viteri
 * Sony Xperia Z3 (leo) ==> David Viteri

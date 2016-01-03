@@ -41,9 +41,12 @@ MOTOROLA
 * Moto E 2015 (otus) ==> Vatsal Koradia
 * Moto E 2015 LTE (surnia) ==> Vatsal Koradia
 * Moto G 2013 (falcon) ==> Benoit Grain
+* Moto G 2013 LTE (peregrine) ==> Vatsal Koradia
 * Moto G 2014 (titan) ==> Vatsal Koradia
 * Moto G 2014 LTE (thea) ==> Cristiano Matos
+* Moto G 2015 (osprey) ==> Vatsal Koradia
 * Moto X 2014 (victara) ==> Benoit Grain
+* Moto X Play (lux) ==> Vatsal Koradia
 
 ==========
 OnePlus

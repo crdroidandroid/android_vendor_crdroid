@@ -82,7 +82,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/crdroid/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
-# T-Mobile theme engine
+# Live lockscreen
+PRODUCT_COPY_FILES += \
+    vendor/cm/config/permissions/org.cyanogenmod.livelockscreen.xml:system/etc/permissions/org.cyanogenmod.livelockscreen.xml
+
+# Theme engine
 include vendor/crdroid/config/themes_common.mk
 
 # Required crDroid packages

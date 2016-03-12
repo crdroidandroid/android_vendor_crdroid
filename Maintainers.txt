@@ -66,10 +66,3 @@ SAMSUNG
 ==========
 
 * Samsung Galaxy S4 (jfltexx) ==> Jerome Genevrois
-
-==========
-SONY
-==========
-
-* Sony Xperia Z1 (honami) ==> David Viteri
-* Sony Xperia Z3 (leo) ==> David Viteri

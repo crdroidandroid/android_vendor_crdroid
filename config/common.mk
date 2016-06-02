@@ -35,13 +35,11 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 # Backup Tool
-ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/crdroid/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/crdroid/prebuilt/common/bin/50-crdroid.sh:system/addon.d/50-crdroid.sh \
     vendor/crdroid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-endif
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \

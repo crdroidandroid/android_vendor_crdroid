@@ -4,6 +4,8 @@ $(call inherit-product, vendor/crdroid/config/common.mk)
 # Include crDroid audio files
 include vendor/crdroid/config/crdroid_audio.mk
 
+PRODUCT_SIZE := full
+
 # Optional crDroid packages
 PRODUCT_PACKAGES += \
     Galaxy4 \

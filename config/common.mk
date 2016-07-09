@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/bin/50-crdroid.sh:system/addon.d/50-crdroid.sh \
     vendor/crdroid/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/crdroid/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/crdroid/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh

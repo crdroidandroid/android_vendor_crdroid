@@ -1,0 +1,68 @@
+===================
+crDroid Maintainers
+===================
+
+===================================================
+This is crDroid maintainers list .... roms provided
+by other people are not considered as official.
+===================================================
+
+==========
+GOOGLE
+==========
+
+* Nexus 4 (mako) ==> Hildo Boerboom
+* Nexus 5 (hammerhead) ==> Hildo Boerboom
+* Nexus 5x (bullhead) ==> Hildo Boerboom
+* Nexus 6 (shamu) ==> Jerome Genevrois
+* Nexus 7 Wifi (flo) ==> Jerome Genevrois
+* Nexus 7 LTE (deb) ==> Jerome Genevrois
+
+==========
+HTC
+==========
+
+* Htc One (m7) ==> Hildo Boerboom
+* Htc One (m8 m8d) ==> Hildo Boerboom
+
+==========
+LG
+==========
+
+* LG G2 (d80x ls980 vs980) ==> Hildo Boerboom
+* LG G3 (d85x ls990 vs985 f400) ==> Hildo Boerboom
+* LG G4 (h815) ==> Hildo Boerboom
+
+==========
+MOTOROLA
+==========
+
+* Moto E 2014 (condor) ==> Vatsal Koradia
+* Moto E 2015 (otus) ==> Vatsal Koradia
+* Moto E 2015 LTE (surnia) ==> Vatsal Koradia
+* Moto G 2013 (falcon) ==> Benoit Grain
+* Moto G 2013 LTE (peregrine) ==> Vatsal Koradia
+* Moto G 2014 (titan) ==> Vatsal Koradia
+* Moto G 2014 LTE (thea) ==> Cristiano Matos
+* Moto G 2015 (osprey) ==> Vatsal Koradia
+* Moto X 2014 (victara) ==> Benoit Grain
+* Moto X Play (lux) ==> Vatsal Koradia
+
+==========
+OnePlus
+==========
+
+* OnePlusOne (bacon) ==> Jerome Genevrois
+
+==========
+Oppo
+==========
+
+* Oppo Find 5 ==> Jerome Genevrois
+* Oppo Find 7 ==> Jerome Genevrois
+
+==========
+SAMSUNG
+==========
+
+* Samsung Galaxy S4 (jfltexx) ==> Jerome Genevrois

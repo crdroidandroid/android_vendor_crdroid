@@ -193,6 +193,10 @@ PRODUCT_PACKAGES += \
     mkfs.exfat
 endif
 
+# Adaway
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/Adaway/Adaway.apk:system/priv-app/Adaway/Adaway.apk
+
 # Openssh
 PRODUCT_PACKAGES += \
     scp \

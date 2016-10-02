@@ -18,4 +18,8 @@ EXCLUDE_SYSTEMUI_TESTS := true
 
 # Custom packages
 PRODUCT_PACKAGES += \
-    OmniSwitch
+    OmniSwitch \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils

@@ -136,9 +136,7 @@ PRODUCT_PACKAGES += \
     AudioFX \
     CMFileManager \
     CMSettingsProvider \
-    CMUpdater \
     CMWallpapers \
-    CyanogenSetupWizard \
     Eleven \
     ExactCalculator \
     Launcher3 \

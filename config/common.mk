@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     Screencast \
     SoundRecorder \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider
 

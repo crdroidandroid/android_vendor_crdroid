@@ -12,3 +12,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.crdroid.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
   ro.modversion=$(LINEAGE_VERSION) \
   ro.cm.display.version=$(LINEAGE_VERSION)
+
+# Don't compile SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true

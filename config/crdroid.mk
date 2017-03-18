@@ -14,7 +14,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crdroid.display.version=$(LINEAGE_VERSION) \
     ro.storage_manager.enabled=1 \
     ro.substratum.verified=true \
-    ro.opa.eligible_device=true
+    ro.opa.eligible_device=true \
+    ro.com.google.ime.theme_id=5
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true

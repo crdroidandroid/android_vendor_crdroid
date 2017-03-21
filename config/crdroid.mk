@@ -24,7 +24,8 @@ PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils \
     ThemeInterfacer \
     OmniStyle \
-    OmniJaws
+    OmniJaws \
+    crDroidWallpapers
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils

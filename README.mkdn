@@ -1,50 +1,83 @@
-LineageOS
-===========
-
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via LineageOS Gerrit!
-You can do this by using these commands:
-
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id> 
-
-    repo start cm-14.1 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [LineageOS Code Review](http://review.lineageos.org/)
+crDroid Android
+===============
+Join us on __[Google+](https://plus.google.com/communities/118297646046960923906)__ for ROM specific discussions and reviews.
+Use below links for device specific discussions.
 
 
-Getting Started
----------------
+Official Maintainers
+--------------------
+Below devices are officially supported.
 
-To get started with Android/LineageOS, you'll need to get
-familiar with [Repo](https://source.android.com/source/using-repo.html) and [Version Control with Git](https://source.android.com/source/version-control.html).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+HTC
+---
+* __[One (m8)]:__ Hildo Boerboom (firebird11)
 
-    repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+LG
+--
+* __[LG G Pad 8.3 (V500)]:__ Alex Mubinov (beroid)
+* __[LG G2 (d800-d801-d802-d803-ls980-vs980)](http://forum.xda-developers.com/lg-g2/development/rom-crdroid-t3120790):__ Hildo Boerboom (firebird11)
+* __[LG G3 (d850-d851-d852-d855-ls990-vs985-f400)](http://forum.xda-developers.com/lg-g3/development/rom-crdroid-t2955012):__ Hildo Boerboom (firebird11)
+* __[LG G4 (h811-h815)]:__ Hildo Boerboom (firebird11)
 
-Then to sync up:
-
-    repo sync
-
-Please see the [LineageOS Wiki](http://wiki.lineageos.org/) for building instructions, by device.
-
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.lineageos.org/w/Github_Organization)
-
-Buildbot
+MOTOROLA
 --------
+* __[Moto G (falcon)]:__ Vatsal Koradia (Vatsal)
+* __[Moto G 2014 (titan)]:__ Vatsal Koradia (Vatsal)
+* __[Moto G4 Plus (athene)]:__ Vache Ounet (Vache)
 
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
+NEXUS
+-----
+* __[Nexus 5 (hammerhead, hammerheadcaf)]:__ Hildo Boerboom (firebird11)
+* __[Nexus 5x (bullhead)]:__ Hildo Boerboom (firebird11)
+* __[Nexus 6 (shamu)](http://forum.xda-developers.com/nexus-6/development/rom-crdroid-android-beta-builds-t3480094):__ Pranav Vashi (neobuddy89)
+* __[Nexus 6p (angler)]:__ Hildo Boerboom (firebird11)
 
-You can view the current build statuses in the [Jenkins](http://jenkins.lineageos.org) tool.
+ONEPLUS
+-------
+* __[OnePlus 1 (bacon)]:__ Hildo Boerboom (firebird11)
+* __[OnePlus 2 (oneplus2)]:__ Sarthak Narang
+* __[OnePlus 3 (oneplus3)]:__ Hildo Boerboom (firebird11)
+* __[OnePlus X (onyx)]:__ Sarthak Narang
+
+SAMSUNG
+-------
+* __[Galaxy S2 (i9100)]:__ Alex Stark (GreekDragon)
+* __[Galaxy S3 (i9300)]:__ Hildo Boerboom (firebird11)
+* __[Galaxy S4 (jfltexx)](http://forum.xda-developers.com/galaxy-s4/i9505-develop/rom-crdroid-t3480917):__ Hildo Boerboom (firebird11)
+* __[Galaxy S5 (klte - all variants)](http://forum.xda-developers.com/galaxy-s5/unified-development/rom-crdroid-t2860894):__ Hildo Boerboom (firebird11)
+
+WILEYFOX
+--------
+* __[Wileyfox Swift (crackling)]:__ Alex Mubinov (beroid)
+
+XIAOMI
+------
+* __[Mi Max (hydrogen)]:__ Vatsal Koradia (Vatsal)
+* __[Redmi Note 3 (kenzo)]:__ Rohan Khurana (warlord_rk)
+
+YU
+--
+* __[Yu Yuphoria (lettuce)]:__ Pranav Reddy (pranu@cool), Pranav Vashi (neobuddy89)
+* __[Yu Yureka (tomato)]:__ Soubhik Khan (SK83)
+
+
+Become an official maintainer
+-----------------------------
+Send hangout message / mail to Vatsal Koradia - koradiavatsal[at]gmail[dot]com
+
+
+Core Team
+---------
+* Cristiano Matos (cristianomatos)
+* David Viteri (alviteri)
+* Hildo Boerboom (firebird11)
+* Pranav Vashi (neobuddy89)
+* Vatsal Koradia (Vatsal)
+
+
+Contributors
+------------
+* Alex Mubinov (beroid)
+* Jason Townley
+* Felipe de Leon (bhb27)

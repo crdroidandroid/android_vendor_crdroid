@@ -12,7 +12,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.crdroid.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
   ro.modversion=$(LINEAGE_VERSION) \
   ro.cm.display.version=$(LINEAGE_VERSION) \
-  ro.storage_manager.enabled=1
+  ro.storage_manager.enabled=1 \
+  ro.substratum.verified=true
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
@@ -20,7 +21,8 @@ EXCLUDE_SYSTEMUI_TESTS := true
 # Custom packages
 PRODUCT_PACKAGES += \
     OmniSwitch \
-    org.dirtyunicorns.utils
+    org.dirtyunicorns.utils \
+    ThemeInterfacer
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils

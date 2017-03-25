@@ -11,7 +11,8 @@ LINEAGE_DISPLAY_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VER
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.crdroid.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
   ro.modversion=$(LINEAGE_VERSION) \
-  ro.cm.display.version=$(LINEAGE_VERSION)
+  ro.cm.display.version=$(LINEAGE_VERSION) \
+  ro.storage_manager.enabled=1
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true

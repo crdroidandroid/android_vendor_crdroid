@@ -22,7 +22,8 @@ EXCLUDE_SYSTEMUI_TESTS := true
 PRODUCT_PACKAGES += \
     OmniSwitch \
     org.dirtyunicorns.utils \
-    ThemeInterfacer
+    ThemeInterfacer \
+    OmniStyle
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils

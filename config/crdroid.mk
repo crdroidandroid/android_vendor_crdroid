@@ -15,3 +15,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true
+
+# Custom packages
+PRODUCT_PACKAGES += \
+    OmniSwitch

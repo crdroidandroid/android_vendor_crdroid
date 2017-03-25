@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     org.dirtyunicorns.utils \
     ThemeInterfacer \
-    OmniStyle
+    OmniStyle \
+    OmniJaws
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils

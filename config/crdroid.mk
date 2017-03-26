@@ -9,12 +9,12 @@ LINEAGE_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MIN
 LINEAGE_DISPLAY_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-v$(CR_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.crdroid.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-  ro.modversion=$(LINEAGE_VERSION) \
-  ro.cm.display.version=$(LINEAGE_VERSION) \
-  ro.storage_manager.enabled=1 \
-  ro.substratum.verified=true \
-  ro.opa.eligible_device=true
+    ro.crdroid.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.modversion=$(LINEAGE_VERSION) \
+    ro.crdroid.display.version=$(LINEAGE_VERSION) \
+    ro.storage_manager.enabled=1 \
+    ro.substratum.verified=true \
+    ro.opa.eligible_device=true
 
 # Don't compile SystemUITests
 EXCLUDE_SYSTEMUI_TESTS := true

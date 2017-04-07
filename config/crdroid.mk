@@ -33,3 +33,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
+
+# Dex optimization not required
+WITH_DEXPREOPT := false

@@ -5,7 +5,7 @@ Join us on __[Google+](https://plus.google.com/communities/118297646046960923906
 
 Become an official maintainer
 -----------------------------
-Send hangout message Hildo Boerboom - hbgassel[at]gmail[dot]com
+Reach out Hildo Boerboom - hbgassel[at]gmail[dot]com
 
 
 Core Team
@@ -17,8 +17,26 @@ Core Team
 * Vatsal Koradia (Vatsal)
 
 
-Contributors
-------------
+Contributors & Maintainers
+--------------------------
 * Alex Mubinov (beroid)
 * Jason Townley
 * Felipe de Leon (bhb27)
+* Jeremy Vaughan (holiealumnus)
+* Gopinaidu Annam (gopinaidu77)
+* Soubhik Kahn (SK83)
+* Vijay Chandra (Vijay chandra)
+* R Schunk (rkschunk)
+* Giovanni Stocco (Stocco)
+* Pavan Jadhaw (ARCADE)
+* Anoop Kumar (AnoopKumar)
+* Shubhrajyoti Sen
+* Vache
+* Abhinai Sanka (This_is_Androfreak)
+* Soufian Boulbayem (dawa4all)
+* Alex Stark (GreekDragon)
+* Rohan Khurana (warlord_rk)
+* Rafael Marchetto (marchetto96)
+* T. Sai Milind (Sai Milind)
+* Pranav Reddy (pranu@cool)
+* Sarthak Narang

@@ -1,70 +1,11 @@
 crDroid Android
 ===============
-Join us on __[Google+](https://plus.google.com/communities/118297646046960923906)__ for ROM specific discussions and reviews.
-Use below links for device specific discussions.
-
-
-Official Maintainers
---------------------
-Below devices are officially supported.
-
-
-HTC
----
-* __[One (m8)]:__ Hildo Boerboom (firebird11)
-
-LG
---
-* __[LG G Pad 8.3 (V500)]:__ Alex Mubinov (beroid)
-* __[LG G2 (d800-d801-d802-d803-ls980-vs980)](http://forum.xda-developers.com/lg-g2/development/rom-crdroid-t3120790):__ Hildo Boerboom (firebird11)
-* __[LG G3 (d850-d851-d852-d855-ls990-vs985-f400)](http://forum.xda-developers.com/lg-g3/development/rom-crdroid-t2955012):__ Hildo Boerboom (firebird11)
-* __[LG G4 (h811-h815)]:__ Hildo Boerboom (firebird11)
-
-MOTOROLA
---------
-* __[Moto G (falcon)]:__ Vatsal Koradia (Vatsal)
-* __[Moto G 2014 (titan)]:__ Vatsal Koradia (Vatsal)
-* __[Moto G4 Plus (athene)]:__ Vache Ounet (Vache)
-
-NEXUS
------
-* __[Nexus 5 (hammerhead, hammerheadcaf)]:__ Hildo Boerboom (firebird11)
-* __[Nexus 5x (bullhead)]:__ Hildo Boerboom (firebird11)
-* __[Nexus 6 (shamu)](http://forum.xda-developers.com/nexus-6/development/rom-crdroid-android-beta-builds-t3480094):__ Pranav Vashi (neobuddy89)
-* __[Nexus 6p (angler)]:__ Hildo Boerboom (firebird11)
-
-ONEPLUS
--------
-* __[OnePlus 1 (bacon)]:__ Hildo Boerboom (firebird11)
-* __[OnePlus 2 (oneplus2)]:__ Sarthak Narang
-* __[OnePlus 3 (oneplus3)]:__ Hildo Boerboom (firebird11)
-* __[OnePlus X (onyx)]:__ Sarthak Narang
-
-SAMSUNG
--------
-* __[Galaxy S2 (i9100)]:__ Alex Stark (GreekDragon)
-* __[Galaxy S3 (i9300)]:__ Hildo Boerboom (firebird11)
-* __[Galaxy S4 (jfltexx)](http://forum.xda-developers.com/galaxy-s4/i9505-develop/rom-crdroid-t3480917):__ Hildo Boerboom (firebird11)
-* __[Galaxy S5 (klte - all variants)](http://forum.xda-developers.com/galaxy-s5/unified-development/rom-crdroid-t2860894):__ Hildo Boerboom (firebird11)
-
-WILEYFOX
---------
-* __[Wileyfox Swift (crackling)]:__ Alex Mubinov (beroid)
-
-XIAOMI
-------
-* __[Mi Max (hydrogen)]:__ Vatsal Koradia (Vatsal)
-* __[Redmi Note 3 (kenzo)]:__ Rohan Khurana (warlord_rk)
-
-YU
---
-* __[Yu Yuphoria (lettuce)]:__ Pranav Reddy (pranu@cool), Pranav Vashi (neobuddy89)
-* __[Yu Yureka (tomato)]:__ Soubhik Khan (SK83)
+Join us on __[Google+](https://plus.google.com/communities/118297646046960923906)__ for ROM discussions and reviews.
 
 
 Become an official maintainer
 -----------------------------
-Send hangout message / mail to Vatsal Koradia - koradiavatsal[at]gmail[dot]com
+Send hangout message Hildo Boerboom - hbgassel[at]gmail[dot]com
 
 
 Core Team

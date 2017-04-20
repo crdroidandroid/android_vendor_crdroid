@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CustomTiles \
     ExactCalculator \
+    Jelly \
     LiveLockScreenService \
     LockClock \
     Trebuchet \

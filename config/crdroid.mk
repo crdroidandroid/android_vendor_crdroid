@@ -36,3 +36,6 @@ PRODUCT_BOOT_JARS += \
 
 # Dex optimization not required
 WITH_DEXPREOPT := false
+
+# DragonTC info
+DRAGONTC_VERSION := 5.0

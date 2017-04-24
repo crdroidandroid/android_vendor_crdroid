@@ -39,3 +39,13 @@ WITH_DEXPREOPT := false
 
 # DragonTC info
 DRAGONTC_VERSION := 5.0
+
+TARGET_LINARO_KERNEL := $(TARGET_GCC_VERSION_KERNEL)
+
+# Find host os
+UNAME := $(shell uname -s)
+HOST_OS := linux
+
+ # Add extra libs for the compilers to use
+export LD_LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LD_LIBRARY_PATH)
+export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)

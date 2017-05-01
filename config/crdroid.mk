@@ -37,15 +37,23 @@ PRODUCT_BOOT_JARS += \
 # Dex optimization not required
 WITH_DEXPREOPT := false
 
-# DragonTC info
-DRAGONTC_VERSION := 5.0
+ifeq ($(CRDROID_OPTIMIZATIONS),true)
+    # DragonTC info
+    DRAGONTC_VERSION := 5.0
+    DISABLE_DTC_OPTS := false
 
-TARGET_LINARO_KERNEL := $(TARGET_GCC_VERSION_KERNEL)
+    TARGET_GCC_VERSION_EXP := 6.3
+    TARGET_LINARO_KERNEL := $(TARGET_GCC_VERSION_KERNEL)
 
-# Find host os
-UNAME := $(shell uname -s)
-HOST_OS := linux
+    # Find host os
+    UNAME := $(shell uname -s)
+    HOST_OS := linux
 
- # Add extra libs for the compilers to use
-export LD_LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LD_LIBRARY_PATH)
-export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
+    # Add extra libs for the compilers to use
+    export LD_LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LD_LIBRARY_PATH)
+    export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
+else
+    DRAGONTC_VERSION := 3.6
+    DISABLE_DTC_OPTS := true
+endif
+

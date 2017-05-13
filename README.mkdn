@@ -5,7 +5,13 @@ Join us on __[Google+](https://plus.google.com/communities/118297646046960923906
 
 Become an official maintainer
 -----------------------------
-Reach out Hildo Boerboom - hbgassel[at]gmail[dot]com
+Read below disclaimer and reach out Hildo Boerboom - hbgassel[at]gmail[dot]com if you agree.
+
+Disclaimer:
+- [x] You are aware of basics to build a ROM, can debug for your device and have built working crDroid ROM before reaching us.
+- [x] No modifications allowed in the build except vendor tree, device tree and kernel.
+- [x] Build should be uploaded to crdroidandroid official AFH FTP. Details will be provided once you are part of the team.
+- [x] All device devs must be active and keep up pace with releases unless there is genuine reason that we are made aware of. Your last uploaded built cannot be older by more than 2 versions.
 
 
 Core Team

@@ -106,8 +106,7 @@ PRODUCT_PACKAGES += \
     CMAudioService \
     CMParts \
     Development \
-    Profiles \
-    WeatherManagerService
+    Profiles
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
@@ -131,8 +130,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     Trebuchet \
-    WallpaperPicker \
-    WeatherProvider
+    WallpaperPicker
 
 # Exchange support
 PRODUCT_PACKAGES += \

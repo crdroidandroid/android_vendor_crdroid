@@ -128,7 +128,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly \
     LiveLockScreenService \
-    LockClock \
     Trebuchet \
     WallpaperPicker
 

@@ -162,6 +162,17 @@ def is_in_manifest(projectpath):
         if localpath.get("path") == projectpath:
             return True
 
+    # ... and what about crdroid snippet ?
+    try:
+        lm = ElementTree.parse(".repo/manifests/snippets/crdroid.xml")
+        lm = lm.getroot()
+    except:
+        lm = ElementTree.Element("manifest")
+
+    for localpath in lm.findall("project"):
+        if localpath.get("path") == projectpath:
+            return True
+
     return False
 
 def add_to_manifest(repositories, fallback_branch = None):

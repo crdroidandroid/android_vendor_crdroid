@@ -18,6 +18,19 @@
  */
 -->
 <sensitivePNS>
+    <!--Greece-->
+    <sensitivePN network="202">
+        <item>197</item>
+        <item>1018</item>
+        <item>1056</item>
+        <item>1065</item>
+        <item>1107</item>
+        <item>1109</item>
+        <item>15900</item>
+        <item>111525</item>
+        <item>116111</item>
+        <item>116123</item>
+    </sensitivePN>
     <!--Netherlands-->
     <sensitivePN network="204">
         <item>08002000</item>
@@ -28,6 +41,7 @@
     </sensitivePN>
     <!--France-->
     <sensitivePN network="208">
+        <item>119</item>
         <item>3919</item>
     </sensitivePN>
     <!--Spain-->
@@ -50,12 +64,32 @@
     <sensitivePN network="226">
         <item>0213114636</item>
     </sensitivePN>
+    <!--Czech Republic-->
+    <sensitivePN network="230">
+        <item>116111</item>
+        <item>222514040</item>
+        <item>222580697</item>
+        <item>224214214</item>
+        <item>241484149</item>
+        <item>283872186</item>
+        <item>284016292</item>
+        <item>284016666</item>
+        <item>596318080</item>
+        <item>596618908</item>
+        <item>737267939</item>
+        <item>777734173</item>
+        <item>777783146</item>
+        <item>777800983</item>
+        <item>800200007</item>
+    </sensitivePN>
     <!--Austria-->
     <sensitivePN network="232">
         <item>0800222555</item>
     </sensitivePN>
     <!--GB-->
     <sensitivePN network="234">
+        <item>116123</item>
+        <item>08001111</item>
         <item>08082000247</item>
     </sensitivePN>
     <!--Norway-->
@@ -65,6 +99,13 @@
         <item>23227930</item>
         <item>80057000</item>
         <item>81003940</item>
+    </sensitivePN>
+    <!--Ukraine-->
+    <sensitivePN network="255">
+        <item>0800500335</item>
+        <item>386</item>
+        <item>0800500225</item>
+        <item>772</item>
     </sensitivePN>
     <!--Germany-->
     <sensitivePN network="262">
@@ -76,6 +117,7 @@
     <!--Portugal-->
     <sensitivePN network="268">
         <item>800202148</item>
+        <item>116006</item>
     </sensitivePN>
     <!--Turkey-->
     <sensitivePN network="286">
@@ -154,30 +196,19 @@
         <item>1091</item>
         <item>1098</item>
     </sensitivePN>
-    <!--Czech Republic-->
-    <sensitivePN network="420">
-        <item>116111</item>
-        <item>222514040</item>
-        <item>222580697</item>
-        <item>224214214</item>
-        <item>241484149</item>
-        <item>283872186</item>
-        <item>284016292</item>
-        <item>284016666</item>
-        <item>596318080</item>
-        <item>596618908</item>
-        <item>737267939</item>
-        <item>777734173</item>
-        <item>777783146</item>
-        <item>777800983</item>
-        <item>800200007</item>
-    </sensitivePN>
     <!--Israel-->
     <sensitivePN network="425">
         <item>1201</item>
         <item>1202</item>
         <item>1203</item>
         <item>1204</item>
+    </sensitivePN>
+    <!--Taiwan-->
+    <sensitivePN network="466">
+        <item>113</item>
+        <item>1955</item>
+        <item>886253883095</item>
+        <item>88635557953</item>
     </sensitivePN>
     <!--Bangladesh-->
     <sensitivePN network="470">

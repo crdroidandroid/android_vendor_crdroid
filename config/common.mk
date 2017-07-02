@@ -124,7 +124,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
-    CustomTiles \
     ExactCalculator \
     Jelly \
     LiveLockScreenService \

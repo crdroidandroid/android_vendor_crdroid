@@ -5,7 +5,7 @@ Join us on __[Google+](https://plus.google.com/communities/118297646046960923906
 
 Become an official maintainer
 -----------------------------
-Read below disclaimer and reach out Hildo Boerboom - hbgassel[at]gmail[dot]com if you agree.
+Read below disclaimer and reach out Jeremy Vaughan - hokiealumnus[at]gmail[dot]com if you agree.
 
 Disclaimer:
 - [x] You are aware of basics to build a ROM, can debug for your device and have built working crDroid ROM before reaching us.
@@ -20,17 +20,15 @@ Core Team
 * David Viteri (alviteri)
 * Hildo Boerboom (firebird11)
 * Pranav Vashi (neobuddy89)
-* Vatsal Koradia (Vatsal)
 
 
 Contributors & Maintainers
 --------------------------
 * Alex Mubinov (beroid)
-* Jason Townley
 * Felipe de Leon (bhb27)
-* Jeremy Vaughan (holiealumnus)
+* Jeremy Vaughan (hokiealumnus)
 * Gopinaidu Annam (gopinaidu77)
-* Soubhik Kahn (SK83)
+* Soubhik Kahn (Soubhik sk83)
 * Vijay Chandra (Vijay chandra)
 * R Schunk (rkschunk)
 * Giovanni Stocco (Stocco)
@@ -45,4 +43,6 @@ Contributors & Maintainers
 * Rafael Marchetto (marchetto96)
 * T. Sai Milind (Sai Milind)
 * Pranav Reddy (pranu@cool)
-* Sarthak Narang
+* Ayush Dubey(Ayushd70)
+* Saikat Halder (Saikatrockz)
+* Gabriel Nicolae Lup (gwolfu)

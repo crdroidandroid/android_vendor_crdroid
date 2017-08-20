@@ -131,7 +131,6 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     ExactCalculator \
     Jelly \
-    LiveLockScreenService \
     Trebuchet \
     WallpaperPicker
 

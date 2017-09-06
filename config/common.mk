@@ -127,13 +127,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
-    LineageSetupWizard \
-    Eleven \
     ExactCalculator \
     Jelly \
     LockClock \
     Trebuchet \
-    Updater \
     WallpaperPicker \
     WeatherProvider
 
@@ -355,3 +352,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product, vendor/lineage/config/crdroid.mk)
+$(call inherit-product, vendor/addons/config.mk)

@@ -1,50 +1,44 @@
-LineageOS
-===========
-
-Submitting Patches
-------------------
-Patches are always welcome!  Please submit your patches via LineageOS Gerrit!
-You can do this by using these commands:
-
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    lineagegerrit <for(new)/changes(patch set)> <branch/change-id> 
-
-    repo start lineage-15.0 .
-    (Make your changes and commit)
-    repo upload .
-Note: "." meaning current directory
-For more help on using this tool, use this command: repo help upload
-
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. vision: Update Kernel)
-Commit your patches in a single commit. Squash multiple commit using this command: git rebase -i HEAD~<# of commits>
-
-To view the status of your and others' patches, visit [LineageOS Code Review](http://review.lineageos.org/)
+crDroid Android
+===============
+Join us on __[Google+](https://plus.google.com/communities/118297646046960923906)__ for ROM discussions and reviews.
 
 
-Getting Started
----------------
+To submit patches and translations
+----------------------------------
+Send pull requests on github. We will review and merge.
 
-To get started with Android/LineageOS, you'll need to get
-familiar with [Repo](https://source.android.com/source/using-repo.html) and [Version Control with Git](https://source.android.com/source/version-control.html).
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+To become an Official Maintainer
+--------------------------------
+Reach out Jeremy Vaughan - hokiealumnus[at]gmail[dot]com
 
-    repo init -u git://github.com/LineageOS/android.git -b lineage-15.0
 
-Then to sync up:
+Core Team
+---------
+* Gabriel Nicolae Lup (gwolfu)
+* Hildo Boerboom (firebird11)
+* Jeremy Vaughan (hokiealumnus)
+* Pranav Vashi (neobuddy89)
 
-    repo sync
 
-Please see the [LineageOS Wiki](http://wiki.lineageos.org/) for building instructions, by device.
-
-For more information on this Github Organization and how it is structured, 
-please [read the wiki article](http://wiki.lineageos.org/w/Github_Organization)
-
-Buildbot
---------
-
-All supported devices are built nightly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses in the [Jenkins](http://jenkins.lineageos.org) tool.
+Contributors & Maintainers
+--------------------------
+* Abhinai Sanka (This_is_Androfreak)
+* Alex Mubinov (beroid)
+* Alex Stark (GreekDragon)
+* Anoop Kumar (AnoopKumar)
+* Ayush Dubey(Ayushd70)
+* Giovanni Stocco (Stocco)
+* Felipe de Leon (bhb27)
+* Gopinaidu Annam (gopinaidu77)
+* Pavan Jadhaw (ARCADE)
+* R Schunk (rkschunk)
+* Rafael Marchetto (marchetto96)
+* Rohan Khurana (warlord_rk)
+* Saikat Halder (Saikatrockz)
+* Shubhrajyoti Sen
+* Soubhik Khan (Soubhik sk83)
+* Soufian Boulbayem (dawa4all)
+* T. Sai Milind (Sai Milind)
+* Vache
+* Vijay Chandra (Vijay chandra)

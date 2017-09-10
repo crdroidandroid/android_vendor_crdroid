@@ -18,4 +18,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     crDroidWallpapers \
     crDroidFileManager \
-    crDroidMusic
+    crDroidMusic \
+    crDroidOTA

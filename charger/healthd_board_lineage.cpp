@@ -33,9 +33,7 @@
 #include <cutils/properties.h>
 
 #include <pthread.h>
-#ifdef LEGACY_ANDROID_ALARM
 #include <linux/android_alarm.h>
-#endif
 #include <sys/timerfd.h>
 #include <linux/rtc.h>
 
@@ -103,38 +101,6 @@ static void draw_capacity(int capacity)
 }
 
 #ifdef QCOM_HARDWARE
-static int timerfd_set_reboot_time_and_wait(time_t secs)
-{
-    int fd;
-    int ret = -1;
-    fd = timerfd_create(CLOCK_REALTIME_ALARM, 0);
-    if (fd < 0) {
-        LOGE("Can't open timerfd alarm node\n");
-        goto err_return;
-    }
-
-    struct itimerspec spec;
-    memset(&spec, 0, sizeof(spec));
-    spec.it_value.tv_sec = secs;
-
-    if (timerfd_settime(fd, 0 /* relative */, &spec, NULL)) {
-        LOGE("Can't set timerfd alarm\n");
-        goto err_close;
-    }
-
-    uint64_t unused;
-    if (read(fd, &unused, sizeof(unused)) < 0) {
-       LOGE("Wait alarm error\n");
-       goto err_close;
-    }
-
-    ret = 0;
-err_close:
-    close(fd);
-err_return:
-    return ret;
-}
-#ifdef LEGACY_ANDROID_ALARM
 enum alarm_time_type {
     ALARM_TIME,
     RTC_TIME,
@@ -206,6 +172,38 @@ static int alarm_is_alm_expired()
 
     return (alm_secs >= rtc_secs - ERR_SECS &&
             alm_secs <= rtc_secs + ERR_SECS) ? 1 : 0;
+}
+
+static int timerfd_set_reboot_time_and_wait(time_t secs)
+{
+    int fd;
+    int ret = -1;
+    fd = timerfd_create(CLOCK_REALTIME_ALARM, 0);
+    if (fd < 0) {
+        LOGE("Can't open timerfd alarm node\n");
+        goto err_return;
+    }
+
+    struct itimerspec spec;
+    memset(&spec, 0, sizeof(spec));
+    spec.it_value.tv_sec = secs;
+
+    if (timerfd_settime(fd, 0 /* relative */, &spec, NULL)) {
+        LOGE("Can't set timerfd alarm\n");
+        goto err_close;
+    }
+
+    uint64_t unused;
+    if (read(fd, &unused, sizeof(unused)) < 0) {
+       LOGE("Wait alarm error\n");
+       goto err_close;
+    }
+
+    ret = 0;
+err_close:
+    close(fd);
+err_return:
+    return ret;
 }
 
 static int alarm_set_reboot_time_and_wait(time_t secs)
@@ -297,8 +295,7 @@ err:
     LOGE("Exit from alarm thread\n");
     return NULL;
 }
-#endif // LEGACY_ANDROID_ALARM
-#endif // QCOM_HARDWARE
+#endif
 
 void healthd_board_init(struct healthd_config*)
 {
@@ -324,14 +321,12 @@ void healthd_board_init(struct healthd_config*)
     }
 
 #ifdef QCOM_HARDWARE
-#ifdef LEGACY_ANDROID_ALARM
     property_get("ro.bootmode", value, "");
     if (!strcmp("charger", value)) {
         rc = pthread_create(&tid, NULL, alarm_thread, NULL);
         if (rc < 0)
             LOGE("Create alarm thread failed\n");
     }
-#endif
 #endif
 }
 

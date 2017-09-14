@@ -3,46 +3,42 @@ crDroid Android
 Join us on __[Google+](https://plus.google.com/communities/118297646046960923906)__ for ROM discussions and reviews.
 
 
-Become an official maintainer
------------------------------
-Read below disclaimer and reach out Jeremy Vaughan - hokiealumnus[at]gmail[dot]com if you agree.
+To submit patches and translations
+----------------------------------
+Send pull requests on github. We will review and merge.
 
-Disclaimer:
-- [x] You are aware of basics to build a ROM, can debug for your device and have built working crDroid ROM before reaching us.
-- [x] No modifications allowed in the build except vendor tree, device tree and kernel.
-- [x] Build should be uploaded to crdroidandroid official AFH FTP. Details will be provided once you are part of the team.
-- [x] All device devs must be active and keep up pace with releases unless there is genuine reason that we are made aware of. Your last uploaded built cannot be older by more than 2 versions.
+
+To become an Official Maintainer
+--------------------------------
+Reach out Jeremy Vaughan - hokiealumnus[at]gmail[dot]com
 
 
 Core Team
 ---------
-* Cristiano Matos (cristianomatos)
-* David Viteri (alviteri)
+* Gabriel Nicolae Lup (gwolfu)
 * Hildo Boerboom (firebird11)
+* Jeremy Vaughan (hokiealumnus)
 * Pranav Vashi (neobuddy89)
 
 
 Contributors & Maintainers
 --------------------------
-* Alex Mubinov (beroid)
-* Felipe de Leon (bhb27)
-* Jeremy Vaughan (hokiealumnus)
-* Gopinaidu Annam (gopinaidu77)
-* Soubhik Kahn (Soubhik sk83)
-* Vijay Chandra (Vijay chandra)
-* R Schunk (rkschunk)
-* Giovanni Stocco (Stocco)
-* Pavan Jadhaw (ARCADE)
-* Anoop Kumar (AnoopKumar)
-* Shubhrajyoti Sen
-* Vache
 * Abhinai Sanka (This_is_Androfreak)
-* Soufian Boulbayem (dawa4all)
+* Alex Mubinov (beroid)
 * Alex Stark (GreekDragon)
-* Rohan Khurana (warlord_rk)
-* Rafael Marchetto (marchetto96)
-* T. Sai Milind (Sai Milind)
-* Pranav Reddy (pranu@cool)
+* Anoop Kumar (AnoopKumar)
 * Ayush Dubey(Ayushd70)
+* Giovanni Stocco (Stocco)
+* Felipe de Leon (bhb27)
+* Gopinaidu Annam (gopinaidu77)
+* Pavan Jadhaw (ARCADE)
+* R Schunk (rkschunk)
+* Rafael Marchetto (marchetto96)
+* Rohan Khurana (warlord_rk)
 * Saikat Halder (Saikatrockz)
-* Gabriel Nicolae Lup (gwolfu)
+* Shubhrajyoti Sen
+* Soubhik Khan (Soubhik sk83)
+* Soufian Boulbayem (dawa4all)
+* T. Sai Milind (Sai Milind)
+* Vache
+* Vijay Chandra (Vijay chandra)

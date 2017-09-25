@@ -27,7 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.ime.theme_id=5 \
     ro.storage_manager.enabled=1 \
     ro.opa.eligible_device=true \
-    ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.network_required=false \
     ro.setupwizard.gservices_delay=-1 \
@@ -36,6 +35,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0 \
     keyguard.no_require_sim=true \
     persist.sys.disable_rescue=true
+
+# Temporary props for bring ups
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.service.adb.enable=1
 
 EXCLUDE_SYSTEMUI_TESTS := true
 

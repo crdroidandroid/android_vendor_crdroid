@@ -37,6 +37,7 @@ Contributors & Maintainers
 * Rohan Khurana (warlord_rk)
 * Saikat Halder (Saikatrockz)
 * Shubhrajyoti Sen
+* Shubham Das (dasshubham762)
 * Soubhik Khan (Soubhik sk83)
 * Soufian Boulbayem (dawa4all)
 * T. Sai Milind (Sai Milind)

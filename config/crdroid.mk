@@ -1,6 +1,6 @@
 # Product version should match Android version
 PRODUCT_VERSION_MAJOR = 8
-PRODUCT_VERSION_MINOR = 0
+PRODUCT_VERSION_MINOR = 1
 
 # Increase CR Version with each major release.
 CR_VERSION := 4.0

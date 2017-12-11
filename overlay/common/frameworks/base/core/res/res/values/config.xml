@@ -53,7 +53,6 @@
         <item>power</item>
         <item>restart</item>
         <item>recovery</item>
-        <item>airplane</item>
         <item>bugreport</item>
         <item>users</item>
     </string-array>

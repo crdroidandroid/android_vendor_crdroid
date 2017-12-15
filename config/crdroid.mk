@@ -51,3 +51,11 @@ PRODUCT_PACKAGES += \
     crDroidWallpapers \
     crDroidFileManager \
     crDroidMusic
+
+# DU Utils Library
+PRODUCT_BOOT_JARS += \
+   org.dirtyunicorns.utils
+
+PRODUCT_PACKAGES += \
+   org.dirtyunicorns.utils
+

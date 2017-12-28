@@ -117,7 +117,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly \
     LockClock \
-    Trebuchet \
     WallpaperPicker \
     WeatherProvider
 

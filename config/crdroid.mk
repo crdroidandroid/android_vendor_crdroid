@@ -48,9 +48,10 @@ EXCLUDE_SYSTEMUI_TESTS := true
 
 # Custom packages
 PRODUCT_PACKAGES += \
-    crDroidWallpapers \
     crDroidFileManager \
-    crDroidMusic
+    crDroidHome \
+    crDroidMusic \
+    crDroidWallpapers
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \

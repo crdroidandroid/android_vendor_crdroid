@@ -36,14 +36,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     persist.sys.disable_rescue=true
 
-# Temporary props for bring ups
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.usb.config=mtp,adb
-
 EXCLUDE_SYSTEMUI_TESTS := true
 
 # Custom packages

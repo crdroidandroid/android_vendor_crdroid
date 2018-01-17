@@ -42,7 +42,8 @@ EXCLUDE_SYSTEMUI_TESTS := true
 PRODUCT_PACKAGES += \
     crDroidHome \
     crDroidMusic \
-    crDroidWallpapers
+    crDroidWallpapers \
+    OmniJaws
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \

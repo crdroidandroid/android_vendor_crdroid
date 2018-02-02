@@ -36,6 +36,7 @@ Contributors & Maintainers
 * Rafael Marchetto (marchetto96)
 * Rohan Khurana (warlord_rk)
 * Saikat Halder (Saikatrockz)
+* Shubham Das (dasshubham762)
 * Shubhrajyoti Sen
 * Soubhik Khan (Soubhik sk83)
 * Soufian Boulbayem (dawa4all)

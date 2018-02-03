@@ -210,7 +210,7 @@ PRODUCT_PACKAGES += \
     procrank
 
 # Conditionally build in su
-ifeq ($(WITH_SU),true)
+ifneq ($(WITH_SU),false)
 PRODUCT_PACKAGES += \
     su
 endif

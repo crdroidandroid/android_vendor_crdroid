@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     crDroidHome \
     crDroidMusic \
     crDroidWallpapers \
-    OmniJaws
+    OmniJaws \
+    OmniStyle
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \

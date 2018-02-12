@@ -9,14 +9,14 @@ LINEAGE_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MIN
 LINEAGE_DISPLAY_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-v$(CR_VERSION)
 
 # Do not edit. These values are parsed by OTA and Settings.
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
     ro.crdroid.build.version=$(LINEAGE_VERSION) \
     ro.crdroid.display.version=$(LINEAGE_DISPLAY_VERSION) \
     ro.crdroid.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(CR_VERSION)
 
 # Additional props
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_GENERIC_PROPERTIES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.error.receiver.system.apps=com.google.android.gms \

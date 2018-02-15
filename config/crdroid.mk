@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += \
 # Additional themes
 PRODUCT_PACKAGES += \
     DuiDarkTheme \
-    SettingsDarkTheme
+    SettingsDarkTheme \
+    SystemDarkTheme
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \

@@ -46,6 +46,11 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle
 
+# Additional themes
+PRODUCT_PACKAGES += \
+    DuiDarkTheme \
+    SettingsDarkTheme
+
 # DU Utils Library
 PRODUCT_BOOT_JARS += \
    org.dirtyunicorns.utils

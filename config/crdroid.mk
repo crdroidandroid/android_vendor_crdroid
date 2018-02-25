@@ -50,7 +50,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DuiDarkTheme \
     SettingsDarkTheme \
-    SystemDarkTheme
+    SystemDarkTheme \
+    crDroidHomeDarkTheme
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \

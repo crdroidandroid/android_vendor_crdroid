@@ -3,18 +3,18 @@ PRODUCT_BRAND ?= crdroidandroid
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
 else
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
 # Default notification/alarm sounds
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.notification_sound=Chime.ogg \
     ro.config.alarm_alert=Argon.ogg
 
@@ -199,16 +199,16 @@ PRODUCT_PACKAGES += \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # Storage manager
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
 
 # Media
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 # These packages are excluded from user builds

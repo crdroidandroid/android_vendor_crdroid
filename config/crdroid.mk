@@ -48,9 +48,9 @@ PRODUCT_PACKAGES += \
 
 # Additional themes
 PRODUCT_PACKAGES += \
-    DuiDarkTheme \
     SettingsDarkTheme \
     SystemDarkTheme \
+    SystemUIDarkTheme \
     crDroidHomeDarkTheme
 
 # DU Utils Library

@@ -48,10 +48,14 @@ PRODUCT_PACKAGES += \
 
 # Additional themes
 PRODUCT_PACKAGES += \
+    crDroidHomeBlackTheme \
+    crDroidHomeDarkTheme \
+    SettingsBlackTheme \
     SettingsDarkTheme \
+    SystemBlackTheme \
     SystemDarkTheme \
-    SystemUIDarkTheme \
-    crDroidHomeDarkTheme
+    SystemUIBlackTheme \
+    SystemUIDarkTheme
 
 # DU Utils Library
 PRODUCT_BOOT_JARS += \

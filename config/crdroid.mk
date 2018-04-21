@@ -40,6 +40,7 @@ EXCLUDE_SYSTEMUI_TESTS := true
 
 # Custom packages
 PRODUCT_PACKAGES += \
+    crDroidFonts \
     crDroidHome \
     crDroidMusic \
     crDroidWallpapers \

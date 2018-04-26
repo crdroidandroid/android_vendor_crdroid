@@ -42,6 +42,7 @@ EXCLUDE_SYSTEMUI_TESTS := true
 PRODUCT_PACKAGES += \
     crDroidFonts \
     crDroidHome \
+    crDroidHome3 \
     crDroidMusic \
     crDroidWallpapers \
     OmniJaws \

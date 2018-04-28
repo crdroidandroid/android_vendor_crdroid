@@ -41,7 +41,6 @@ EXCLUDE_SYSTEMUI_TESTS := true
 # Custom packages
 PRODUCT_PACKAGES += \
     crDroidFonts \
-    crDroidHome \
     crDroidHome3 \
     crDroidMusic \
     crDroidWallpapers \
@@ -50,8 +49,6 @@ PRODUCT_PACKAGES += \
 
 # Additional themes
 PRODUCT_PACKAGES += \
-    crDroidHomeBlackTheme \
-    crDroidHomeDarkTheme \
     SettingsBlackTheme \
     SettingsDarkTheme \
     SystemBlackTheme \

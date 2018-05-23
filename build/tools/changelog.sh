@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017 crDroid Android Project
+# Copyright (C) 2017-2018 crDroid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,10 @@ fi
 
 touch $Changelog
 
-for i in $(seq 10);
+echo "For how many days do you want to generate changelog? (🕑 timeout 15 seconds - default to 7 days)"
+read -r -t 15 days || days=7
+
+for i in $(seq $days);
 do
 export After_Date=`date --date="$i days ago" +%m-%d-%Y`
 k=$(expr $i - 1)

@@ -131,14 +131,22 @@ PRODUCT_PACKAGES += \
 
 # Berry styles
 PRODUCT_PACKAGES += \
+    LineageAmberAccent \
     LineageBlackAccent \
+    LineageBlueAccent \
     LineageBrownAccent \
     LineageCyanAccent \
+    LineageDemonAccent \
+    LineageDenimAccent \
     LineageGreenAccent \
+    LineageGoldAccent \
+    LineageGreyAccent \
     LineageOrangeAccent \
     LineagePinkAccent \
     LineagePurpleAccent \
     LineageRedAccent \
+    LineageTealAccent \
+    LineageTurquoiseAccent \
     LineageYellowAccent
 
 # Extra tools in Lineage

@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
     LineageGoldAccent \
     LineageGreyAccent \
     LineageOrangeAccent \
+    LineageOxygenAccent \
     LineagePinkAccent \
     LineagePurpleAccent \
     LineageRedAccent \

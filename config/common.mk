@@ -224,6 +224,7 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 
 # Product version should match Android version

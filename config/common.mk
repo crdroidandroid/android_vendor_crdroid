@@ -226,6 +226,16 @@ endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 
+# Product version should match Android version
+PRODUCT_VERSION_MAJOR = 8
+PRODUCT_VERSION_MINOR = 1
+
+# Increase CR Version with each major release.
+CR_VERSION := 4.6
+
+LINEAGE_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(LINEAGE_BUILD)-v$(CR_VERSION)
+LINEAGE_DISPLAY_VERSION := crDroidAndroid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(LINEAGE_BUILD)-v$(CR_VERSION)
+
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 

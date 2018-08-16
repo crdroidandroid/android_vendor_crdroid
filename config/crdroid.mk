@@ -20,29 +20,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.disable_rescue=true
 
 EXCLUDE_SYSTEMUI_TESTS := true
-
-# Custom packages
-PRODUCT_PACKAGES += \
-    crDroidFonts \
-    crDroidHome3 \
-    crDroidMusic \
-    crDroidWallpapers \
-    OmniJaws \
-    OmniStyle
-
-# Additional themes
-PRODUCT_PACKAGES += \
-    SettingsBlackTheme \
-    SettingsDarkTheme \
-    SystemBlackTheme \
-    SystemDarkTheme \
-    SystemUIBlackTheme \
-    SystemUIDarkTheme
-
-# DU Utils Library
-PRODUCT_BOOT_JARS += \
-   org.dirtyunicorns.utils
-
-PRODUCT_PACKAGES += \
-   org.dirtyunicorns.utils
-

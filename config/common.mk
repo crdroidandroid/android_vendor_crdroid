@@ -215,7 +215,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Conditionally build in su
 ifneq ($(TARGET_BUILD_VARIANT),user)
-ifneq ($(WITH_SU),false)
+ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su
 endif

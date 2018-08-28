@@ -11,6 +11,9 @@ type Product_variables struct {
 	Device_support_legacy_hwfde struct {
 		Cflags []string
 	}
+	Device_support_wait_for_qsee struct {
+		Cflags []string
+	}
 	Additional_gralloc_10_usage_bits struct {
 		Cppflags []string
 	}
@@ -42,6 +45,7 @@ type ProductVariables struct {
 	Device_support_hwfde  *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
 	Device_support_legacy_hwfde  *bool `json:",omitempty"`
+	Device_support_wait_for_qsee  *bool `json:",omitempty"`
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`

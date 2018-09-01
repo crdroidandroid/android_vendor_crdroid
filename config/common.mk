@@ -248,4 +248,4 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product, vendor/lineage/config/crdroid.mk)
-#$(call inherit-product, vendor/addons/config.mk)
+$(call inherit-product, vendor/addons/config.mk)

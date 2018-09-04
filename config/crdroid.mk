@@ -20,3 +20,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.disable_rescue=true
 
 EXCLUDE_SYSTEMUI_TESTS := true
+
+# Additional themes
+PRODUCT_PACKAGES += \
+    SettingsBlackTheme \
+    SettingsDarkTheme \
+    SystemUIBlackTheme \
+    SystemUIDarkTheme

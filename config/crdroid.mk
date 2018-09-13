@@ -25,5 +25,7 @@ EXCLUDE_SYSTEMUI_TESTS := true
 PRODUCT_PACKAGES += \
     SettingsBlackTheme \
     SettingsDarkTheme \
+    SystemBlackTheme \
+    SystemDarkTheme \
     SystemUIBlackTheme \
     SystemUIDarkTheme

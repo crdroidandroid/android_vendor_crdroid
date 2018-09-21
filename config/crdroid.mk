@@ -21,6 +21,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 EXCLUDE_SYSTEMUI_TESTS := true
 
+# Custom packages
+PRODUCT_PACKAGES += \
+    crDroidMusic
+
 # Additional themes
 PRODUCT_PACKAGES += \
     SettingsBlackTheme \

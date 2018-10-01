@@ -19,6 +19,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
     persist.sys.disable_rescue=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.services.whitelist.packagelist=com.google.android.gms
+
 EXCLUDE_SYSTEMUI_TESTS := true
 
 # Custom packages

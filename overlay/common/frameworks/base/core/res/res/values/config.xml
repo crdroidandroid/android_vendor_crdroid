@@ -178,4 +178,7 @@
          Internet network (except when the current default network is mobile,
          in which case a DUN network will be used if required). -->
     <bool name="config_tether_upstream_automatic">true</bool>
+
+    <!-- Colon separated list of package names that should be granted DND access -->
+    <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence</string>
 </resources>

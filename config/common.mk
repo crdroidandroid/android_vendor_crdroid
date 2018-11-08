@@ -217,12 +217,10 @@ PRODUCT_PACKAGES_DEBUG += \
     procrank \
     strace
 
-# Conditionally build in su
-ifneq ($(TARGET_BUILD_VARIANT),user)
-ifeq ($(WITH_SU),true)
+# Conditionally don't build in su
+ifneq ($(WITH_SU),false)
 PRODUCT_PACKAGES += \
     su
-endif
 endif
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay

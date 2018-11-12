@@ -218,7 +218,7 @@ PRODUCT_PACKAGES_DEBUG += \
     strace
 
 # Conditionally don't build in su
-ifneq ($(WITH_SU),false)
+ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su
 endif

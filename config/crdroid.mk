@@ -22,8 +22,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.services.whitelist.packagelist=com.google.android.gms
 
-EXCLUDE_SYSTEMUI_TESTS := true
-
 # Custom packages
 PRODUCT_PACKAGES += \
     crDroidMusic

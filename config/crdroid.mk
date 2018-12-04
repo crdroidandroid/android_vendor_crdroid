@@ -25,12 +25,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Custom packages
 PRODUCT_PACKAGES += \
     crDroidMusic
-
-# Additional themes
-PRODUCT_PACKAGES += \
-    SettingsBlackTheme \
-    SettingsDarkTheme \
-    SystemBlackTheme \
-    SystemDarkTheme \
-    SystemUIBlackTheme \
-    SystemUIDarkTheme

@@ -29,6 +29,7 @@
 
     <!-- Disable stock OTA components if installed -->
     <string-array name="config_disabledComponents" translatable="false">
+        <item>com.google.android.apps.restore/com.google.android.apps.pixelmigrate.component.NotificationConsolidatorService</item>
         <item>com.google.android.gsf/com.google.android.gsf.update.phone.SystemUpdateActivity</item>
         <item>com.google.android.gsf/com.google.android.gsf.update.phone.SystemUpdateService$Receiver</item>
         <item>com.google.android.gsf/com.google.android.gsf.update.phone.SystemUpdateService$SecretCodeReceiver</item>

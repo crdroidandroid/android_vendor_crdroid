@@ -154,4 +154,9 @@
 
     <!-- Component name for default assistant on this device -->
     <string name="config_defaultAssistantComponentName">com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService</string>
+
+    <!--  Control whether to lock day/night mode change from normal application. When it is
+          true, day / night mode change is only allowed to apps with MODIFY_DAY_NIGHT_MODE
+          permission. -->
+    <bool name="config_lockDayNightMode">true</bool>
 </resources>

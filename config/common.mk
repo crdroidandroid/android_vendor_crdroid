@@ -75,6 +75,7 @@ PRODUCT_COPY_FILES += \
 
 # Lineage-specific init rc file
 PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/init/init.crdroid-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.crdroid-system_ext.rc \
     vendor/lineage/prebuilt/common/etc/init/init.lineage-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.lineage-system_ext.rc
 
 # Enable Android Beam on all targets

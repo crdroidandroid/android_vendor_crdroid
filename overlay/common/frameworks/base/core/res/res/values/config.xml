@@ -74,12 +74,6 @@
          non-interactive state. -->
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
 
-    <!-- Controls the WiFi wakeup feature.
-          0 = Not available.
-          1 = Available.
-     -->
-     <integer name="config_wifi_wakeup_available">1</integer>
-
     <!-- Control whether Night display is available. This should only be enabled on devices
          that have a HWC implementation that can apply the matrix passed to setColorTransform
          without impacting power, performance, and app compatibility (e.g. protected content). -->

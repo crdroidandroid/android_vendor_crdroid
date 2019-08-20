@@ -137,27 +137,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Exchange2
 
-# Berry styles
-PRODUCT_PACKAGES += \
-    LineageAmberAccent \
-    LineageBlackAccent \
-    LineageBlueAccent \
-    LineageBrownAccent \
-    LineageCyanAccent \
-    LineageDemonAccent \
-    LineageDenimAccent \
-    LineageGreenAccent \
-    LineageGoldAccent \
-    LineageGreyAccent \
-    LineageOrangeAccent \
-    LineageOxygenAccent \
-    LineagePinkAccent \
-    LineagePurpleAccent \
-    LineageRedAccent \
-    LineageTealAccent \
-    LineageTurquoiseAccent \
-    LineageYellowAccent
-
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \

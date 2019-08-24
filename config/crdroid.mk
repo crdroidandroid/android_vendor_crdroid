@@ -29,4 +29,5 @@ PRODUCT_PACKAGES += \
     crDroidFonts \
     crDroidSetupWizard \
     crDroidMusic \
+    OmniStyle \
     WeatherClient

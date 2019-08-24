@@ -27,5 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Custom packages
 PRODUCT_PACKAGES += \
     crDroidFonts \
+    crDroidSetupWizard \
     crDroidMusic \
     WeatherClient

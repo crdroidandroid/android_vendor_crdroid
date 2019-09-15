@@ -47,13 +47,6 @@ endif
 
 # Customizations
 PRODUCT_PACKAGES += \
-    IconShapePebbleOverlay \
-    IconShapeRoundedRectOverlay \
-    IconShapeSquareOverlay \
-    IconShapeSquircleOverlay \
-    IconShapeTaperedRectOverlay \
-    IconShapeTeardropOverlay \
-    IconShapeVesselOverlay \
     LineageNavigationBarNoHint \
     NavigationBarMode2ButtonOverlay
 

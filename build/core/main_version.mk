@@ -1,3 +1,9 @@
+# Build fingerprint
+ifneq ($(BUILD_FINGERPRINT),)
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+endif
+
 # crDroid System Version
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.crdroid.build.version=$(LINEAGE_VERSION) \

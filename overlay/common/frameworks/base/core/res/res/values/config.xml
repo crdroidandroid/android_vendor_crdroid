@@ -256,4 +256,10 @@
          Internet network (except when the current default network is mobile,
          in which case a DUN network will be used if required). -->
     <bool name="config_tether_upstream_automatic">true</bool>
+
+    <!-- Component name for the activity that will be presenting the Recents UI, which will receive special permissions for API related
+          to fetching and presenting recent tasks. The default configuration uses Launcehr3QuickStep as default launcher and points to
+          the corresponding recents component. When using a different default launcher, change this appropriately or use the default
+          systemui implementation: com.android.systemui/.recents.RecentsActivity -->
+    <string name="config_recentsComponentName" translatable="false">ch.deletescape.lawnchair.crdroid/com.android.quickstep.RecentsActivity</string>
 </resources>

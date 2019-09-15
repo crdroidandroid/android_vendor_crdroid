@@ -49,7 +49,7 @@ endif
 
 # Legal
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.crdroidlegal.url=https://crdroid.net/legal.php
 
 # Media
 PRODUCT_PRODUCT_PROPERTIES += \

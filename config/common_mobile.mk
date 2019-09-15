@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
 
 # Legal
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.crdroidlegal.url=https://crdroid.net/legal.php
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \

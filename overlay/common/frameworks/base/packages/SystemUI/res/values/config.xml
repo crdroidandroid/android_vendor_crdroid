@@ -44,4 +44,11 @@
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
     <bool name="config_vibrateOnIconAnimation">true</bool>
+
+    <!-- The number of columns in the QuickSettings -->
+    <integer name="quick_settings_num_columns">4</integer>
+
+    <!-- The number of rows in the QuickSettings -->
+    <integer name="quick_settings_max_rows">2</integer>
+
 </resources>

@@ -148,21 +148,6 @@ PRODUCT_PACKAGES += \
     Updater \
     WeatherProvider
 
-# Berry styles
-PRODUCT_PACKAGES += \
-    LineageBlackTheme \
-    LineageDarkTheme \
-    LineageBlackAccent \
-    LineageBlueAccent \
-    LineageBrownAccent \
-    LineageCyanAccent \
-    LineageGreenAccent \
-    LineageOrangeAccent \
-    LineagePinkAccent \
-    LineagePurpleAccent \
-    LineageRedAccent \
-    LineageYellowAccent
-
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \

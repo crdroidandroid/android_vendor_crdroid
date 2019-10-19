@@ -25,6 +25,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.services.whitelist.packagelist=com.google.android.gms
 
+# Extra packages
+PRODUCT_PACKAGES += \
+    PixelThemes \
+    ThemePicker
+
 # Accents
 PRODUCT_PACKAGES += \
     Amber \

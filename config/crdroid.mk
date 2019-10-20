@@ -87,3 +87,9 @@ PRODUCT_PACKAGES += \
     TwitterBlue \
     XboxGreen \
     XiaomiOrange
+
+# Themes
+PRODUCT_PACKAGES += \
+    SettingsDark \
+    SystemDark \
+    SysUIDark

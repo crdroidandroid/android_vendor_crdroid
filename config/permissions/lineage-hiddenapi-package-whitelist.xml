@@ -22,5 +22,6 @@ platform cert need to be included, as apps signed with the platform cert are exe
 -->
 
 <config>
+  <hidden-api-whitelisted-app package="com.google.android.apps.nexuslauncher" />
   <hidden-api-whitelisted-app package="org.lineageos.jelly" />
 </config>

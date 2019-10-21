@@ -28,11 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     PixelThemes \
-    ThemePicker \
-    GalleryGoPrebuilt \
-    NexusLauncherRelease \
-    NexusLauncherReleaseOverlay \
-    SettingsIntelligenceGooglePrebuilt
+    ThemePicker
 
 # Accents
 PRODUCT_PACKAGES += \

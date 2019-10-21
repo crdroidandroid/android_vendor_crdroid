@@ -21,30 +21,4 @@
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
     </privapp-permissions>
-
-    <privapp-permissions package="com.google.android.apps.nexuslauncher">
-        <permission name="android.permission.BIND_APPWIDGET"/>
-        <permission name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
-        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.google.intelligence.sense">
-        <permission name="android.permission.CAPTURE_AUDIO_HOTWORD"/>
-        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
-        <permission name="android.permission.LOCATION_HARDWARE"/>
-        <permission name="android.permission.MANAGE_SOUND_TRIGGER"/>
-        <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-    </privapp-permissions>
-
-    <privapp-permissions package="com.google.android.settings.intelligence">
-        <permission name="android.permission.READ_SEARCH_INDEXABLES"/>
-        <permission name="android.permission.MANAGE_FINGERPRINT"/>
-        <permission name="android.permission.WRITE_SETTINGS_HOMEPAGE_DATA"/>
-        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.READ_SEARCH_INDEXABLES"/>
-        <permission name="android.permission.MODIFY_PHONE_STATE"/>
-    </privapp-permissions>
 </permissions>

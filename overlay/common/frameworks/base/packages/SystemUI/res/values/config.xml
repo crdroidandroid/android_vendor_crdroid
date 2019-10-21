@@ -51,6 +51,4 @@
     <!-- The number of rows in the QuickSettings -->
     <integer name="quick_settings_max_rows">2</integer>
 
-    <!-- Launcher package name for overlaying icons. -->
-    <string name="launcher_overlayable_package">com.google.android.apps.nexuslauncher</string>
 </resources>

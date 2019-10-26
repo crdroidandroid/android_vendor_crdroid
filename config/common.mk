@@ -135,11 +135,9 @@ PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
     LineageSetupWizard \
-    Eleven \
     Jelly \
     LockClock \
     Profiles \
-    TrebuchetQuickStep \
     Updater \
     WeatherProvider
 

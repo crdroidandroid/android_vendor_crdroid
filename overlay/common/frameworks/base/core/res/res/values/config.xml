@@ -209,4 +209,7 @@
 
     <!-- Sharesheet: define a max number of targets per application for new shortcuts-based direct share introduced in Q -->
     <integer name="config_maxShortcutTargetsPerApp">8</integer>
+
+    <!-- The name of the package that will hold the assistant role by default. -->
+    <string name="config_defaultAssistant" translatable="false">com.google.android.googlequicksearchbox</string>
 </resources>

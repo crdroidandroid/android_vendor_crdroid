@@ -16,4 +16,7 @@
 
 <permissions>
 
+    <privapp-permissions package="com.android.systemui">
+        <permission name="android.permission.WRITE_APN_SETTINGS"/>
+    </privapp-permissions>
 </permissions>

@@ -27,9 +27,9 @@ fi
 if [ -f $existingOTAjson ]; then
 	#get data from already existing device json
 	#there might be a better way to parse json yet here we try without adding more dependencies like jq
-	maintainer=`grep -n "maintainer" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
-	oem=`grep -n "oem" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
-	device=`grep -n "device" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+	maintainer=`grep -n "\"maintainer\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+	oem=`grep -n "\"oem\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+	device=`grep -n "\"device\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
 	filename=$3
 	version=`echo "$3" | cut -d'-' -f5`
 	v_max=`echo "$version" | cut -d'.' -f1 | cut -d'v' -f2`
@@ -41,7 +41,7 @@ if [ -f $existingOTAjson ]; then
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
 	md5=`md5sum "$2/$3" | cut -d' ' -f1`
 	size=`stat -c "%s" "$2/$3"`
-	buildtype=`grep -n "type" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
+	buildtype=`grep -n "\"buildtype\"" $existingOTAjson | cut -d ":" -f 3 | sed 's/"//g' | sed 's/,//g' | xargs`
 	forum=`grep -n "\"forum\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
 	if [ ! -z "$forum" ]; then
 		forum="https:"$forum

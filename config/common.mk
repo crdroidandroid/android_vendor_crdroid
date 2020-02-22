@@ -16,16 +16,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-# Default notification/alarm sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.notification_sound=Chime.ogg \
-    ro.config.alarm_alert=Argon.ogg
-
-ifneq ($(TARGET_BUILD_VARIANT),user)
-# Thank you, please drive thru!
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
-endif
-
 # Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 
@@ -115,23 +105,14 @@ PRODUCT_PACKAGES += \
 
 # AOSP packages
 PRODUCT_PACKAGES += \
-    Email \
-    ExactCalculator \
-    Exchange2 \
     Terminal
 
 # Lineage packages
 PRODUCT_PACKAGES += \
-    AudioFX \
-    Backgrounds \
     LineageParts \
     LineageSettingsProvider \
     LineageSetupWizard \
-    Jelly \
-    LockClock \
-    Profiles \
-    Updater \
-    WeatherProvider
+    Updater
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
@@ -153,18 +134,6 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-# Custom off-mode charger
-ifeq ($(WITH_LINEAGE_CHARGER),true)
-PRODUCT_PACKAGES += \
-    lineage_charger_res_images \
-    font_log.png \
-    libhealthd.lineage
-endif
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
@@ -192,10 +161,6 @@ PRODUCT_PACKAGES += \
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
-
-# Media
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    media.recorder.show_manufacturer_and_model=true
 
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \

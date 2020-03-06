@@ -134,3 +134,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SystemAmoledBlack \
     SystemCharcoalBlack
+
+# Navbar Themes
+PRODUCT_PACKAGES += \
+    StockAsusOverlay \
+    NavbarAsusOverlay \
+    NavbarOnePlusOverlay \
+    NavbarOneUiOverlay \
+    NavbarTecnoCamonOverlay

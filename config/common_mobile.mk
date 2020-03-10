@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     Profiles \
+    Seedvault \
     WeatherProvider
 
 # Charger

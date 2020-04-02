@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     OmniJaws \
     OmniStyle \
-    Longshot
+    StitchImage
 
 # Fonts
 PRODUCT_PACKAGES += \

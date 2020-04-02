@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle \
     MatLog \
-    QuickAccessWallet
+    QuickAccessWallet \
+    StitchImage
 
 # Fonts
 PRODUCT_PACKAGES += \

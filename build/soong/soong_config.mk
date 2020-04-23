@@ -1,5 +1,3 @@
-include vendor/lineage/config/BoardConfigQcomDefs.mk
-
 add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 add_json_val_default = $(call add_json_val, $(1), $(if $(strip $(2)), $(2), $(3)))
 

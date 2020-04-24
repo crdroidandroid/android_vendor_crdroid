@@ -235,6 +235,10 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 
+ifeq ($(TARGET_HAS_FOD),true)
+DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/fod
+endif
+
 # Product version should match Android version
 PRODUCT_VERSION_MAJOR = 10
 PRODUCT_VERSION_MINOR = 0

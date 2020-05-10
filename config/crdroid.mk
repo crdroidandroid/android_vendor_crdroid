@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     crDroidMusic \
     crDroidThemesStub \
     ThemePicker \
+    OmniJaws \
     OmniStyle \
     Longshot
 

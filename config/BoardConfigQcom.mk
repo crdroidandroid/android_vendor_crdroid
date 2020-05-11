@@ -112,5 +112,6 @@ ifneq ($(TARGET_USE_AOSP_SURFACEFLINGER), true)
     endif
 endif
 
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
+# Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES
+QCOM_SOONG_NAMESPACE ?= hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
+PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)

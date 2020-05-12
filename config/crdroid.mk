@@ -34,6 +34,12 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Longshot
 
+# Fonts
+PRODUCT_PACKAGES += \
+    fonts_customization.xml \
+    LatoFont \
+    RubikFont
+
 # Accents
 PRODUCT_PACKAGES += \
     Amber \

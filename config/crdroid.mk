@@ -37,8 +37,33 @@ PRODUCT_PACKAGES += \
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
+    AclonicaFont \
+    Amarante \
+    BariolFont \
+    CagliostroFont \
+    CoconFont \
+    ComfortaaFont \
+    ComicSansFont \
+    CoolstoryFont \
+    ExotwoFont \
+    Fifa2018Font \
+    GoogleSansFont \
+    GrandHotelFont \
     LatoFont \
-    RubikFont
+    LGSmartGothicFont \
+    NokiaPureFont \
+    NunitoFont \
+    OneplusSlateFont \
+    QuandoFont \
+    RedressedFont \
+    ReemKufiFont \
+    RosemaryFont \
+    RubikFont \
+    SamsungOneFont \
+    SonySketchFont \
+    StoropiaFont \
+    SurferFont \
+    UbuntuFont
 
 # Accents
 PRODUCT_PACKAGES += \

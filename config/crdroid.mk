@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     crDroidMusic \
     crDroidThemesStub \
+    Etar \
     ThemePicker \
     OmniJaws \
     OmniStyle \

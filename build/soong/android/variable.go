@@ -14,6 +14,10 @@ type Product_variables struct {
 		Overrides []string
 		Shared_libs []string
 	}
+	Qcom_um_soong_namespace struct {
+		Cflags []string
+		Header_libs []string
+	}
 	Recovery_skip_ev_rel_input struct {
 		Cflags []string
 	}
@@ -99,6 +103,7 @@ type ProductVariables struct {
 	Should_wait_for_qsee  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Supports_extended_compress_format  *bool `json:",omitempty"`
+	Qcom_um_soong_namespace  *string `json:",omitempty"`
 	Recovery_skip_ev_rel_input  *bool `json:",omitempty"`
 	Supports_hw_fde  *bool `json:",omitempty"`
 	Supports_hw_fde_perf  *bool `json:",omitempty"`

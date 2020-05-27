@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
 # Fonts
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
+    AccuratistFont \
     AclonicaFont \
     Amarante \
     BariolFont \

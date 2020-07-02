@@ -125,3 +125,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SystemAmoledBlack \
     SystemCharcoalBlack
+
+# Switch Themes
+PRODUCT_PACKAGES += \
+    ContainedSwitch \
+    MD2Switch \
+    NarrowSwitch \
+    OnePlusSwitch \
+    RetroSwitch \
+    StockSwitch \
+    TelegramSwitch

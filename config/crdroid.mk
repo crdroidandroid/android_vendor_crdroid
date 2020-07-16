@@ -140,5 +140,6 @@ PRODUCT_PACKAGES += \
 # Notch city
 PRODUCT_PACKAGES += \
     HideCutout \
+    ImmersiveMode \
     StatusBarStock \
     StatusBarStockSysUI

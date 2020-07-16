@@ -136,3 +136,9 @@ PRODUCT_PACKAGES += \
     RetroSwitch \
     StockSwitch \
     TelegramSwitch
+
+# Notch city
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock \
+    StatusBarStockSysUI

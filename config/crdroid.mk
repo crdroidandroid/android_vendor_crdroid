@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
     GrandHotelFont \
     LatoFont \
     LGSmartGothicFont \
+    LinotteFont \
     NokiaPureFont \
     NunitoFont \
     OneplusSlateFont \

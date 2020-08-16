@@ -17,6 +17,7 @@ type Product_variables struct {
 	Qcom_um_soong_namespace struct {
 		Cflags []string
 		Header_libs []string
+		Shared_libs []string
 	}
 	Recovery_skip_ev_rel_input struct {
 		Cflags []string
@@ -68,7 +69,6 @@ type Product_variables struct {
 	}
 	Uses_qcom_um_family struct {
 		Cflags []string
-		Shared_libs []string
 	}
 	Uses_qcom_um_3_18_family struct {
 		Include_dirs []string

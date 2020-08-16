@@ -15,7 +15,7 @@ UM_4_9_FAMILY := sdm845 sdm710
 UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET) $(ATOLL)
 UM_4_19_FAMILY := $(KONA) $(LITO)
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY)
- 
+
 BOARD_USES_ADRENO := true
 
 # UM platforms no longer need this set on O+
@@ -64,9 +64,7 @@ endif
 # List of targets that use master side content protection
 MASTER_SIDE_CP_TARGET_LIST := msm8996 $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY)
 
-ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
-    QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
-else ifneq ($(filter $(B_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+ifneq ($(filter $(B_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     MSM_VIDC_TARGET_LIST := $(B_FAMILY)
     QCOM_HARDWARE_VARIANT := msm8974
 else ifneq ($(filter $(B64_FAMILY),$(TARGET_BOARD_PLATFORM)),)
@@ -93,23 +91,6 @@ else ifneq ($(filter $(UM_4_19_FAMILY),$(TARGET_BOARD_PLATFORM)),)
 else
     MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
-endif
-
-ifneq ($(TARGET_USE_AOSP_SURFACEFLINGER), true)
-    # Required for frameworks/native
-    ifeq ($(QCOM_HARDWARE_VARIANT),msm8996)
-        TARGET_USES_QCOM_UM_FAMILY := true
-        TARGET_USES_QCOM_UM_3_18_FAMILY := true
-    else ifeq ($(QCOM_HARDWARE_VARIANT),msm8998)
-        TARGET_USES_QCOM_UM_FAMILY := true
-        TARGET_USES_QCOM_UM_4_4_FAMILY := true
-    else ifeq ($(QCOM_HARDWARE_VARIANT),sdm845)
-        TARGET_USES_QCOM_UM_FAMILY := true
-        TARGET_USES_QCOM_UM_4_9_FAMILY := true
-    else ifeq ($(QCOM_HARDWARE_VARIANT),sm8150)
-        TARGET_USES_QCOM_UM_FAMILY := true
-        TARGET_USES_QCOM_UM_4_14_FAMILY := true
-    endif
 endif
 
 # Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES

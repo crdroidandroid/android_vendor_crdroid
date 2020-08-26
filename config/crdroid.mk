@@ -145,3 +145,11 @@ PRODUCT_PACKAGES += \
     ImmersiveMode \
     StatusBarStock \
     StatusBarStockSysUI
+
+# Navbar Themes
+PRODUCT_PACKAGES += \
+    StockAsusOverlay \
+    NavbarAsusOverlay \
+    NavbarOnePlusOverlay \
+    NavbarOneUiOverlay \
+    NavbarTecnoCamonOverlay

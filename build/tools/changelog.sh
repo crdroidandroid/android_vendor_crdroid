@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2018 crDroid Android Project
+# Copyright (C) 2017-2020 crDroid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,9 @@
 # limitations under the License.
 #
 
-export Changelog=Changelog.txt
+Changelog=Changelog.txt
+
+DEVICE=$(echo $TARGET_PRODUCT | cut -d "_" -f2)
 
 if [ -f $Changelog ];
 then
@@ -37,15 +39,14 @@ fi
 
 for i in $(seq $changelog_days);
 do
-export After_Date=`date --date="$i days ago" +%m-%d-%Y`
+After_Date=`date --date="$i days ago" +%m-%d-%Y`
 k=$(expr $i - 1)
-	export Until_Date=`date --date="$k days ago" +%m-%d-%Y`
+	Until_Date=`date --date="$k days ago" +%m-%d-%Y`
 
 	# Line with after --- until was too long for a small ListView
 	echo '====================' >> $Changelog;
 	echo  "     "$Until_Date    >> $Changelog;
 	echo '====================' >> $Changelog;
-	echo "" >> $Changelog;
 	# Cycle through every repo to find commits between 2 dates
 	CURRENT_PATH="$(realpath `pwd`)"
 
@@ -55,6 +56,5 @@ done
 
 sed -i 's/project/   */g' $Changelog
 
-cp $Changelog $OUT/system/etc/
-cp $Changelog $OUT/
-rm $Changelog
+cp $Changelog ./out/target/product/$DEVICE/system/etc/
+mv $Changelog ./out/target/product/$DEVICE/

@@ -384,8 +384,8 @@ if __name__ == '__main__':
             print('WARNING: Skipping {0} since there is no project directory for: {1}\n'.format(item['id'], item['project']))
             continue
         else:
-            sys.stderr.write('ERROR: For {0}, could not determine the project path for project {1}\n'.format(item['id'], item['project']))
-            sys.exit(1)
+            sys.stderr.write('WARNING: For {0}, could not determine the project path for project {1}\n'.format(item['id'], item['project']))
+            continue
 
         # If --start-branch is given, create the branch (more than once per path is okay; repo ignores gracefully)
         if args.start_branch:

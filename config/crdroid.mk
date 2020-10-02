@@ -135,6 +135,11 @@ PRODUCT_PACKAGES += \
     SystemAmoledBlack \
     SystemCharcoalBlack
 
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
 # Navbar Themes
 PRODUCT_PACKAGES += \
     StockAsusOverlay \

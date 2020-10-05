@@ -39,4 +39,7 @@
 
     <!-- Whether to show the "glanceable hub" settings on mobile. -->
     <bool name="config_show_glanceable_hub_toggle_setting_mobile">true</bool>
+
+    <!-- Whether memory from app_info_settings is available or not. -->
+    <bool name="config_show_app_info_settings_memory">true</bool>
 </resources>

@@ -25,6 +25,42 @@
         <item>org.microg.nlp</item>
     </string-array>
 
+    <!-- Extra location package names -->
+    <string-array name="config_locationExtraPackageNames" translatable="false">
+        <!-- Google Play Services location history module -->
+        <item>com.google.android.gms.location.history</item>
+    </string-array>
+
+    <!-- A list of potential packages, in priority order, that may contain an
+         ephemeral resolver. Each package will be be queried for a component
+         that has been granted the PACKAGE_EPHEMERAL_AGENT permission.
+         This may be empty if ephemeral apps are not supported. -->
+    <string-array name="config_ephemeralResolverPackage" translatable="false">
+        <!-- Google Play Services or microG -->
+        <item>com.google.android.gms</item>
+    </string-array>
+
+    <!-- The set of system packages on device that are queryable by any app regardless of the
+         contents of its manifest. -->
+    <string-array name="config_forceQueryablePackages" translatable="false">
+        <!-- Android Settings -->
+        <item>com.android.settings</item>
+        <item>com.android.providers.settings</item>
+        <!-- Google Play Services or microG -->
+        <item>com.google.android.gms</item>
+        <!-- Google Play Store -->
+        <item>com.android.vending</item>
+    </string-array>
+
+    <!-- A list of potential packages, in priority order, that can supply rules to
+         AppIntegrityManager. These need to be apps on the system partition. -->
+    <string-array name="config_integrityRuleProviderPackages" translatable="false">
+        <!-- Google Play Services or microG -->
+        <item>com.google.android.gms</item>
+        <!-- Google Play Store -->
+        <item>com.android.vending</item>
+    </string-array>
+
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Disable stock OTA components if installed -->
@@ -65,6 +101,11 @@
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
+    <!-- The component name for the default profile supervisor, which can be set as a profile owner
+    even after user setup is complete. The defined component should be used for supervision purposes
+    only. The component must be part of a system app. -->
+    <string name="config_defaultSupervisionProfileOwnerComponent" translatable="false">com.google.android.gms/.kids.account.receiver.ProfileOwnerReceiver</string>
+
    <!-- Set icon mask to circle -->
    <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
 
@@ -91,20 +132,52 @@
          rendered inoperative for safety reasons, like the phone dialer and
          SMS handler. -->
     <string-array translatable="false" name="config_nonBlockableNotificationPackages">
+        <!-- AOSP apps -->
         <item>com.android.dialer</item>
         <item>com.android.messaging</item>
-        <item>com.google.android.dialer</item>
-        <item>com.google.android.dialer:phone_incoming_call</item>
+        <!-- Google apps -->
         <item>com.google.android.deskclock:Firing</item>
         <item>com.google.android.setupwizard</item>
         <item>com.google.android.apps.pixelmigrate</item>
+        <item>com.google.android.dialer</item>
+    </string-array>
+
+    <!-- Names of packages that should not be suspended when personal use is blocked by policy. -->
+    <string-array name="config_packagesExemptFromSuspension" translatable="false">
+        <!-- AOSP apps -->
+        <item>com.android.vending</item>
+        <item>com.android.systemui</item>
+        <item>com.android.settings</item>
+        <item>com.google.android.gms</item>
+        <!-- Google apps -->
+        <item>com.google.android.apps.wellbeing</item>
+        <item>com.google.android.apps.pixelmigrate</item>
+        <item>com.google.android.apps.restore</item>
+    </string-array>
+
+    <!-- An array of packages that can make sound on the ringer stream in priority-only DND
+     mode -->
+    <string-array translatable="false" name="config_priorityOnlyDndExemptPackages">
+        <!-- AOSP apps -->
+        <item>com.android.dialer</item>
+        <item>com.android.systemui</item>
+        <item>android</item>
+        <!-- Google apps -->
+        <item>com.google.android.dialer</item>
     </string-array>
 
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
     <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.google.android.as</string>
 
+    <!-- Apps that are authorized to access shared accounts, overridden by product overlays -->
+    <string name="config_appsAuthorizedForSharedAccounts" translatable="false">;com.android.vending;com.android.settings;</string>
+
     <!-- Package name that should be granted Notification Assistant access -->
     <string name="config_defaultAssistantAccessPackage" translatable="false">com.google.android.ext.services</string>
+
+    <!-- Component name that accepts ACTION_SEND intents for nearby (proximity-based) sharing.
+         Used by ChooserActivity. -->
+    <string name="config_defaultNearbySharingComponent" translatable="false">com.google.android.gms/.nearby.sharing.ShareSheetActivity</string>
 
     <!-- The package name for the default system textclassifier service.
          This service must be trusted, as it can be activated without explicit consent of the user.

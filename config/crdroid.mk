@@ -119,3 +119,8 @@ PRODUCT_PACKAGES += \
     TwitterBlue \
     XboxGreen \
     XiaomiOrange
+
+# Dark Styles
+PRODUCT_PACKAGES += \
+    SystemAmoledBlack \
+    SystemCharcoalBlack

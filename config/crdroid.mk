@@ -29,7 +29,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     crDroidMusic \
     crDroidThemesStub \
-    ThemePicker
+    ThemePicker \
+    OmniStyle
 
 # Fonts
 PRODUCT_PACKAGES += \

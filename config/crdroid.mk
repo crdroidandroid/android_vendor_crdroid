@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     crDroidMusic \
     crDroidThemesStub \
     ThemePicker \
-    OmniStyle
+    OmniStyle \
+    MatLog
 
 # Fonts
 PRODUCT_PACKAGES += \

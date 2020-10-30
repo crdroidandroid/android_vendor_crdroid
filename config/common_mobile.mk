@@ -31,8 +31,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LockClock \
     Profiles \
-    TrebuchetQuickStep \
-    WeatherProvider
+    TrebuchetQuickStep
 
 # Charger
 PRODUCT_PACKAGES += \

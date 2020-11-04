@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard \
     Updater
 
+# Config
+PRODUCT_PACKAGES += \
+    SimpleDeviceConfig
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \

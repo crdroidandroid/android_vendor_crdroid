@@ -29,6 +29,12 @@
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
 
+    <!-- SystemUI Plugins that can be loaded on user builds. -->
+    <string-array name="config_pluginWhitelist" translatable="false">
+        <item>com.android.systemui</item>
+        <item>com.android.systemui.plugin.globalactions.wallet</item>
+    </string-array>
+
     <!-- Tiles to auto add to Quick Settings upon first change of a given secure setting.
          The syntax is setting-name:spec. If the tile is a TileService, the spec should be specified
          as custom(package/class). Relative class name is supported. -->

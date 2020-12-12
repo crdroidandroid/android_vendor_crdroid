@@ -23,5 +23,8 @@
         <!-- Enable privacy indicators -->
         <item>privacy/permissions_hub_2_enabled=true</item>
         <item>privacy/permissions_hub_enabled=true</item>
+
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
     </string-array>
 </resources>

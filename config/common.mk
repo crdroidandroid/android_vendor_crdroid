@@ -120,6 +120,7 @@ PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
     LineageSetupWizard \
+    SoftAPManager \
     Updater
 
 # Config

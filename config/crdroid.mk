@@ -177,3 +177,6 @@ PRODUCT_PACKAGES += \
     QStileTeardrop \
     QStileTriangle \
     QStileWavey
+
+# Customizable volume panels
+-include packages/apps/Plugins/plugins.mk

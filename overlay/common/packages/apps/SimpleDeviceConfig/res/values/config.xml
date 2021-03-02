@@ -29,5 +29,9 @@
 
         <!-- Allow more cached apps in the background -->
         <item>activity_manager/max_cached_processes=64</item>
+
+        <!-- Cached app freezer on supported devices -->
+        <item>activity_manager_native_boot/use_freezer=true</item>
+
     </string-array>
 </resources>

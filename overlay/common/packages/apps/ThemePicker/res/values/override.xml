@@ -34,5 +34,10 @@
         <item>com.android.contacts</item>
         <item>com.android.dialer</item>
         <item>com.android.email</item>
+        <item>com.android.chrome</item>
+        <item>com.google.android.deskclock</item>
+        <item>com.google.android.apps.nexuslauncher</item>
+        <item>com.android.documentsui</item>
+        <item>com.crdroid.customization</item>
     </array>
 </resources>

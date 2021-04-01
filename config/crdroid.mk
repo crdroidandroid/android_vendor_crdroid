@@ -29,6 +29,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+# Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
+# on supported devices with Deep Press input classifier HALs and models
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.input.video_enabled=false
+
 # Blurs
 ifeq ($(TARGET_ENABLE_BLUR), true)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \

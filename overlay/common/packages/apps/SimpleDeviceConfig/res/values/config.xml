@@ -46,5 +46,10 @@
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
         <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
+
+        <!-- Machine learning back gesture (requires TensorFlow model) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+        <item>systemui/back_gesture_ml_model_name=backgesture</item>
+        <item>systemui/back_gesture_ml_model_threshold=0.9</item>
     </string-array>
 </resources>

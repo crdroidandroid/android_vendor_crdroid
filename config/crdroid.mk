@@ -150,6 +150,13 @@ PRODUCT_PACKAGES += \
     NavbarOneUiOverlay \
     NavbarTecnoCamonOverlay
 
+# Notch city
+PRODUCT_PACKAGES += \
+    HideCutout \
+    ImmersiveMode \
+    StatusBarStock \
+    StatusBarStockSysUI
+
 # QS tile styles
 PRODUCT_PACKAGES += \
     QStileDefault \

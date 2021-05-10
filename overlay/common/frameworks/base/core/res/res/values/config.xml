@@ -295,4 +295,7 @@
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
+
+    <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
+    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 </resources>

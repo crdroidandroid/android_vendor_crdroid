@@ -323,4 +323,7 @@
     <!-- The app which will handle routine based automatic battery saver, if empty the UI for
          routine based battery saver will be hidden -->
     <string name="config_batterySaverScheduleProvider">com.google.android.apps.turbo</string>
+
+    <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
+    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 </resources>

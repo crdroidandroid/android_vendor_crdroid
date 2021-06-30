@@ -179,15 +179,6 @@
          Used by ChooserActivity. -->
     <string name="config_defaultNearbySharingComponent" translatable="false">com.google.android.gms/.nearby.sharing.ShareSheetActivity</string>
 
-    <!-- The package name for the default system textclassifier service.
-         This service must be trusted, as it can be activated without explicit consent of the user.
-         Example: "com.android.textclassifier"
-         If no textclassifier service with the specified name exists on the device (or if this is
-         set to empty string), a default textclassifier will be loaded in the calling app's process.
-         See android.view.textclassifier.TextClassificationManager.
-    -->
-    <string name="config_defaultTextClassifierPackage" translatable="false">com.google.android.as</string>
-
     <!-- The list of IMEs which should be disabled until used.
          This function suppresses update notifications for these pre-installed apps.
          We need to set this configuration carefully that they should not have functionarities
@@ -289,13 +280,6 @@
          screenshot chord -->
     <integer name="config_screenshotChordKeyTimeout">250</integer>
 
-    <!-- Live Captions provided by Google's Device Personalization Service package  -->
-    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
-    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
-
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
-
-    <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
-    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
 </resources>

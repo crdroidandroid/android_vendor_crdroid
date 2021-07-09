@@ -203,9 +203,12 @@ PATH_OVERRIDE := PATH=$(KERNEL_BUILD_OUT_PREFIX)$(HOST_OUT_EXECUTABLES):$$PATH
 ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
     ifneq ($(TARGET_KERNEL_CLANG_VERSION),)
         KERNEL_CLANG_VERSION := clang-$(TARGET_KERNEL_CLANG_VERSION)
-    else
-        # Use the default version of clang if TARGET_KERNEL_CLANG_VERSION hasn't been set by the device config
+    else ifeq ($(TARGET_KERNEL_USE_DEFAULT_CLANG),true)
+        # Use the default version of clang
         KERNEL_CLANG_VERSION := $(LLVM_PREBUILTS_VERSION)
+    else
+        # Use clang 12.0.7
+        KERNEL_CLANG_VERSION := clang-r416183d
     endif
     TARGET_KERNEL_CLANG_PATH ?= $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(KERNEL_CLANG_VERSION)
     ifeq ($(KERNEL_ARCH),arm64)

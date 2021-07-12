@@ -380,7 +380,7 @@ if __name__ == '__main__':
         elif item['project'] in project_name_to_data and len(project_name_to_data[item['project']]) == 1:
             local_branch = list(project_name_to_data[item['project']])[0]
             project_path = project_name_to_data[item['project']][local_branch]
-            print('WARNING: Project {0} has a different branch ("{1}" != "{2}")'.format(project_path, local_branch, item['branch']))
+            args.quiet or print('WARNING: Project {0} has a different branch ("{1}" != "{2}")'.format(project_path, local_branch, item['branch']))
         elif args.ignore_missing:
             print('WARNING: Skipping {0} since there is no project directory for: {1}\n'.format(item['id'], item['project']))
             continue
@@ -415,7 +415,7 @@ if __name__ == '__main__':
                         head_change_id = output[len(output) - j]
                         break
                 if head_change_id.strip() == item['change_id']:
-                    print('Skipping {0} - already picked in {1} as HEAD~{2}'.format(item['id'], project_path, i))
+                    args.quiet or print('Skipping {0} - already picked in {1} as HEAD~{2}'.format(item['id'], project_path, i))
                     found_change = True
                     break
         if found_change:

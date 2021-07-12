@@ -270,6 +270,7 @@ if __name__ == '__main__':
             if revision is None:
                 revision = project.get('revision', default_revision)
 
+        name = name.replace("crdroidandroid", "LineageOS")
         if name not in project_name_to_data:
             project_name_to_data[name] = {}
         revision = revision.split('refs/heads/')[-1]

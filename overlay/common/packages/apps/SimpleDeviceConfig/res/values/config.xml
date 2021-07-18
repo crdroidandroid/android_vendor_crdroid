@@ -30,6 +30,9 @@
         <!-- Allow more cached apps in the background -->
         <item>activity_manager/max_cached_processes=64</item>
 
+        <!-- Cached app freezer on supported devices -->
+        <item>activity_manager_native_boot/use_freezer=true</item>
+
         <!-- Recents text selection (for Pixel Launcher users) -->
         <item>device_personalization_services/Overview__enable_image_selection=true</item>
         <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>

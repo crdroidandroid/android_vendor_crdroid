@@ -202,6 +202,15 @@ PRODUCT_PACKAGES += \
     StockSwitch \
     TelegramSwitch
 
+# Rounded Styles
+PRODUCT_PACKAGES += \
+    StockRounded \
+    NoneRounded \
+    SlightRounded \
+    MediumRounded \
+    HighRounded \
+    ExtremeRounded
+
 # Volume Panel styles
 PRODUCT_PACKAGES += \
 	AospPanel \

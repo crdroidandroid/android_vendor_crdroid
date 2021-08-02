@@ -191,8 +191,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
 
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
-
 PRODUCT_VERSION_MAJOR = 11
 PRODUCT_VERSION_MINOR = 0
 

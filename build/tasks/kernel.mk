@@ -207,8 +207,8 @@ ifeq ($(TARGET_KERNEL_CLANG_COMPILE),true)
         # Use the default version of clang
         KERNEL_CLANG_VERSION := $(LLVM_PREBUILTS_VERSION)
     else
-        # Use clang 12.0.7
-        KERNEL_CLANG_VERSION := clang-r416183d
+        # Use clang 13.0.1
+        KERNEL_CLANG_VERSION := clang-r428724
     endif
     TARGET_KERNEL_CLANG_PATH ?= $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(KERNEL_CLANG_VERSION)
     ifeq ($(KERNEL_ARCH),arm64)

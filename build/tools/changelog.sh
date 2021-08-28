@@ -17,11 +17,7 @@
 
 Changelog=Changelog.txt
 
-if [ -z $1 ]; then
-	DEVICE=$(echo $TARGET_PRODUCT | sed -e 's/lineage_//g')
-else
-	DEVICE=$1
-fi
+DEVICE=$1
 
 if [ -f $Changelog ];
 then

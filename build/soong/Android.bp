@@ -69,6 +69,23 @@ camera_needs_client_info {
 }
 
 soong_config_module_type {
+    name: "display_use_smooth_motion",
+    module_type: "cc_defaults",
+    config_namespace: "lineageGlobalVars",
+    bool_variables: ["display_use_smooth_motion"],
+    properties: ["cppflags"],
+}
+
+display_use_smooth_motion {
+    name: "display_use_smooth_motion_defaults",
+    soong_config_variables: {
+        display_use_smooth_motion: {
+            cppflags: ["-DDISPLAY_USE_SMOOTH_MOTION"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "disable_postrender_cleanup",
     module_type: "cc_defaults",
     config_namespace: "lineageGlobalVars",

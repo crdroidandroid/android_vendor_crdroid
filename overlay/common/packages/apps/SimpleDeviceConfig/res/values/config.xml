@@ -23,6 +23,9 @@
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
 
+        <!-- Don't pin camera app to save memory -->
+        <item>runtime_native_boot/pin_camera=false</item>
+
         <!-- Use new privacy indicators for location -->
         <item>privacy/location_indicators_enabled=true</item>
     </string-array>

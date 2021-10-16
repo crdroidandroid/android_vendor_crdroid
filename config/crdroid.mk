@@ -25,11 +25,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
 
-# Blur
+# Blurs
 ifneq ($(TARGET_DISABLE_BLUR), true)
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1
+    ro.surface_flinger.supports_background_blur=1 \
+    ro.launcher.blur.appLaunch=0
 endif
 
 # Extra packages

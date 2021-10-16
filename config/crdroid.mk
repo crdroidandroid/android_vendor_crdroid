@@ -33,6 +33,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0
 endif
 
+# Enable dex2oat64 to do dexopt
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    dalvik.vm.dex2oat64.enabled=true
+
 # Extra packages
 PRODUCT_PACKAGES += \
     MatLog

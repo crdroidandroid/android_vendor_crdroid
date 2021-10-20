@@ -413,4 +413,8 @@
              2 - MODE_NIGHT_YES
     -->
     <integer name="config_defaultNightMode">2</integer>
+
+    <!-- List of comma separated package names for which we the system will not show crash, ANR,
+         etc. dialogs. -->
+    <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice</string>
 </resources>

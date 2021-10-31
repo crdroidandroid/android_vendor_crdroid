@@ -21,6 +21,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
     persist.sys.disable_rescue=true
 
+# Enable IORap I/O Prefetching
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
+
 # Blur
 ifneq ($(TARGET_DISABLE_BLUR), true)
 PRODUCT_PRODUCT_PROPERTIES += \

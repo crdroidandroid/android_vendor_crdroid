@@ -959,3 +959,7 @@ function fixup_common_out_dir() {
         mkdir -p ${common_out_dir}
     fi
 }
+
+# Override host metadata to make builds more reproducible and avoid leaking info
+export BUILD_USERNAME=nobody
+export BUILD_HOSTNAME=android-build

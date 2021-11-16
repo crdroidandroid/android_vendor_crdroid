@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     HideCutout \
     ImmersiveMode \
+    NotchKiller \
     StatusBarStock \
     StatusBarStockSysUI
 

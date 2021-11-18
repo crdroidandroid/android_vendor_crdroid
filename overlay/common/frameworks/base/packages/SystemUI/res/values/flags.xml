@@ -15,6 +15,10 @@
     limitations under the License.
 -->
 <resources>
+
+    <!-- Allow users to override these flags via device config -->
+    <bool name="are_flags_overrideable">true</bool>
+
     <bool name="flag_conversations">true</bool>
     <bool name="flag_charging_ripple">true</bool>
     <bool name="flag_monet">true</bool>

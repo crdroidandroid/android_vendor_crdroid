@@ -9,7 +9,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.setupwizard.rotation_locked=true \
     ro.com.google.ime.theme_id=5 \
-    ro.storage_manager.enabled=1 \
     ro.opa.eligible_device=true \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.setupwizard.network_required=false \

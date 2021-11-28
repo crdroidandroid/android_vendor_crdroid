@@ -20,6 +20,9 @@
             System
         -->
 
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+
         <!-- Use new privacy indicators for location -->
         <item>privacy/location_indicators_enabled=true</item>
     </string-array>

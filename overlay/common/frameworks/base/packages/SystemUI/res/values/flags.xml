@@ -18,4 +18,5 @@
     <bool name="flag_conversations">true</bool>
     <bool name="flag_charging_ripple">true</bool>
     <bool name="flag_monet">true</bool>
+    <bool name="flag_smartspace">true</bool>
 </resources>

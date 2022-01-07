@@ -26,4 +26,7 @@
     <string-array name="config_pluginWhitelist" translatable="false">
         <item>com.android.systemui.plugin.globalactions.wallet</item>
     </string-array>
+
+    <!-- SystemUIFactory component -->
+    <string name="config_systemUIFactoryComponent" translatable="false">org.pixelexperience.systemui.SystemUIGoogleFactory</string>
 </resources>

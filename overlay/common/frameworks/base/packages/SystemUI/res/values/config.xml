@@ -34,4 +34,7 @@
     <!-- Icons that don't show in a collapsed statusbar on keyguard -->
     <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
     </string-array>
+
+    <!-- SystemUIFactory component -->
+    <string name="config_systemUIFactoryComponent" translatable="false">org.pixelexperience.systemui.SystemUIGoogleFactory</string>
 </resources>

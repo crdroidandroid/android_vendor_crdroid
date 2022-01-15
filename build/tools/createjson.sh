@@ -75,6 +75,18 @@ if [ -f $existingOTAjson ]; then
 	if [ ! -z "$telegram" ]; then
 		telegram="https:"$telegram
 	fi
+	dt=`grep -n "\"dt\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
+	if [ ! -z "$dt" ]; then
+		dt="https:"$dt
+	fi
+	common-dt=`grep -n "\"common-dt\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
+	if [ ! -z "$common-dt" ]; then
+		common-dt="https:"$common-dt
+	fi
+	kernel=`grep -n "\"kernel\"" $existingOTAjson | cut -d ":" -f 4 | sed 's/"//g' | sed 's/,//g' | xargs`
+	if [ ! -z "$kernel" ]; then
+		kernel="https:"$kernel
+	fi
 
 	echo '{
 	"response": [
@@ -97,7 +109,10 @@ if [ -f $existingOTAjson ]; then
 			"bootloader": "'$bootloader'",
 			"recovery": "'$recovery'",
 			"paypal": "'$paypal'",
-			"telegram": "'$telegram'"
+			"telegram": "'$telegram'",
+			"dt": "'$dt'",
+			"common-dt": "'$common-dt'",
+        		"kernel": "'$kernel'"
 		}
 	]
 }' >> $output

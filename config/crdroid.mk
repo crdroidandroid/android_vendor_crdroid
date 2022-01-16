@@ -84,3 +84,9 @@ PRODUCT_PACKAGES += \
     StoropiaFont \
     SurferFont \
     UbuntuFont
+
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationOverlayHidden

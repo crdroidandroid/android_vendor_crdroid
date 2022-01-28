@@ -123,7 +123,7 @@ PRODUCT_COPY_FILES += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    LineageThemesStub \
+    crDroidThemesStub \
     ThemePicker
 
 # Config

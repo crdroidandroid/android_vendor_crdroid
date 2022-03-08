@@ -29,4 +29,7 @@
 
     <!-- SystemUIFactory component -->
     <string name="config_systemUIFactoryComponent" translatable="false">org.pixelexperience.systemui.SystemUIGoogleFactory</string>
+
+   <!-- SystemUI vendor service, used in config_systemUIServiceComponents. -->
+   <string name="config_systemUIVendorServiceComponent" translatable="false">org.pixelexperience.systemui.GoogleServices</string>
 </resources>

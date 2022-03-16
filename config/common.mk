@@ -194,9 +194,6 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/lineage/overlay/common \
     vendor/lineage/overlay/no-rro
 
-PRODUCT_PACKAGES += \
-    TrebuchetOverlay
-
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     vendor/lineage/build/target/product/security/lineage
 

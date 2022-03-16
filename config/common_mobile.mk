@@ -19,23 +19,6 @@ PRODUCT_PACKAGES += \
     Glimpse \
     LatinIME
 
-ifeq ($(PRODUCT_TYPE), go)
-PRODUCT_PACKAGES += \
-    TrebuchetQuickStepGo
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    TrebuchetQuickStepGo
-else
-PRODUCT_PACKAGES += \
-    TrebuchetQuickStep
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    TrebuchetQuickStep
-endif
-
-PRODUCT_PACKAGES += \
-    TrebuchetOverlay
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images

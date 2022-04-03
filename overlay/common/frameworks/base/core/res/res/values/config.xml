@@ -405,4 +405,32 @@
     <string name="db_default_journal_mode">MEMORY</string>
     <string name="db_default_sync_mode">OFF</string>
     <string name="db_wal_sync_mode">OFF</string>
+
+    <!-- List containing the allowed install sources for accessibility service. -->
+    <string-array name="config_accessibility_allowed_install_source" translatable="false">
+        <item>com.android.vending</item>
+    </string-array >
+
+    <!-- A list of packages managing companion device(s) by the same manufacturers as the main
+         device. It will fall back to showing a prompt if the association has been called multiple
+         times in a short period.
+         Note that config_companionDeviceManagerPackage and config_companionDeviceCerts are
+         parallel arrays.
+     -->
+    <string-array name="config_companionDevicePackages" translatable="false">
+        <item>com.google.android.apps.wear.companion</item>
+        <item>com.google.android.apps.wear.companion</item>
+    </string-array>
+
+    <!-- A list of SHA256 Certificates managing companion device(s) by the same manufacturers as
+         the main device. It will fall back to showing a prompt if the association has been called
+         multiple times in a short period.
+         Note that config_companionDeviceCerts and config_companionDeviceManagerPackage are parallel
+         arrays.
+         Example: "1A:2B:3C:4D"
+     -->
+    <string-array name="config_companionDeviceCerts" translatable="false">
+        <item>92:3F:B8:D6:48:71:01:14:8D:8D:C0:F7:90:11:5D:BA:34:CF:0E:A3:AA:5D:3B:B0:74:D2:D9:73:58:8C:39:3A</item>
+        <item>48:ED:00:58:D1:B6:63:8E:39:A6:E4:C2:DF:1C:4D:5F:DF:59:3F:69:6B:F3:1B:09:A8:8F:93:14:1E:AF:60:0F</item>
+    </string-array>
 </resources>

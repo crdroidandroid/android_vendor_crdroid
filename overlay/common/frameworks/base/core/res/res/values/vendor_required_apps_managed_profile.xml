@@ -25,5 +25,20 @@
         <item>com.google.android.gms</item> <!-- Required by Play -->
         <item>com.google.android.contacts</item> <!-- Google Contacts -->
         <item>com.android.contacts</item> <!-- AOSP Contacts -->
+        <item>com.google.android.apps.wellbeing</item>
+        <item>com.google.android.googlequicksearchbox</item>
+        <item>com.google.android.apps.assistant</item>
+        <item>com.google.android.apps.searchlite</item>
+        <item>com.google.android.documentsui</item>
+        <item>com.google.android.apps.nbu.files</item>
+        <item>com.google.android.projection.gearhead</item>
+        <item>com.google.android.apps.accessibility.voiceaccess</item>
+        <item>com.google.android.apps.internal.betterbug</item>
+        <item>com.google.android.apps.internal.nexusuploader</item>
+        <item>com.google.android.netgrapher</item>
+        <item>com.android.ramdump</item>
+        <item>com.google.android.volta</item>
+        <item>com.google.android.as</item>
+        <item>com.google.mds</item>
     </string-array>
 </resources>

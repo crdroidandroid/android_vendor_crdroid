@@ -94,6 +94,9 @@
      -->
     <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
 
+    <!-- The name of the package that will hold the wellbeing role. -->
+    <string name="config_systemWellbeing">com.google.android.apps.wellbeing</string>
+
     <!-- List of packages that can use the Conversation space for their category messages
     notifications until they target R -->
     <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">

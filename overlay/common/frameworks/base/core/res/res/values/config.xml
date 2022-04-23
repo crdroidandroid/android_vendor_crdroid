@@ -408,11 +408,6 @@
          etc. dialogs. -->
     <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice</string>
 
-    <!-- SQLite -->
-    <string name="db_default_journal_mode">MEMORY</string>
-    <string name="db_default_sync_mode">OFF</string>
-    <string name="db_wal_sync_mode">OFF</string>
-
     <!-- List containing the allowed install sources for accessibility service. -->
     <string-array name="config_accessibility_allowed_install_source" translatable="false">
         <item>com.android.vending</item>

@@ -44,10 +44,6 @@ PRODUCT_PACKAGES += \
     lineage_charger_animation
 endif
 
-# Customizations
-PRODUCT_PACKAGES += \
-    LineageNavigationBarNoHint
-
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true

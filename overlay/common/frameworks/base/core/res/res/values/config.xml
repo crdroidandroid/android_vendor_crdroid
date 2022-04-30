@@ -251,6 +251,7 @@
         <!-- AOSP apps -->
         <item>com.android.dialer</item>
         <item>com.android.systemui</item>
+        <item>com.android.server.telecom</item>
         <item>android</item>
         <!-- Google apps -->
         <item>com.google.android.dialer</item>
@@ -321,7 +322,7 @@
     <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
 
     <!-- Colon separated list of package names that should be granted DND access -->
-    <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence</string>
+    <string name="config_defaultDndAccessPackages" translatable="false">com.google.android.gms:com.google.android.GoogleCamera:com.google.intelligence.sense:com.google.android.settings.intelligence:com.google.android.dialer</string>
 
     <!-- Flag indicating whether we should enable smart battery. -->
     <bool name="config_smart_battery_available">true</bool>
@@ -452,4 +453,25 @@
         <item>92:3F:B8:D6:48:71:01:14:8D:8D:C0:F7:90:11:5D:BA:34:CF:0E:A3:AA:5D:3B:B0:74:D2:D9:73:58:8C:39:3A</item>
         <item>48:ED:00:58:D1:B6:63:8E:39:A6:E4:C2:DF:1C:4D:5F:DF:59:3F:69:6B:F3:1B:09:A8:8F:93:14:1E:AF:60:0F</item>
     </string-array>
+
+    <!-- The name of the package that will hold the speech recognizer role by default. -->
+    <string name="config_systemSpeechRecognizer" translatable="false">com.google.android.tts</string>
+	
+    <!-- The name of the package that will hold the system activity recognizer role. -->
+    <string name="config_systemActivityRecognizer" translatable="false">com.google.android.gms</string>
+
+    <!-- Whether the primary location time zone provider is enabled.
+         This setting is ignored if config_enableGeolocationTimeZoneDetection is false.
+         This is turned on in GMS sample config as Google hosts a location time zone provider in
+         GmsCore. -->
+    <bool name="config_enablePrimaryLocationTimeZoneProvider" translatable="false">true</bool>
+
+    <!-- The package hosting the primary location time zone provider.
+         Only used when config_enableGeolocationTimeZoneDetection and
+         config_enablePrimaryLocationTimeZoneProvider are true.
+         See android.service.timezone.TimeZoneProviderService for how to host location time zone
+         provider services.
+         This contains the GmsCore package name in GMS sample config as Google hosts a location
+         time zone provider in GmsCore. The provider implementation is hosted in GmsCore. -->
+    <string name="config_primaryLocationTimeZoneProviderPackageName" translatable="false">com.google.android.gms</string>
 </resources>

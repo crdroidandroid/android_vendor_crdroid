@@ -18,9 +18,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.dun.override=0 \
     persist.sys.disable_rescue=true
 
-# Enable IORap I/O Prefetching
+# Disable iorapd
 PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
+    ro.iorapd.enable=false
 
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models

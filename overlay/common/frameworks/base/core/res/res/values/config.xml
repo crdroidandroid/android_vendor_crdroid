@@ -42,17 +42,22 @@
         <item>org.microg.nlp</item>
     </string-array>
 
+    <!-- Extra location package names -->
     <string-array name="config_locationExtraPackageNames" translatable="false">
-        <!-- Bluetooth -->
-        <item>com.android.bluetooth</item>
-        <!-- TeleService -->
-        <item>com.android.phone</item>
-        <!-- CneApp -->
-        <item>com.qualcomm.qti.cne</item>
-        <!-- ImsService -->
-        <item>com.shannon.imsservice</item>
         <!-- Google Play Services location history module -->
         <item>com.google.android.gms.location.history</item>
+    </string-array>
+
+    <!-- These are system packages exempted from privacy indicator -->
+    <string-array name="config_indicatorExemptedPackageNames" translatable="false">
+        <item>com.android.bluetooth</item>
+        <item>com.android.phone</item>
+        <item>com.android.networkstack.tethering</item>
+        <item>com.android.systemui</item>
+        <item>com.google.android.settings.intelligence</item>
+        <item>com.crdroid.faceunlock</item>
+        <item>com.qualcomm.qti.cne</item>
+        <item>com.shannon.imsservice</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>

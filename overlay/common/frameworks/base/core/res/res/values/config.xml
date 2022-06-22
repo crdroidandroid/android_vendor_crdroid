@@ -53,6 +53,11 @@
         <item>com.shannon.imsservice</item>
         <!-- Google Play Services location history module -->
         <item>com.google.android.gms.location.history</item>
+
+        <item>com.android.networkstack.tethering</item>
+        <item>com.android.systemui</item>
+        <item>com.google.android.settings.intelligence</item>
+        <item>com.crdroid.faceunlock</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>

@@ -187,16 +187,6 @@
      -->
     <string name="config_defaultNetworkRecommendationProviderPackage" translatable="false">com.google.android.gms</string>
 
-    <!-- The package name of the default network recommendation app.
-         A network recommendation provider must:
-             * Be granted the SCORE_NETWORKS permission.
-             * Be granted the ACCESS_COARSE_LOCATION permission.
-             * Include a Service for the android.net.scoring.RECOMMEND_NETWORKS action
-               protected by the BIND_NETWORK_RECOMMENDATION_SERVICE permission.
-         This must be set to a valid network recommendation app or empty.
-     -->
-    <string name="config_defaultNetworkRecommendationProviderPackage" translatable="false">com.google.android.gms</string>
-
     <!-- A list of potential packages, in priority order, that may contain an
          ephemeral resolver. Each package will be be queried for a component
          that has been granted the PACKAGE_EPHEMERAL_AGENT permission.

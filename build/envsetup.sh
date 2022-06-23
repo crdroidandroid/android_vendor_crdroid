@@ -962,6 +962,7 @@ function fixup_common_out_dir() {
 }
 
 export USE_THINLTO_CACHE=true
+export SKIP_ABI_CHECKS=true
 
 # Override host metadata to make builds more reproducible and avoid leaking info
 export BUILD_USERNAME=nobody

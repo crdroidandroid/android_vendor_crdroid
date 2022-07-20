@@ -27,7 +27,7 @@ fi
 touch $Changelog
 
 # define changelog_days using 'export changelog_days=10'
-# this can be done before intiate build environment (. build/envsetup.sh) 
+# this can be done before intiate build environment (. build/envsetup.sh)
 if [ -z $changelog_days ];then
 	changelog_days=10
 else
@@ -37,21 +37,27 @@ else
 	fi
 fi
 
-for i in $(seq $changelog_days);
-do
-After_Date=`date --date="$i days ago" +%m-%d-%Y`
-k=$(expr $i - 1)
-	Until_Date=`date --date="$k days ago" +%m-%d-%Y`
+REPO_LIST="$(repo list --path | sed 's|^vendor/crDroidOTA$||')"
+for i in $(seq $changelog_days); do
+    After_Date=`date --date="$i days ago" +%m-%d-%Y`
+    k=$(expr $i - 1)
+    Until_Date=`date --date="$k days ago" +%m-%d-%Y`
 
-	# Line with after --- until was too long for a small ListView
-	echo '====================' >> $Changelog;
-	echo  "     "$Until_Date    >> $Changelog;
-	echo '====================' >> $Changelog;
-	# Cycle through every repo to find commits between 2 dates
-	CURRENT_PATH="$(realpath `pwd`)"
+    # Line with after --- until was too long for a small ListView
+    echo '====================' >> $Changelog
+    echo  "     "$Until_Date    >> $Changelog
+    echo '====================' >> $Changelog
 
-    repo forall -i vendor_crDroidOTA -c "GIT_LOG=\`git log --oneline --after=$After_Date --until=$Until_Date\` ; if [ ! -z \"\$GIT_LOG\" ]; then printf  '\n   * '; realpath \`pwd\` | sed 's|^$CURRENT_PATH/||' ; echo \"\$GIT_LOG\"; fi" >> $Changelog
-	echo "" >> $Changelog;
+    # Cycle through all available repos
+    for repo_path in $REPO_LIST; do
+        # Find commits between 2 dates
+        GIT_LOG="$(git -C "$repo_path" log --oneline --after="$After_Date" --until="$Until_Date")"
+        [ -n "$GIT_LOG" ] && {
+            printf '\n   * '; echo "$repo_path"
+            echo "$GIT_LOG"
+        } >> $Changelog
+    done
+    echo >> $Changelog
 done
 
 sed -i 's/project/   */g' $Changelog

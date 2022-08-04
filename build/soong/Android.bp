@@ -73,6 +73,27 @@ camera_needs_client_info_lib {
 }
 
 soong_config_module_type {
+    name: "target_uses_oneplus_camera",
+    module_type: "cc_defaults",
+    config_namespace: "lineageGlobalVars",
+    bool_variables: ["target_uses_oneplus_camera"],
+    properties: [
+        "cflags",
+        "cppflags",
+    ],
+}
+
+target_uses_oneplus_camera {
+    name: "target_uses_oneplus_camera_defaults",
+    soong_config_variables: {
+        target_uses_oneplus_camera: {
+            cflags: ["-DTARGET_USES_ONEPLUS_CAMERA"],
+            cppflags: ["-DTARGET_USES_ONEPLUS_CAMERA"],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "disable_postrender_cleanup",
     module_type: "cc_defaults",
     config_namespace: "lineageGlobalVars",

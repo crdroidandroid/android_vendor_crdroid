@@ -18,6 +18,10 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Jelly
 
+# Battery Status Viewer
+PRODUCT_PACKAGES += \
+    BatteryStatsViewer
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images

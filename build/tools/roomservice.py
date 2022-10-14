@@ -44,7 +44,7 @@ except ImportError:
 DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision =  "12.1"
+custom_default_revision =  "13.0"
 custom_dependencies = "crdroid.dependencies"
 org_manifest = "crdroidandroid"  # leave empty if org is provided in manifest
 org_display = "crDroid Android"  # needed for displaying

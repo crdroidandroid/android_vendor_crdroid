@@ -53,6 +53,8 @@
         <item>com.shannon.imsservice</item>
         <!-- MediaTek ImsService -->
         <item>com.mediatek.ims</item>
+        <!-- OmniJaws -->
+        <item>org.omnirom.omnijaws</item>
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>

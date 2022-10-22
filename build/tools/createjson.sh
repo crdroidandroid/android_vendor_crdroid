@@ -24,6 +24,8 @@ if [ -f $output ]; then
 	rm $output
 fi
 
+echo "Generating JSON file data for OTA support..."
+
 if [ -f $existingOTAjson ]; then
 	#get data from already existing device json
 	#there might be a better way to parse json yet here we try without adding more dependencies like jq
@@ -35,7 +37,6 @@ if [ -f $existingOTAjson ]; then
 	v_max=`echo "$version" | cut -d'.' -f1 | cut -d'v' -f2`
 	v_min=`echo "$version" | cut -d'.' -f2`
 	version=`echo $v_max.$v_min`
-	download="https://sourceforge.net/projects/crdroid/files/'$device'/'$v_max'.x/'$4'/download"
 	buildprop=$2/system/build.prop
 	linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
@@ -116,13 +117,50 @@ if [ -f $existingOTAjson ]; then
 		}
 	]
 }' >> $output
-
-        echo "JSON file data for OTA support:"
 else
-	#if not already supported, create dummy file with info in it on how to
-	echo 'There is no official support for this device yet' >> $output;
-	echo 'Consider adding official support by reading the documentation at https://github.com/crdroidandroid/android_vendor_crDroidOTA/blob/13.0/README.md' >> $output;
+	filename=$3
+	version=`echo "$3" | cut -d'-' -f5`
+	v_max=`echo "$version" | cut -d'.' -f1 | cut -d'v' -f2`
+	v_min=`echo "$version" | cut -d'.' -f2`
+	version=`echo $v_max.$v_min`
+	buildprop=$2/system/build.prop
+	linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
+	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
+	md5=`md5sum "$2/$3" | cut -d' ' -f1`
+	sha256=`sha256sum "$2/$3" | cut -d' ' -f1`
+	size=`stat -c "%s" "$2/$3"`
+
+	echo '{
+	"response": [
+		{
+			"maintainer": "''",
+			"oem": "''",
+			"device": "''",
+			"filename": "'$filename'",
+			"download": "https://sourceforge.net/projects/crdroid/files/'$1'/'$v_max'.x/'$3'/download",
+			"timestamp": '$timestamp',
+			"md5": "'$md5'",
+			"sha256": "'$sha256'",
+			"size": '$size',
+			"version": "'$version'",
+			"buildtype": "''",
+			"forum": "''",
+			"gapps": "''",
+			"firmware": "''",
+			"modem": "''",
+			"bootloader": "''",
+			"recovery": "''",
+			"paypal": "''",
+			"telegram": "''",
+			"dt": "''",
+			"common-dt": "''",
+			"kernel": "''"
+		}
+	]
+}' >> $output
+
+	echo 'There is no official support for this device yet'
+	echo 'Consider adding official support by reading the documentation at https://github.com/crdroidandroid/android_vendor_crDroidOTA/blob/13.0/README.md'
 fi
 
-cat $output
 echo ""

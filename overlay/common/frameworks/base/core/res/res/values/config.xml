@@ -57,6 +57,8 @@
         <item>org.omnirom.omnijaws</item>
         <!-- SystemUI -->
         <item>com.android.systemui</item>
+        <!-- Tethering -->
+        <item>com.android.networkstack.tethering</item>
     </string-array>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and

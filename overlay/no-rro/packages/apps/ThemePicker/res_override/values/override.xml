@@ -16,6 +16,8 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Package of the stub apk containing the themes descriptions -->
     <string name="themes_stub_package" translatable="false">com.google.android.apps.customization.pixel</string>
+    <!-- Package of the stub apk containing the clock content -->
     <string name="clocks_stub_package" translatable="false">com.crdroid.customization</string>
 </resources>

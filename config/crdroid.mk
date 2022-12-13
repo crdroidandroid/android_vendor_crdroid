@@ -55,4 +55,5 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 # Extra packages
 PRODUCT_PACKAGES += \
     GameSpace \
-    MatLog
+    MatLog \
+    ParallelSpace

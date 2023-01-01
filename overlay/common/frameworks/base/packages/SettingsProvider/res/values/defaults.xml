@@ -38,4 +38,7 @@
 
     <!-- Default for Settings.System.VIBRATE_WHEN_RINGING -->
     <bool name="def_vibrate_when_ringing">true</bool>
+
+    <!-- Default for Settings.Global.DEVELOPMENT_ENABLE_NON_RESIZABLE_MULTI_WINDOW -->
+    <bool name="def_enable_non_resizable_multi_window">true</bool>
 </resources>

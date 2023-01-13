@@ -542,4 +542,16 @@
 
     <!-- The name of the package that will hold the wellbeing role. -->
     <string name="config_systemWellbeing" translatable="false">com.google.android.apps.wellbeing</string>
+
+    <!-- List of system components which are allowed to receive ServiceState entries in an
+         un-sanitized form, even if the location toggle is off. This is intended ONLY for system
+         components, such as the telephony stack, which require access to the full ServiceState for
+         tasks such as network registration. -->
+    <string-array name="config_serviceStateLocationAllowedPackages">
+        <item>com.android.providers.telephony</item>
+        <item>com.android.mms.service</item>
+        <item>com.android.ons</item>
+        <item>com.android.stk</item>
+        <item>com.android.phone</item>
+    </string-array>
 </resources>

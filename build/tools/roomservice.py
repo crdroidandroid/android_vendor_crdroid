@@ -72,17 +72,18 @@ def add_auth(githubreq):
         githubreq.add_header("Authorization","Basic %s" % githubauth)
 
 if not depsonly:
-    githubreq = urllib.request.Request("https://raw.githubusercontent.com/LineageOS/mirror/main/default.xml")
+    githubreq = urllib.request.Request("https://api.github.com/search/repositories?q=%s+user:LineageOS+in:name+fork:true" % device)
+    add_auth(githubreq)
     try:
-        result = ElementTree.fromstring(urllib.request.urlopen(githubreq, timeout=10).read().decode())
+        result = json.loads(urllib.request.urlopen(githubreq, timeout=10).read().decode())
     except urllib.error.URLError:
-        print("Failed to fetch data from GitHub")
+        print("Failed to search GitHub")
         sys.exit(1)
     except ValueError:
         print("Failed to parse return data from GitHub")
         sys.exit(1)
-    for res in result.findall('.//project'):
-        repositories.append(res.attrib['name'][10:])
+    for res in result.get('items', []):
+        repositories.append(res)
 
 local_manifests = r'.repo/local_manifests'
 if not os.path.exists(local_manifests): os.makedirs(local_manifests)
@@ -288,10 +289,11 @@ if depsonly:
     sys.exit()
 
 else:
-    for repo_name in repositories:
+    for repository in repositories:
+        repo_name = repository['name']
         if re.match(r"^android_device_[^_]*_" + device + "$", repo_name):
-            print("Found repository: %s" % repo_name)
-            
+            print("Found repository: %s" % repository['name'])
+
             manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
             repo_path = "device/%s/%s" % (manufacturer, device)
             revision = get_default_or_fallback_revision(repo_name)

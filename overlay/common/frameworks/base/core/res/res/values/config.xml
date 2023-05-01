@@ -223,4 +223,91 @@
 
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
+
+    <!-- Apps that are authorized to access shared accounts, overridden by product overlays -->
+    <string name="config_appsAuthorizedForSharedAccounts" translatable="false">;com.android.vending;com.android.settings;</string>
+
+    <!-- The component name, flattened to a string, for the default accessibility service to be
+         enabled by the accessibility shortcut. This service must be trusted, as it can be activated
+         without explicit consent of the user. If no accessibility service with the specified name
+         exists on the device, the accessibility shortcut will be disabled by default. -->
+    <string name="config_defaultAccessibilityService" translatable="false">com.google.android.marvin.talkback/.TalkBackService</string>
+
+    <!-- Component name that should be granted Notification Assistant access -->
+    <string name="config_defaultAssistant" translatable="false">com.google.android.googlequicksearchbox</string>
+
+    <!-- The component name, flattened to a string, for the default autofill service
+         to  enabled for an user. This service must be trusted, as it can be activated
+         without explicit consent of the user. If no autofill service with the
+          specified name exists on the device, autofill will be disabled by default.
+    -->
+    <string name="config_defaultAutofillService" translatable="false">com.google.android.gms/.autofill.service.AutofillService</string>
+
+    <!-- The package name of the dock manager app. Must be granted the
+         POST_NOTIFICATIONS permission. -->
+    <string name="config_defaultDockManagerPackageName" translatable="false">com.google.android.apps.nest.dockmanager.app</string>
+
+    <!-- Colon separated list of package names that should be granted Notification Listener access -->
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.google.android.apps.nexuslauncher:com.google.android.setupwizard:com.google.android.apps.pixelmigrate:com.android.launcher3</string>
+
+    <!-- Component name that accepts settings intents for saved devices.
+             Used by FastPairSettingsFragment. -->
+    <string name="config_defaultNearbyFastPairSettingsDevicesComponent" translatable="false">com.google.android.gms/com.google.android.gms.nearby.discovery.devices.SavedDevicesSettingsActivity</string>
+
+    <!-- Component name that accepts ACTION_SEND intents for nearby (proximity-based) sharing.
+         Used by ChooserActivity. -->
+    <string name="config_defaultNearbySharingComponent" translatable="false">com.google.android.gms/com.google.android.gms.nearby.sharing.ShareSheetActivity</string>
+
+    <!-- The package name of the default network recommendation app.
+         A network recommendation provider must:
+             * Be granted the SCORE_NETWORKS permission.
+             * Be granted the ACCESS_COARSE_LOCATION permission.
+             * Include a Service for the android.net.scoring.RECOMMEND_NETWORKS action
+               protected by the BIND_NETWORK_RECOMMENDATION_SERVICE permission.
+         This must be set to a valid network recommendation app or empty.
+     -->
+    <string name="config_defaultNetworkRecommendationProviderPackage" translatable="false">com.google.android.gms</string>
+
+    <!-- The package name of the default search selector app. Must be granted the POST_NOTIFICATIONS
+         permission.
+    -->
+    <string name="config_defaultSearchSelectorPackageName" translatable="false">com.google.android.apps.setupwizard.searchselector</string>
+
+    <!-- The name of the package that will handle updating the device management role. -->
+    <string name="config_devicePolicyManagementUpdater" translatable="false">com.google.android.gms</string>
+
+    <!-- Whether the secondary location time zone provider is enabled.
+         This setting is ignored if config_enableGeolocationTimeZoneDetection is false.
+         AOSP does not configure a secondary location time zone provider. -->
+    <string name="config_primaryLocationTimeZoneProviderPackageName" translatable="false">com.google.android.gms</string>
+
+    <!-- The name of the package that will hold the system activity recognizer role. -->
+    <string name="config_systemActivityRecognizer" translatable="false">com.google.android.gms</string>
+
+    <!-- The names of the packages that will hold the automotive projection role. -->
+    <string name="config_systemAutomotiveProjection" translatable="false">com.google.android.projection.gearhead</string>
+
+    <!-- On-device package for providing companion device associations. -->
+    <string name="config_systemCompanionDeviceProvider" translatable="false">com.google.android.gms</string>
+
+    <!-- The name of the package that will hold the game service role. -->
+    <string name="config_systemGameService">com.google.android.gms</string>
+
+    <!-- The name of the package that will hold the speech recognizer role by default. -->
+    <string name="config_systemSpeechRecognizer" translatable="false">com.google.android.tts</string>
+
+    <!-- The set of system packages on device that are queryable by any app regardless of the
+         contents of its manifest. -->
+    <string-array name="config_forceQueryablePackages" translatable="false">
+        <item>com.android.settings</item>
+        <item>com.google.android.gms</item>
+        <item>com.android.vending</item>
+    </string-array>
+
+    <!-- A list of potential packages, in priority order, that can supply rules to
+         AppIntegrityManager. These need to be apps on the system partition. -->
+    <string-array name="config_integrityRuleProviderPackages" translatable="false">
+        <item>com.android.vending</item>
+        <item>com.google.android.gms</item>
+    </string-array>
 </resources>

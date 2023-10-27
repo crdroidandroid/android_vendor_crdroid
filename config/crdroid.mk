@@ -34,5 +34,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
+    GameSpace \
     MatLog \
     OmniJaws

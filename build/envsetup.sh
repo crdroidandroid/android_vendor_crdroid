@@ -898,7 +898,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/lineage/scripts/repopick/repopick.py $@
+    $T/lineage/scripts/repopick/repopick.py "$@"
 }
 
 function sort-blobs-list() {

@@ -55,11 +55,6 @@ cc_library_headers {
     defaults: ["generated_kernel_header_defaults"],
 }
 
-cc_library_headers {
-    name: "qti_kernel_headers",
-    defaults: ["generated_kernel_header_defaults"],
-}
-
 // Target platform agnostic config modules
 soong_config_module_type {
     name: "aapt_version_code",

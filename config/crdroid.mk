@@ -66,4 +66,5 @@ PRODUCT_PACKAGES += \
     BatteryStatsViewer \
     GameSpace \
     MatLog \
-    OmniJaws
+    OmniJaws \
+    OmniStyle

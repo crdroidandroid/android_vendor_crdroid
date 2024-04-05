@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2022 crDroid Android Project
+# Copyright (C) 2017-2024 crDroid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,8 +23,6 @@ if [ -f $Changelog ];
 then
 	rm -f $Changelog
 fi
-
-touch $Changelog
 
 # define changelog_days using 'export changelog_days=10'
 # this can be done before intiate build environment (. build/envsetup.sh)
@@ -60,10 +58,12 @@ for i in $(seq $changelog_days); do
     echo >> $Changelog
 done
 
-if [ -f $Changelog ]; then
-    sed -i 's/project/   */g' $Changelog
-    cp $Changelog $OUT_DIR/target/product/$DEVICE/system/etc/
-    mv $Changelog $OUT_DIR/target/product/$DEVICE/
+if [ -f "$Changelog" ]; then
+    if cp "$Changelog" "$OUT_DIR/target/product/$DEVICE/system/etc/"; then
+        mv "$Changelog" "$OUT_DIR/target/product/$DEVICE/${DEVICE}_changelog.txt" || echo "Failed to move changelog file to $OUT_DIR/target/product/$DEVICE/${DEVICE}_changelog.txt"
+    else
+        echo "Failed to copy changelog file to $OUT_DIR/target/product/$DEVICE/system/etc/"
+    fi
 else
-    echo "Changelog file does not exist."
+    echo "Changelog file does not exist"
 fi

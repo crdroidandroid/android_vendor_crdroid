@@ -415,6 +415,26 @@ powershare {
     },
 }
 
+soong_config_module_type {
+    name: "libcameraservice_ext_lib",
+    module_type: "cc_defaults",
+    config_namespace: "lineageGlobalVars",
+    value_variables: ["target_libcameraservice_ext_lib"],
+    properties: [
+        "cppflags",
+        "whole_static_libs",
+    ],
+}
+libcameraservice_ext_lib {
+    name: "libcameraservice_ext_lib_defaults",
+    soong_config_variables: {
+        target_libcameraservice_ext_lib: {
+            cppflags: ["-DTARGET_PROVIDES_CAMERA_PROVIDER_EXT_LIB"],
+            whole_static_libs: ["%s"],
+        },
+    },
+}
+
 // NVIDIA specific config modules
 soong_config_module_type {
     name: "nvidia_enhancements",

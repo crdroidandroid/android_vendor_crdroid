@@ -427,6 +427,8 @@
         <item>launcher/INVOKE_OMNI_LPH_MPR=true</item>
         <item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
         <item>launcher/LPNH_TIMEOUT_MS=400</item>
+        <item>launcher/ANIMATE_LPNH=true</item>
+        <item>launcher/SHRINK_NAV_HANDLE_ON_PRESS=true</item>
         <item>launcher/show_search_educard_qsb=true</item>
         <item>launcher/show_three_dot_menu_qsb=true</item>
         <item>launcher/use_app_search_for_web=true</item>

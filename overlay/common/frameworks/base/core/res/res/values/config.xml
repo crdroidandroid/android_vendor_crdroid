@@ -446,12 +446,6 @@
     <!-- Package name of Health Connect data migrator application.  -->
     <string name="config_healthConnectMigratorPackageName" translatable="false">com.google.android.apps.healthdata</string>
 
-    <!-- Name of the default framework dialog that is used to get or save an app credential.
-    This UI should be always launch-able and is used as a fallback when an oem replacement activity
-    (defined at config_oemCredentialManagerDialogComponent) is undefined / not found. -->
-    <string name="config_credentialManagerDialogComponent" translatable="false"
-            >com.google.android.gms/.identitycredentials.ui.CredentialChooserActivity</string>
-
     <!-- Flag indicating which package name can access the persistent data partition -->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 

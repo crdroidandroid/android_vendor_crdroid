@@ -23,6 +23,17 @@ import sys
 
 from xml.etree import ElementTree
 
+dryrun = os.getenv('ROOMSERVICE_DRYRUN') == "true"
+if dryrun:
+    print("Dry run roomservice, no change will be made.")
+
+product = sys.argv[1]
+
+if len(sys.argv) > 2:
+    depsonly = sys.argv[2]
+else:
+    depsonly = None
+
 try:
     # For python3
     import urllib.error
@@ -115,6 +126,15 @@ def is_in_manifest(project_path):
             return True
     return False
 
+def add_to_manifest(repositories):
+    if dryrun:
+        return
+
+    try:
+        lm = ElementTree.parse(".repo/local_manifests/roomservice.xml")
+        lm = lm.getroot()
+    except:
+        lm = ElementTree.Element("manifest")
 
 def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
@@ -183,8 +203,10 @@ def fetch_dependencies(repo_path, fallback_branch=None):
         dependencies = {}
         print('%s has no additional dependencies.' % repo_path)
 
-    fetch_list = []
-    syncable_repos = []
+    if len(syncable_repos) > 0:
+        print('Syncing dependencies')
+        if not dryrun:
+            os.system('repo sync --force-sync %s' % ' '.join(syncable_repos))
 
     for dependency in dependencies:
         if not is_in_manifest(dependency['target_path']):

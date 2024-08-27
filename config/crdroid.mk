@@ -27,9 +27,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 ifeq ($(TARGET_ENABLE_BLUR), true)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1 \
-    ro.launcher.blur.appLaunch=0
+    ro.surface_flinger.supports_background_blur=1
 endif
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=0
 
 # Disable async MTE on system_server
 PRODUCT_SYSTEM_EXT_PROPERTIES += \

@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle
 
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
+ifneq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
 PRODUCT_PACKAGES += \
     FaceUnlock
 

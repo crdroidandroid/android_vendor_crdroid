@@ -45,3 +45,12 @@ ifneq ($(TARGET_DISABLE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
 endif
+
+# DeviceAsWebcam
+ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
+PRODUCT_PACKAGES += \
+    DeviceAsWebcam
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
+endif

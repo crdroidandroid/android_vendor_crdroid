@@ -36,6 +36,8 @@ PRODUCT_PACKAGES += \
     AxSandbox \
     BatteryStatsViewer \
     GameSpace \
+    LMOFreeform \
+    LMOFreeformSidebar \
     MatLog \
     OmniJaws \
     OmniStyle

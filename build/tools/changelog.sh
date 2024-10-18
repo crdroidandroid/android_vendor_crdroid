@@ -19,10 +19,18 @@ Changelog=Changelog.txt
 
 DEVICE=$1
 
-if [ -f $Changelog ];
-then
-	rm -f $Changelog
+# Lock file to ensure only one instance runs at a time
+LOCKFILE=/tmp/changelog_${DEVICE}_lock
+
+# Acquire the lock or exit if already running
+exec 9>"$LOCKFILE"
+if ! flock -n 9; then
+    echo "Changelog generation is already running."
+    exit 0
 fi
+
+# Remove old changelog if it exists
+[ -f "$Changelog" ] && rm -f "$Changelog"
 
 # define changelog_days using 'export changelog_days=10'
 # this can be done before intiate build environment (. build/envsetup.sh)
@@ -67,3 +75,7 @@ if [ -f "$Changelog" ]; then
 else
     echo "Changelog file does not exist"
 fi
+
+# Release the lock
+flock -u 9
+rm -f $LOCKFILE

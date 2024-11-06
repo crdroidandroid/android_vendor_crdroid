@@ -231,6 +231,16 @@
         <item>device_personalization_services/Captions__text_transform_augmented_input=true</item>
         <item>device_personalization_services/Captions__visibility_playing_duration_millis=5000</item>
         <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_input=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_music=false</item>
+        <item>device_personalization_services/Captions__enable_clearcut_logging=false</item>
+        <item>device_personalization_services/Captions__enable_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_punctuations=true</item>
+        <item>device_personalization_services/Captions__enable_new_model_version_advanced_2023=true</item>
+        <item>device_personalization_services/Captions__new_model_version_advanced_2023=20230808</item>
+        <item>device_personalization_services/Captions__allow_use_public_speech_recognition=true</item>
 
         <!-- Smartspace -->
         <item>device_personalization_services/Cell__enable_cell=true</item>
@@ -347,6 +357,26 @@
         <item>device_personalization_services/NowPlaying__handle_ambient_music_results_with_history=true</item>
         <item>device_personalization_services/NowPlaying__min_training_interval_millis=86400000</item>
         <item>device_personalization_services/NowPlaying__nnfp_v3_model_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_get_model_state_cooldown_seconds_cloud_search=9</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_handle_results_with_search=true</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_index_manifest_17_09_02=2586:https://storage.googleapis.com/music-iq-db/updatable_ytm_db/20240721-030041/manifest.json</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_matcher_match_threshold_17_09_02=1.0E-6</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_notification_show_assistant_text=true</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_on_demand_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__ambient_music_on_demand_music_confidence=0.48</item>
+        <item>device_personalization_services/NowPlaying__capture_own_speaker_allowed=true</item>
+        <item>device_personalization_services/NowPlaying__cloud_api_allowed=true</item>
+        <item>device_personalization_services/NowPlaying__dsp_model_checksum_enabled=false</item>
+        <item>device_personalization_services/NowPlaying__fast_recognition_ui_cleanup_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__favorites_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__feature_users_count_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__handle_ambient_music_results_with_assistant=true</item>
+        <item>device_personalization_services/NowPlaying__handle_ambient_music_results_with_history=true</item>
+        <item>device_personalization_services/NowPlaying__history_summary_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__labs_personalized_shard_allowed=true</item>
+        <item>device_personalization_services/NowPlaying__min_training_interval_millis=86400000</item>
+        <item>device_personalization_services/NowPlaying__nnfp_v3_model_enabled=true</item>
+        <item>device_personalization_services/NowPlaying__now_playing_allowed=true</item>
         <item>device_personalization_services/NowPlaying__on_demand_enable_eager_prompt=true</item>
         <item>device_personalization_services/NowPlaying__on_demand_fingerprinter_being_setup_warning=true</item>
         <item>device_personalization_services/NowPlaying__on_demand_hide_if_fingerprinter_install_not_confirmed=true</item>
@@ -386,6 +416,29 @@
         <item>device_personalization_services/Translate__translation_service_enabled=true</item>
         <item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
         <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
+        <item>device_personalization_services/NowPlaying__youtube_export_enabled=true</item>
+
+        <!-- Google Live Translate -->
+        <item>device_personalization_services/SimpleStorage__disable_live_translate_dao_provider=false</item>
+        <item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
+        <item>device_personalization_services/Translate__beta_audio_to_text_languages_in_live_caption=ja</item>
+        <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+        <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
+        <item>device_personalization_services/Translate__disable_session_state=false</item>
+        <item>device_personalization_services/Translate__disable_translate_without_system_animation=true</item>
+        <item>device_personalization_services/Translate__enable_chronicle_migration=true</item>
+        <item>device_personalization_services/Translate__enable_default_langid_model=false</item>
+        <item>device_personalization_services/Translate__enable_dictionary_langid_detection=true</item>
+        <item>device_personalization_services/Translate__enable_language_profile_quick_update=false</item>
+        <item>device_personalization_services/Translate__enable_nextdoor=false</item>
+        <item>device_personalization_services/Translate__enable_opmv4_service=false</item>
+        <item>device_personalization_services/Translate__enable_spa_setting=false</item>
+        <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
+        <item>device_personalization_services/Translate__translation_service_enabled=true</item>
+        <item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
+        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=false</item>
 
         <!-- Gboard -->
         <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>

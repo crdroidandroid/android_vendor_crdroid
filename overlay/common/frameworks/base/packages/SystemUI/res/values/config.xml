@@ -51,4 +51,8 @@
 
     <!-- Whether or not lockscreen shortcuts can be customized -->
     <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
+
+    <!-- Time (in ms) to delay the bouncer views from showing when passive auth may be used for
+    device entry. -->
+    <integer name="primary_bouncer_passive_auth_delay">0</integer>
 </resources>

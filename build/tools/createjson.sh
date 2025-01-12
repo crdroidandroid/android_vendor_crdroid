@@ -28,7 +28,7 @@ echo "Generating JSON file data for OTA support..."
 
 # Helper function to extract field from JSON
 extract_field() {
-    grep -Po "\"$1\"\s*:\s*\"[^\"]*\"" "$existingOTAjson" | head -n 1 | sed -E 's/.*: \"(.*)\"/\1/'
+    grep "\"$1\":" "$existingOTAjson" | sed -n "s/.*\"$1\": *\"\([^\"]*\)\".*/\1/p" | xargs
 }
 
 if [ -f $existingOTAjson ]; then

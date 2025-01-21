@@ -1,0 +1,13 @@
+flag_value {
+  package: "android.app"
+  name: "compact_heads_up_notification"
+  state: ENABLED
+  permission: READ_ONLY
+}
+
+flag_value {
+  package: "android.app"
+  name: "compact_heads_up_notification_reply"
+  state: ENABLED
+  permission: READ_ONLY
+}

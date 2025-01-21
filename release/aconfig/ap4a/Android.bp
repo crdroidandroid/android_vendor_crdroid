@@ -17,5 +17,6 @@ aconfig_value_set {
     name: "aconfig_value_set-lineage-ap4a",
     values: [
         "aconfig-values-ap4a-com.android.server.notification-all",
+        "aconfig-values-ap4a-android.app.flags-all",
     ],
 }

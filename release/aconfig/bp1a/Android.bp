@@ -16,6 +16,7 @@
 aconfig_value_set {
     name: "aconfig_value_set-lineage-bp1a",
     values: [
+        "aconfig-values-bp1a-android.app.flags-all",
         "aconfig-values-bp1a-android.hardware.biometrics-all",
         "aconfig-values-bp1a-com.android.window.flags-all",
     ],

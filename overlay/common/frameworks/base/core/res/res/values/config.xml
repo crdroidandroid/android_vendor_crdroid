@@ -123,10 +123,278 @@
 
     <!-- Define device configs on boot -->
     <string-array name="global_device_configs_override">
-        <!-- Enable app cloning  -->
-        <item>app_cloning/cloned_apps_enabled=true</item>
-        <item>app_cloning/delete_all_app_clones_enabled=true</item>
-        <item>app_cloning/enable_app_cloning_building_blocks=true</item>
+        <!-- Disable always screen on -->
+        <item>attention_manager_service/keep_screen_on_enabled=false</item>
+
+        <!-- Enable new location indicators -->
+        <item>privacy/location_access_check_enabled=true</item>
+        <item>privacy/location_accuracy_enabled=true</item>
+        <item>privacy/location_indicators_small_enabled=true</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
+
+        <!-- Enable shared connectivity -->
+        <item>wifi/shared_connectivity_enabled=true</item>
+
+        <!-- Don't pin camera app to save memory -->
+        <item>runtime_native_boot/pin_camera=false</item>
+
+        <!-- Globally enable the new photo picker -->
+        <item>storage_native_boot/take_over_get_content=true</item>
+
+        <!--
+            Device Personalization Services (AiAi)
+        -->
+
+        <!-- Adaptive Sound (Pixel 2020) -->
+        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
+        <item>device_personalization_services/AdaptiveAudio__use_silence_detector_state_bug_fix=true</item>
+
+        <!-- Smartspace -->
+        <item>device_personalization_services/EchoSmartspace__always_send_weather_to_home_screen=true</item>
+        <item>device_personalization_services/EchoSmartspace__doorbell_when_for_update_time=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_add_card_explanation_button_on_long_press=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_consolidated_weather=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_dimensional_logging=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_encode_subcard_into_smartspace_target_id=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_loud_sound_alert=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_my_pixel_ambient_data=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_predictor_expiration=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_remote_views=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_remote_views_content_migration=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_remote_views_hub_mode_timer=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_remote_views_mobile_hub_mode_timer=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_settings_highlight=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_show_on_home_screen_toggle=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_sports_card_explanation=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_sports_score_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_sports_score_background_container=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_subzero_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_thing_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_travel_features_type_merge=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_trip_bundle_ambient_data=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_wallet_suggestions=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_data_extras=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_reminder_extraction_homescreen=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_reminder_extraction_lockscreen=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_removal_as_secondary_card_home=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_weather_removal_as_secondary_card_lockscreen=true</item>
+        <item>device_personalization_services/EchoSmartspace__loud_sound_snooze_duration_minutes=30</item>
+        <item>device_personalization_services/EchoSmartspace__loud_sound_test_threshold_db=0</item>
+        <item>device_personalization_services/EchoSmartspace__loud_sound_test_threshold_duration_seconds=30</item>
+        <item>device_personalization_services/EchoSmartspace__ring_lockscreen_delay_seconds=0</item>
+        <item>device_personalization_services/EchoSmartspace__ring_on_aod_only=true</item>
+        <item>device_personalization_services/EchoSmartspace__show_background_switch=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_daily_forecast=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
+        <item>Device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=false</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_allowlist_packages=com.nest.android, com.google.android.apps.chromecast.app, com.ringapp</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=4</item>
+        <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bluetooth_metadata_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_cross_device_timer=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_unified_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_off_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=false</item>
+        <item>device_personalization_services/Echo__smartspace_enable_outlook_events=false</item>
+        <item>device_personalization_services/Echo__smartspace_enable_package_delivery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_ridesharing_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_score_ranker=WEIGHTED</item>
+        <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
+        <item>device_personalization_services/Echo__smartspace_outlook_event_source_of_truth=TEXT_ONLY</item>
+        <item>device_personalization_services/Echo__smartspace_package_delivery_card_delay_seconds=0</item>
+
+        <!-- Notification Assistant (DPS) -->
+        <item>notification_assistant/generate_actions=true</item>
+        <item>notification_assistant/generate_replies=true</item>
+        <item>device_personalization_services/Notification__enable_otp_check_for_default_sms_package=true</item>
+        <item>device_personalization_services/Notification__enable_otp_in_smart_suggestion=true</item>
+
+        <!-- Now Playing -->
+        <item>device_personalization_services/NowPlaying__enable_now_playing_lock_screen_update=true</item>
+        <item>device_personalization_services/NowPlaying__enable_now_playing_quick_affordance=true</item>
+        <item>device_personalization_services/NowPlaying__enable_now_playing_quick_settings=true</item>
+
+        <!-- Screen attention (Pixel 2019) -->
+        <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
+        <item>device_personalization_services/Attention__accel_sensor_threshold_mss=0.2</item>
+        <item>device_personalization_services/Attention__enabled=true</item>
+        <item>device_personalization_services/Attention__margin_horizontal_px=1000</item>
+        <item>device_personalization_services/Attention__margin_vertical_px=1000</item>
+        <item>device_personalization_services/Attention__proximity_sensor_enabled=false</item>
+
+        <!-- Translation -->
+        <item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
+        <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+        <item>device_personalization_services/Translate__chat_translate_languages=de,en,es,fr,it,ja,hi,zh,ru,pl,pt,ko,th,tr,nl,zh_Hant,sv,da,vi,ar,fa,no,bn,fil</item>
+        <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
+        <item>device_personalization_services/Translate__disable_translate_without_system_animation=false</item>
+        <item>device_personalization_services/Translate__enable_chronicle_migration=true</item>
+        <item>device_personalization_services/Translate__enable_default_langid_model=true</item>
+        <item>device_personalization_services/Translate__enable_dictionary_langid_detection=true</item>
+        <item>device_personalization_services/Translate__enable_opmv4_service=true</item>
+        <item>device_personalization_services/Translate__enable_settings_backup_restore=true</item>
+        <item>device_personalization_services/Translate__enable_setup_wizard_dialog_v2=true</item>
+        <item>device_personalization_services/Translate__enable_translate_kit_api_migration=false</item>
+        <item>device_personalization_services/Translate__interpreter_source_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__interpreter_target_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
+        <item>device_personalization_services/Translate__text_to_text_language_list=vi,ja,fa,ro,nl,mr,mt,ar,ms,it,eo,is,et,es,iw,zh,uk,af,id,ur,mk,cy,hi,el,be,pt,lt,hr,lv,hu,ht,te,de,bg,th,bn,tl,pl,tr,kn,sv,gl,ko,sw,cs,da,ta,gu,ka,sl,ca,sk>device_personalization_services/Translate__translation_service_enabled=true</item>
+        <item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
+        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
+
+        <!-- Speech Recognition -->
+        <item>device_personalization_services/TextClassifierParams__enable_dynamic_kg_collections=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_location_scorer=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_superpacks_custom_bin_processing=true</item>
+        <item>device_personalization_services/TextClassifierParams__enable_superpacks_multi_bulks_request=true</item>
+        <item>device_personalization_services/TextClassifierParams__max_allowable_bins_requests=0</item>
+        <item>device_personalization_services/TextClassifierParams__max_allowable_local_slice_size=0</item>
+        <item>device_personalization_services/TextClassifierParams__max_allowable_new_slices_size=95</item>
+        <item>device_personalization_services/TextClassifierParams__use_vocab_annotator=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_superpacks_kg_actions_ranking=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_tc_easter_egg=false</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_tc_easter_egg_logging=false</item>
+        <item>device_personalization_services/TextClassifierTcLib__enable_tclib_download_using_superpacks=true</item>
+        <item>device_personalization_services/TextClassifierTcLib__kg_actions_ranking_superpacks_manifest_version=211005</item>
+        <item>device_personalization_services/TextClassifierTcLib__kg_actions_ranking_superpacks_url_template=[https://gstatic.com/matchmaker/kg_actions_ranking_table/](https://gstatic.com/matchmaker/kg_actions_ranking_table/)%{VERSION}/superpacks_manifest.zip</item>
+        <item>device_personalization_services/TextClassifierTcLib__tc_easter_egg_action_name=</item>
+        <item>device_personalization_services/TextClassifierTcLib__tc_easter_egg_activity_name=</item>
+        <item>device_personalization_services/TextClassifierTcLib__tc_easter_egg_package_name=</item>
+        <item>device_personalization_services/TextClassifierTcLib__tc_easter_egg_templates=</item>
+        <item>device_personalization_services/TextClassifierTcLib__tc_easter_egg_url=</item>
+        <item>device_personalization_services/TextClassifierTcLib__tc_easter_egg_url_param=</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_actions_superpacks_manifest_url_template=[https://www.gstatic.com/matchmaker/tclib_models/actions/v](https://www.gstatic.com/matchmaker/tclib_models/actions/v)%{VERSION}/%{LOCALE}/superpacks_manifest.zip</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_actions_superpacks_manifest_version=104</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_annotator_superpacks_manifest_url_template=[https://www.gstatic.com/matchmaker/tclib_models/annotator/v](https://www.gstatic.com/matchmaker/tclib_models/annotator/v)%{VERSION}/%{LOCALE}/superpacks_manifest.zip</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_annotator_superpacks_manifest_version=903</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_langid_superpacks_manifest_url_template=[https://www.gstatic.com/matchmaker/tclib_models/langid/v](https://www.gstatic.com/matchmaker/tclib_models/langid/v)%{VERSION}/superpacks_manifest.zip</item>
+        <item>device_personalization_services/TextClassifierTcLib__tclib_langid_superpacks_manifest_version=1</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__enable_tclib=true</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__knowledge_graph_collections_table_superpacks_manifest_version=21102003</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__template_table_superpacks_manifest_url_template=[https://gstatic.com/matchmaker/template_table/21072101/](https://gstatic.com/matchmaker/template_table/21072101/)%{TEMPLATE_TABLE_FORMAT_NUMBER}/%{LOCALE}/superpacks_manifest.></item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__template_table_superpacks_manifest_version_v2=21072101</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__webref_superpacks_manifest_url_template=[https://gstatic.com/webref-ondevice/aiai/23072901_pir/](https://gstatic.com/webref-ondevice/aiai/23072901_pir/)%{FORMAT_NUMBER}/%{LOCALE}/superpacks_manifest.zip</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__webref_superpacks_manifest_version_v3=23072901</item>
+        <item>device_personalization_services/TextClassifierWebrefDeploy__webref_supported_locales=en,de,es,fr,it,ja,nl,no,pt,sv,nb</item>
+        <item>device_personalization_services/TextClassifierWebrefUrl__webref_url_template=[https://gstatic.com/webref-ondevice/aiai/](https://gstatic.com/webref-ondevice/aiai/)%{VERSION}_pir/%{FORMAT_NUMBER}/% {LOCALE}/superpacks_manifest.zip</item>
+
+        <!-- Gboard voice typing -->
+        <item>device_personalization_services/SmartDictation__cache_max_size=200</item>
+        <item>device_personalization_services/SmartDictation__caching_strategy=3</item>
+        <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contact_fields=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts_learned_from_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=false</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
+        <item>device_personalization_services/SmartDictation__enable_personalized_biasing_on_locked_device=false</item>
+        <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
+        <item>device_personalization_services/SmartDictation__enable_stronger_boost_for_generic_phrases_biasing=true</item>
+        <item>device_personalization_services/SmartDictation__exclude_contacts_from_generic_biasing=false</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_assistant_geller_data_index=false</item>
+        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_url=[https://www.gstatic.com/nasa/apps/non_en_pack_02072023/23020800/2/en-us/superpacks_manifest.zip](https://www.gstatic.com/nasa/apps/non_en_pack_02072023/23020800/2/en-us/superpacks_manifest.zip)</item>
+        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_ver=2023020700</item>
+        <item>device_personalization_services/SmartRecPixelSearch__disable_ee_sys_pointers=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_aiai_tc_generator=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_assistant_geller_data_index=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_feedback_ranking=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_search_system_pointer_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__promote_sys_pointer_in_psb=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_example_cache_on_suggest_selection=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_example_collection=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_example_store_connector=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_locked_bootloader_check=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_paste_package_signal=true</item>
+        <item>device_personalization_services/SmartSelect__enable_smart_select_training_manager_populations=false</item>
+        <item>device_personalization_services/SmartSelect__smart_select_example_ttl_ms=1209600000</item>
+
+        <!-- Pixel Launcher -->
+        <item>launcher/ANIMATE_LPNH=true</item>
+        <item>launcher/CUSTOM_LPNH_THRESHOLDS=true</item>
+        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=false</item>
+        <item>launcher/ENABLE_LPNH_TWO_STAGES=true</item>
+        <item>launcher/ENABLE_SEARCH_HAPTIC_HINT=true</item>
+        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
+        <item>launcher/LPNH_HAPTIC_HINT_DELAY=0</item>
+        <item>launcher/LPNH_HAPTIC_HINT_ITERATIONS=50</item>
+        <item>launcher/LPNH_TIMEOUT_MS=450</item>
+        <item>launcher/SHRINK_NAV_HANDLE_ON_PRESS=true</item>
+        <item>launcher/TWO_STAGE_DURATION_PERCENTAGE=200</item>
+        <item>launcher/TWO_STAGE_SLOP_PERCENTAGE=66</item>
+        <item>launcher/android.provider.launcher_data_access=true</item>
+        <item>launcher/PSB_RESKIN=true</item>
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/enable_one_search_aa=true</item>
+        <item>launcher/enable_quick_launch_v3_aa=true</item>
+        <item>launcher/gboard_update_enter_key=true</item>
+
+        <!-- Pixel Launcher (Recents) -->
+        <item>device_personalization_services/Overview__enable_barcode_detection=true</item>
+        <item>device_personalization_services/Overview__enable_image_search=true</item>
+        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+
+        <!-- Disable federated learning -->
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
+
+        <!-- Disable unused AiAi features -->
+        <item>device_personalization_services/Fedex__enable_fedex=false</item>
+        <item>device_personalization_services/Logging__enable_aiai_clearcut_logging=false</item>
+        <item>device_personalization_services/VisualCortex__enable=false</item>
+
+        <!-- System Ui -->
+        <item>systemui/clipboard_overlay_show_actions=true</item>
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/volume_separate_notification=true</item>
+
+        <!-- Media Provider -->
+        <item>mediaprovider/allowed_cloud_providers=com.google.android.apps.photos.cloudpicker</item>
+        <item>mediaprovider/cloud_media_feature_enabled=true</item>
+
+        <!-- Wallpaper Effects -->
+        <item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=Ct4IEtsICiF3YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMSwgESdWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9tZGktc2VydmluZy9haWFpLXdhbGxwYXBlcmVmZmVjdHMtY2luZW1hdGljLW1vZGVscy83NDYvNTk2NDgzNDA1MzljOGU2OWRmZGZlYjkzNTk0OTIzYWJmZDBmMGQwNyCM4JQFKig1OTY0ODM0MDUzOWM4ZTY5ZGZkZmViOTM1OTQ5MjNhYmZkMGYwZDA3OhJkZXB0aF9tb2RlbC50ZmxpdGV4AKIBAKoBABLIARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni84NmE3MWYwYTIwYjFhMjhiNTY4MTMwZTliYTZjMTYzZTdhZjQzMTg5IKzsyQQqKDg2YTcxZjBhMjBiMWEyOGI1NjgxMzBlOWJhNmMxNjNlN2FmNDMxODk6GHBlcnNvbl9wb3NlX21vZGVsLnRmbGl0ZXgAogEAqgEAEs0BEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2I2NTQxNDFiOTUwNjY3OTVlYjBlNjNlZDRkNzFiZjQxZDQyYjFhNmMgyPPNAiooYjY1NDE0MWI5NTA2Njc5NWViMGU2M2VkNGQ3MWJmNDFkNDJiMWE2YzodcGVyc29uX3NlZ21lbnRlcl9tb2RlbC50ZmxpdGV4AKIBAKoBABLLARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni9lOTllZWJlMDQ2NDk4ZmU2N2MzMzdjZmZkMzkzODM4NTVkMjE0NjM5INCXrwIqKGU5OWVlYmUwNDY0OThmZTY3YzMzN2NmZmQzOTM4Mzg1NWQyMTQ2Mzk6G3JnYmRfaW5wYWludGVyX21vZGVsLnRmbGl0ZXgAogEAqgEAEsQBEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2ExNjQ4ZjQ2NDYyZDVmMTExOTVjNmEyYTBhN2M0MTMyZTEwNzJjMDIgsLo6KihhMTY0OGY0NjQ2MmQ1ZjExMTk1YzZhMmEwYTdjNDEzMmUxMDcyYzAyOhVzYWxpZW5jeV9tb2RlbC50ZmxpdGV4AKIBAKoBABgAUABYAGoECAEQAHAAogEAqAEAuAHqBdIBB2RlZmF1bHTaAQDiARsKBwgBEJ+xjRcKBwgCEKCxjRcKBwgDEKGxjRc</item>
+        <item>device_personalization_services/WallpaperEffects__enable_allow_fg_download_on_cellular=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_foreground_model_download=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=true</item>
+        <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item>
+        <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
+        <item>device_personalization_services/WallpaperEffects__use_tpu=false</item>
+
+        <!-- Settings -->
+        <item>settings_ui/bt_advanced_header_enabled=true</item>
+        <item>settings_ui/bt_le_audio_contact_sharing_enabled=true</item>
+        <item>settings_ui/bt_near_by_suggestion_enabled=true</item>
+        <item>settings_ui/bt_slice_settings_enabled=true</item>
+
+        <!-- Window Manager splash screen exemption -->
+        <item>window_manager/splash_screen_exception_list=com.facebook.lite,com.facebook.mlite,com.instagram.android,tv.twitch.android.app,tv.twitch.android.viewer,org.iggymedia.periodtracker,com.ohmgames.cheatandrun,com.skgames.trafficracer,com.skgames.trafficrider,com.skgames.wingsonfiregame,com.microblink.photomath,com.cam001.selfie,com.soundcloud.android,com.skype.raider,com.phonepe.app,jp.naver.line.android,com.facebook.stella,in.startv.hotstar,in.startv.hotstar.dplus,ru.yandex.yandexnavi,com.google.android.apps.nbu.paisa.user,net.one97.paytm,com.viber.voip,com.king.candycrushsaga,com.roblox.client,com.picsart.studio,com.jio.myjio,in.mohalla.sharechat,com.imo.android.imoim,com.discord,com.meesho.supply,com.kiloo.subwaysurf,com.booking,com.jio.media.jiobeats,com.nexstreaming.app.kinemasterfree,com.nhn.android.navercafe,br.com.gabba.Caixa,com.nu.production,com.funnypuri.client,com.gaana,com.graymatrix.did,com.canva.editor,com.mercadopago.wallet,com.overdrive.mobile.android.libby,com.duolingo,com.taxis99,br.com.bb.android,id.dana,com.wix.android,com.bigwinepot.nwdn.international,com.lazygeniouz.saveit,com.instagram.lite,com.picpay,com.tv.v18.viola,com.bradesco,org.iggymedia.periodtracker,com.didiglobal.passenger,com.iqiyi.i18n,com.naver.linewebtoon,com.sonyliv,ru.dublgis.dgismobile,com.itau,tr.gov.turkiye.edevlet.kapisi,com.mcdonalds.mobileapp,com.pandora.android,com.ixigo.train.ixitrain,com.realme.link,com.videoeditorpro.android,br.gov.caixa.fgts.trabalhador,com.bancomer.mbanking,br.gov.serpro.cnhe,de.zalando.mobile,com.agoda.mobile.consumer,photoeditor.layout.collagemaker,com.heytap.quickgame,photo.editor.photoeditor.photoeditorpro,video.reface.app,sortpuz.water.sort.puzzle.game,in.cricketexchange.app.cricketexchange,me.zepeto.main,com.axis.mobile,br.com.santander.way,com.novapontocom.casasbahia,pdf.tap.scanner,com.mic.bluezone,instagram.photo.video.downloader.repost.insta,com.bankofbaroda.mconnect,media.music.musicplayer,org.jw.jwlibrary.mobile,com.superbinogo.jungleboyadventure,br.com.intermedium,com.indiaBulls,com.traveloka.android,com.portonics.mygp,com.unicostudio.braintest,com.unicostudio.braintest2new,com.pedidosya,com.naver.vapp,com.microsoft.xboxone.smartglass,com.mind.quiz.brain.out,th.co.truemoney.wallet,com.itaucard.activity,com.ubercab.driver,in.gov.umang.negd.g2c,com.Dominos,omegle.tv,com.chase.sig.android,com.rockstargames.gtasa,com.snowcorp.vita,com.forshared.files,com.bpjstku,com.taxsee.taxsee,com.wallapop,puzzle.blockpuzzle.cube.relax,com.dd.doordash,com.nvt.cs,com.garanti.cepsubesi,com.inditex.zara,net.telewebion,com.fogg.photovideomaker,naukriApp.appModules.login,com.nttdocomo.android.dmenu2,com.emeint.android.myservices,com.fundevs.app.mediaconverter,com.mobikwik_new.bajajfinserv,com.scores365,com.themausoft.wpsapp,com.mcdo.mcdonalds,com.ge.capital.konysbiapp,com.glovo,com.picmax.wemoji,com.oyo.consumer,com.funcamerastudio.videomaker,com.comuto,my.com.tngdigital.ewallet,com.instagram.layout,com.ykb.android,br.com.mobicare.minhaoi,com.citibanamex.banamexmobile,com.nhn.android.webtoon,com.evernote,com.lyxoto.master.forminecraftpe,com.tripadvisor.tripadvisor,jp.co.mcdonalds.android,com.lguplus.mobile.cs,app.trell,com.infraware.office.link,com.iqoption,com.jazz.jazzworld,com.lomotif.android,glitchvideoeditor.videoeffects.glitchvideoeffect,videoplayer.videodownloader.hdvideoplayer,com.tmobile.pr.mytmobile,com.swifthawk.picku.free</item>
+
+        <!-- Autofill compatibility apps -->
+        <item>autofill/compat_mode_allowed_packages=com.android.chrome[url_bar]:com.brave.browser[url_bar]:com.brave.browser_beta[url_bar]:com.brave.browser_nightly[url_bar]:com.chrome.beta[url_bar]:com.chrome.dev[url_bar]:com.chrome.canary[url_bar]:com.microsoft.emmx[url_bar]:com.microsoft.emmx.beta[url_bar]:com.microsoft.emmx.canary[url_bar]:com.microsoft.emmx.dev[url_bar]:com.opera.browser[url_field]:com.opera.browser.beta[url_bar]:com.opera.mini.native[url_bar]:com.opera.mini.native.beta[url_bar]:com.sec.android.app.sbrowser[location_bar_edit_text]:com.sec.android.app.sbrowser.beta[location_bar_edit_text]:org.mozilla.fennec_aurora[url_bar]:org.mozilla.firefox[url_bar]:org.mozilla.firefox_beta[url_bar]:org.chromium.chrome[url_bar]</item>
     </string-array>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->

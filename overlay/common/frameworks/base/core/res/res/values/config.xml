@@ -299,7 +299,7 @@
         <item>device_personalization_services/EchoSmartspace__enable_ring_using_ui_template=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_travel_features_type_merge=true</item>
         <item>device_personalization_services/EchoSmartspace__enable_weather_data_extras=true</item>
-        <item>device_personalization_services/EchoSmartspace__ring_channels_regex=4_ding_channel_notification\d+</item>
+        <item>device_personalization_services/EchoSmartspace__ring_channels_regex=4_ding_channel_notification\\d+</item>
         <item>device_personalization_services/EchoSmartspace__ring_lockscreen_delay_seconds=0</item>
         <item>device_personalization_services/EchoSmartspace__ring_on_aod_only=true</item>
         <item>device_personalization_services/EchoSmartspace__runtastic_check_pause_action=true</item>
@@ -390,7 +390,7 @@
         <!-- Gboard -->
         <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
         <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
-        <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={"8":-7}</item>
+        <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={\"8\":-7}</item>
         <item>device_personalization_services/SmartRecCompose__enable_compose_action_filter=true</item>
         <item>device_personalization_services/SmartRecCompose__enable_deep_clu_model=true</item>
         <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>

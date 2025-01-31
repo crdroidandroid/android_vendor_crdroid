@@ -123,11 +123,424 @@
 
     <!-- Define device configs on boot -->
     <string-array name="global_device_configs_override">
+        <!-- Disable always screen on -->
+        <item>attention_manager_service/keep_screen_on_enabled=false</item>
+
         <!-- Enable app cloning  -->
         <item>app_cloning/cloned_apps_enabled=true</item>
         <item>app_cloning/delete_all_app_clones_enabled=true</item>
         <item>app_cloning/enable_app_cloning_building_blocks=true</item>
-    </string-array>
+
+        <!-- Enable new location indicators -->
+        <item>privacy/location_access_check_enabled=true</item>
+        <item>privacy/location_accuracy_enabled=true</item>
+        <item>privacy/location_indicator_settings_enabled=true</item>
+        <item>privacy/location_indicators_enabled=true</item>
+        <item>privacy/location_indicators_show_system=false</item>
+        <item>privacy/location_indicators_small_enabled=true</item>
+
+        <!-- Enable shared connectivity -->
+        <item>wifi/shared_connectivity_enabled=true</item>
+
+        <!-- Don't pin camera app to save memory -->
+        <item>runtime_native_boot/pin_camera=false</item>
+
+        <!-- Globally enable the new photo picker -->
+        <item>storage_native_boot/take_over_get_content=true</item>
+
+        <!-- Machine learning back gesture (requires TensorFlow model) -->
+        <item>systemui/use_back_gesture_ml_model=true</item>
+        <item>systemui/back_gesture_ml_model_name=backgesture</item>
+        <item>systemui/back_gesture_ml_model_threshold=0.8</item>
+
+        <!-- Intelligence Bubbles -->
+        <item>intelligence_bubbles/intelligence_bubbles_webref_superpacks_manifest_url_template=https://gstatic.com/matchmaker/demo/bubbles/20051000/2/en-us/superpacks_manifest.zip</item>
+        <item>intelligence_bubbles/intelligence_bubbles_webref_superpacks_manifest_version=20051000</item>
+
+        <!-- Text classifier -->
+        <item>textclassifier/generate_links_max_text_length=10000</item>
+        <item>textclassifier/manifest_download_max_attempts=3</item>
+        <item>textclassifier/manifest_download_required_network_type=UNMETERED</item>
+        <item>textclassifier/manifest_url_actions_suggestions_de-ch=https://www.gstatic.com/android/text_classifier/actions/q/v103/de_CH.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_de-li=https://www.gstatic.com/android/text_classifier/actions/q/v103/de_CH.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_de=https://www.gstatic.com/android/text_classifier/actions/q/v103/de.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_en=https://www.gstatic.com/android/text_classifier/actions/q/v104/en.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_es=https://www.gstatic.com/android/text_classifier/actions/q/v103/es.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_fr=https://www.gstatic.com/android/text_classifier/actions/q/v103/fr.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_it=https://www.gstatic.com/android/text_classifier/actions/q/v103/it.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_ja=https://www.gstatic.com/android/text_classifier/actions/q/v103/ja.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_ko=https://www.gstatic.com/android/text_classifier/actions/q/v103/ko.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_pt-br=https://www.gstatic.com/android/text_classifier/actions/q/v103/pt_BR.model.manifest</item>
+        <item>textclassifier/manifest_url_actions_suggestions_universal=https://www.gstatic.com/android/text_classifier/actions/q/v103/default.model.manifest</item>
+        <item>textclassifier/manifest_url_annotator_ar=https://www.gstatic.com/android/text_classifier/v904/ar.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_da=https://www.gstatic.com/android/text_classifier/v904/da.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_de=https://www.gstatic.com/android/text_classifier/v904/de.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_en=https://www.gstatic.com/android/text_classifier/v904/en.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_es=https://www.gstatic.com/android/text_classifier/v904/es.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_fr=https://www.gstatic.com/android/text_classifier/v904/fr.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_it=https://www.gstatic.com/android/text_classifier/v904/it.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_ja=https://www.gstatic.com/android/text_classifier/v904/ja.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_ko=https://www.gstatic.com/android/text_classifier/v904/ko.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_nb=https://www.gstatic.com/android/text_classifier/v904/no.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_nl=https://www.gstatic.com/android/text_classifier/v904/nl.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_nn=https://www.gstatic.com/android/text_classifier/v904/no.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_no=https://www.gstatic.com/android/text_classifier/v904/no.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_pl=https://www.gstatic.com/android/text_classifier/v904/pl.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_pt=https://www.gstatic.com/android/text_classifier/v904/pt.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_ru=https://www.gstatic.com/android/text_classifier/v904/ru.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_sv=https://www.gstatic.com/android/text_classifier/v904/sv.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_th=https://www.gstatic.com/android/text_classifier/v904/th.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_tr=https://www.gstatic.com/android/text_classifier/v904/tr.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_universal=https://www.gstatic.com/android/text_classifier/v904/universal.fb.manifest</item>
+        <item>textclassifier/manifest_url_annotator_zh=https://www.gstatic.com/android/text_classifier/v904/zh.fb.manifest</item>
+        <item>textclassifier/manifest_url_lang_id_universal=https://www.gstatic.com/android/text_classifier/langid/q/v1/model.smfb.manifest</item>
+        <item>textclassifier/model_download_backoff_delay_in_millis=3600000</item>
+        <item>textclassifier/model_download_manager_enabled=true</item>
+        <item>textclassifier/model_download_worker_max_attempts=5</item>
+
+        <!--
+            Device Personalization Services (AiAi)
+        -->
+
+        <!-- Adaptive Sound (Pixel 2020) -->
+        <item>device_personalization_services/AdaptiveAudio__enable_adaptive_audio=true</item>
+        <item>device_personalization_services/AdaptiveAudio__show_promo_notification=false</item>
+        <item>device_personalization_services/AdaptiveAudio__use_silence_detector_state_bug_fix=true</item>
+
+        <!-- Live Caption (Pixel 2017 + OEM) -->
+        <item>device_personalization_services/Captions__allow_box_x_axis_movement=true</item>
+        <item>device_personalization_services/Captions__allow_use_public_speech_recognition=true</item>
+        <item>device_personalization_services/Captions__allow_voip_call_without_audio_recording=true</item>
+        <item>device_personalization_services/Captions__available_for_download=en-US;en-GB;en-CA;en-IE;en-AU;en-SG;en-IN;fr-FR;fr-CA;fr-BE;fr-CH;it-IT;it-CH;de-DE;de-AT;de-BE;de-CH;ja-JP;es-ES;es-US;cmn-Hant-TW;hi-IN;pt-BR;tr-TR;pl-PL;cmn-Hans-CN;ko-KR;ru-RU;vi-VN</item>
+        <item>device_personalization_services/Captions__disable_prod=false</item>
+        <item>device_personalization_services/Captions__enable=false</item>
+        <item>device_personalization_services/Captions__enable_activation_boost=true</item>
+        <item>device_personalization_services/Captions__enable_adaptive_box_width=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_input=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_modality_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_augmented_music=true</item>
+        <item>device_personalization_services/Captions__enable_clearcut_logging=false</item>
+        <item>device_personalization_services/Captions__enable_drag_and_double_tap_to_resize=true</item>
+        <item>device_personalization_services/Captions__enable_ec_integration=false</item>
+        <item>device_personalization_services/Captions__enable_language_detection=true</item>
+        <item>device_personalization_services/Captions__enable_new_model_version_advanced_2023=true</item>
+        <item>device_personalization_services/Captions__enable_one_caption_experiment=false</item>
+        <item>device_personalization_services/Captions__enable_punctuations=true</item>
+        <item>device_personalization_services/Captions__enable_setting_page=false</item>
+        <item>device_personalization_services/Captions__enable_survey=false</item>
+        <item>device_personalization_services/Captions__enable_text_transform=true</item>
+        <item>device_personalization_services/Captions__enable_westworld_logging=false</item>
+        <item>device_personalization_services/Captions__enable_zero_day=false</item>
+        <item>device_personalization_services/Captions__manifest_url_template=https://storage.googleapis.com/captions/%{NAMESPACE}_%{VERSION}_manifest.json</item>
+        <item>device_personalization_services/Captions__model_version_v1=20190613</item>
+        <item>device_personalization_services/Captions__model_version_v1_2=20200112</item>
+        <item>device_personalization_services/Captions__new_model_version=20210623</item>
+        <item>device_personalization_services/Captions__new_model_version_advanced_2023=20230808</item>
+        <item>device_personalization_services/Captions__speech_threshold=0.2</item>
+        <item>device_personalization_services/Captions__support_lang_id_disabled_after_dismissals=true</item>
+        <item>device_personalization_services/Captions__supported_languages=en-US;fr-FR;it-IT;de-DE;ja-JP;es-ES;cmn-Hant-TW;hi-IN;pt-BR;tr-TR;pl-PL;cmn-Hans-CN;ko-KR;ru-RU;vi-VN</item>
+        <item>device_personalization_services/Captions__supported_languages_beta_quality=ja-JP;pt-BR;tr-TR;pl-PL;cmn-Hans-CN;ko-KR;ru-RU;vi-VN</item>
+        <item>device_personalization_services/Captions__surface_sound_events=true</item>
+        <item>device_personalization_services/Captions__text_transform_augmented_input=true</item>
+        <item>device_personalization_services/Captions__visibility_playing_duration_millis=5000</item>
+        <item>device_personalization_services/Captions__visibility_stopped_duration_millis=1500</item>
+
+        <!-- Smartspace -->
+        <item>device_personalization_services/Cell__enable_cell=true</item>
+        <item>device_personalization_services/Cell__enable_smartspace_events=true</item>
+        <item>device_personalization_services/EchoSmartspace__check_notification_visibility=true</item>
+        <item>device_personalization_services/EchoSmartspace__doorbell_when_for_update_time=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_add_contextual_feedback_button_on_long_press=false</item>
+        <item>device_personalization_services/EchoSmartspace__enable_add_internal_feedback_button=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_agsa_settings_read=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_cross_feature_rank_dedup_twiddler=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_dimensional_logging=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_encode_subcard_into_smartspace_target_id=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_media_recs_for_driving=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_predictor_expiration=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_ring_channels_regex=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_ring_using_ui_template=true</item>
+        <item>device_personalization_services/EchoSmartspace__enable_travel_features_type_merge=true</item>
+        <item>device_personalization_services/EchoSmartspace__ring_channels_regex=4_ding_channel_notification\d+</item>
+        <item>device_personalization_services/EchoSmartspace__ring_lockscreen_delay_seconds=0</item>
+        <item>device_personalization_services/EchoSmartspace__ring_on_aod_only=true</item>
+        <item>device_personalization_services/EchoSmartspace__runtastic_check_pause_action=true</item>
+        <item>device_personalization_services/EchoSmartspace__runtastic_is_ongoing_default_true=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_daily_forecast=true</item>
+        <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
+        <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
+        <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=false</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_allowlist_packages=com.nest.android, com.google.android.apps.chromecast.app</item>
+        <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=4</item>
+        <item>device_personalization_services/Echo__smartspace_enable_async_icon=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bedtime_active_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bedtime_reminder_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_bluetooth_metadata_parser=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_cross_device_timer=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_dark_launch_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell_context_wrapper=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_doorbell_extras=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_dwb_bedtime_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_earthquake_alert_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_echo_unified_settings=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_doordash=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_eta_lyft=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_food_delivery_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_grocery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_off_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_light_predictor=false</item>
+        <item>device_personalization_services/Echo__smartspace_enable_media_wake_lock_acquire=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_nap=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_nudge=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_outlook_events=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_package_delivery=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_connections=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_paired_device_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_ridesharing_eta=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_safety_check_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_score_ranker=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_sensitive_notification_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_step_predictor=true</item>
+        <item>device_personalization_services/Echo__smartspace_enable_subcard_logging=true</item>
+        <item>device_personalization_services/Echo__smartspace_gaia_twiddler=true</item>
+        <item>device_personalization_services/Echo__smartspace_outlook_event_source_of_truth=TEXT_ONLY</item>
+        <item>device_personalization_services/Echo__smartspace_package_delivery_card_delay_seconds=0</item>
+        <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_flight_landing_smartspace_aiai=true</item>
+        <item>device_personalization_services/Echo_smartspace__enable_hotel_smartspace_aiai=true</item>
+        <item>device_personalization_services/Echo_smartspace__smartspace_enable_daily_forecast=true</item>
+        <item>device_personalization_services/Echo_smartspace__smartspace_enable_timely_reminder=true</item>
+
+        <!-- Nearby -->
+	<item>nearby/nearby_enable_presence_broadcast_legacy=false</item>
+	<item>nearby/nearby_support_test_app=false</item>
+
+        <!-- Notification Assistant (DPS) -->
+        <item>notification_assistant/generate_actions=true</item>
+        <item>notification_assistant/generate_replies=true</item>
+        <item>device_personalization_services/NotificationAssistant__enable_service=true</item>
+        <item>device_personalization_services/NotificationAssistant__enable_upgrade_importance=true</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_download_url=https://www.gstatic.com/android/notifications/importance/v1/manifest.json</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_type=channel_stats</item>
+        <item>device_personalization_services/NotificationAssistant__importance_model_version=1</item>
+        <item>device_personalization_services/NotificationAssistant__max_importance_variance=0.5</item>
+
+        <!-- Screen attention (Pixel 2019) -->
+        <item>device_personalization_services/Attention__accel_sensor_enabled=false</item>
+        <item>device_personalization_services/Attention__accel_sensor_threshold_mss=0.2</item>
+        <item>device_personalization_services/Attention__enabled=true</item>
+        <item>device_personalization_services/Attention__margin_horizontal_px=1000</item>
+        <item>device_personalization_services/Attention__margin_vertical_px=1000</item>
+        <item>device_personalization_services/Attention__proximity_sensor_enabled=false</item>
+
+        <!-- Translation -->
+        <item>device_personalization_services/Translate__app_blocklist=com.google.android.talk</item>
+        <item>device_personalization_services/Translate__blue_chip_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__characterset_lang_detection_enabled=true</item>
+        <item>device_personalization_services/Translate__chat_translate_languages=de,en,es,fr,it,ja,hi,zh,ru,pl,pt,ko,th,tr,nl,zh_Hant,sv,da,vi,ar,fa,no,bn,fil</item>
+        <item>device_personalization_services/Translate__copy_to_translate_enabled=true</item>
+        <item>device_personalization_services/Translate__differentiate_simplified_and_traditional_chinese=true</item>
+        <item>device_personalization_services/Translate__disable_translate_without_system_animation=false</item>
+        <item>device_personalization_services/Translate__enable_chronicle_migration=true</item>
+        <item>device_personalization_services/Translate__enable_default_langid_model=true</item>
+        <item>device_personalization_services/Translate__enable_dictionary_langid_detection=true</item>
+        <item>device_personalization_services/Translate__enable_opmv4_service=true</item>
+        <item>device_personalization_services/Translate__enable_settings_backup_restore=false</item>
+        <item>device_personalization_services/Translate__enable_setup_wizard_dialog_v2=false</item>
+        <item>device_personalization_services/Translate__enable_spa_setting=false</item>
+        <item>device_personalization_services/Translate__enable_translate_kit_api_migration=false</item>
+        <item>device_personalization_services/Translate__interpreter_source_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__interpreter_target_languages=de,en,ja,es,fr,it</item>
+        <item>device_personalization_services/Translate__replace_auto_translate_copied_text_enabled=true</item>
+        <item>device_personalization_services/Translate__text_to_text_language_list=vi,ja,fa,ro,nl,mr,mt,ar,ms,it,eo,is,et,es,iw,zh,uk,af,id,ur,mk,cy,hi,el,be,pt,lt,hr,lv,hu,ht,te,de,bg,th,bn,tl,pl,tr,kn,sv,gl,ko,sw,cs,da,ta,gu,ka,sl,ca,sk,ga,sq,no,fi,ru,fr,en,zh_Hant,fil</item>
+        <item>device_personalization_services/Translate__translation_service_enabled=true</item>
+        <item>device_personalization_services/Translate__translator_expiration_enabled=true</item>
+        <item>device_personalization_services/Translate__use_translate_kit_streaming_api=true</item>
+
+        <!-- Speech Recognition -->
+        <item>device_personalization_services/SpeechPack__downloadable_language_packs_raw=CiNhdXRvZ2VuX0FkZFVuc3Bva2VuUHVuY3R1YXRpb25WMzA1OTLEAgoFZW4tVVMSBWVuLVVTGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VuLVVTL3YzMDA4L3NvZGEtZW4tVVMtdjMwMDguemlwIMAXKOnZAjIUc29kYS1lbi1VUy12MzAwOC1mNTQ4NkBkYkA5Mzc3MzkxNjMwREIzMDZBRUYzODFFREMwMjFBNEQ5QkM2OUMwMjA5RkZBQ0YwNjU4Qzg5MTE4NDcwRERDQTcxeAF4AngDeAR4BXgGeAeKASg2Q0NCOEQxRTdCNjFGQTI0MEUwMjAwNjc5QjlDMUQ1ODc2RjUzODZDogEOCBYQAxAEEAUQBhAJEAqiAQoIFxADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFjLAAgoFZGUtREUSBWRlLURFGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2RlLURFL3YzMDAzL3NvZGEtZGUtREUtdjMwMDMuemlwILsXKKqABDIQc29kYS1kZS1ERS12MzAwMzg2QGRiQDBBRkE2QjNBNzFFMTk3ODkzM0RDNjlENjZCODU1OTY5REE1RThEQzBEMEI4RDREMEZBNkU4RjYzRTUxOTcyMzZ4AXgCeAN4BHgFeAZ4B4oBKDQ3M0FGRTMzMDNEMjc1RDMwREY5MkY5RTFFQTA2NEZFMjFBNEFBRDKiAQwIFhADEAQQBRAJEAqiAQwIFxADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWMrQCCgVlcy1FUxIFZXMtRVMaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZXMtRVMvdjMwMDAvc29kYS1lcy1FUy12MzAwMC56aXAguBcouIEDMhBzb2RhLWVzLUVTLXYzMDAwODZAZGJANTA4NjQ1MEUzMjdFNDk4QzBDNTdEQ0VGRDUwREMxOUM5ODBGRjQwNEQzRUI5ODA0N0UyQjFENkFDMkJGNUMzOXgBeAJ4A3gEeAV4BngHigEoNEY1NTRDNTE0MzYyMDU1MjVENTg1MTkzMjk4NzBFQzkwMjU4MjREQ6IBBggWEAkQCqIBBggXEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBYyxAIKBWZyLUZSEgVmci1GUhpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9mci1GUi92MzAwMy9zb2RhLWZyLUZSLXYzMDAzLnppcCC7Fyi72QYyEHNvZGEtZnItRlItdjMwMDM4NkBkYkA2QTlENjg3QjExQjVCMTc2MTczNjMwMjk0MTMwNzk0RTc1NjcwRTlGQzc4REY0M0Y5NUVBNTE2RkNCOTc4RkMyeAF4AngDeAR4BXgGeAeKASgxNEQxNUQ2RDNFOEEzM0EzMTE5QjZCQjhCNjYwRDEwREIyRDYyNzRGogEOCBYQAxAEEAUQBhAJEAqiAQ4IFxADEAQQBRAGEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBYyvAIKBWl0LUlUEgVpdC1JVBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9pdC1JVC92MzAwMC9zb2RhLWl0LUlULXYzMDAwLnppcCC4FyitpQMyEHNvZGEtaXQtSVQtdjMwMDA4NkBkYkAzMDYyRTJCOUVBNEExNzlGMjA3NkJFNDQwQzVDNUQ0NjM3MDA2NzZFMkNBQ0U1MzU1NDUzNThBMjYyOEVDOEMyeAF4AngDeAR4BXgGeAeKASgxOEQyNUQ1NjFGRjMwRENEQUZDQ0E4N0Q3RUY3QjA4NEM0MDBCNTRFogEKCBYQAxAFEAkQCqIBCggXEAMQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWMsACCgVlbi1BVRIFZW4tQVUaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZW4tQVUvdjMwMDMvc29kYS1lbi1BVS12MzAwMy56aXAguxcowtYCMhBzb2RhLWVuLUFVLXYzMDAzODZAZGJAMTA1Q0Q4Mzg1RTNBMzA3N0RENUI5OUJDNTczRUUxMEE0NDAwRjc0QzY3NDk2NTJGMDJGRjlFODc5MkU4RDkxQXgBeAJ4A3gEeAV4BngHigEoOUE2QTU2NjdCNkEyREE5NjJGNUU3MzRCOUNFNUUzMzRCQTlDQjIzRaIBDggWEAMQBBAFEAYQCRAKogEKCBcQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBYywAIKBWVuLUdCEgVlbi1HQhpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9lbi1HQi92MzAwMi9zb2RhLWVuLUdCLXYzMDAyLnppcCC6Fyj01gIyEHNvZGEtZW4tR0ItdjMwMDI4NkBkYkBGRDgyOTRBQjJEQjlBQUVFRTAwMzlGMkI4MjRGMkMzMzhCMUYwRkJCMTU4QzU4MERGN0Y5MDc5NTdBRkRCNkM0eAF4AngDeAR4BXgGeAeKASg5RjY3RDgwNTUxNTFDMjAyNjYwRERDMjVCNEI0RDRGNDQyQ0UxOUFCogEOCBYQAxAEEAUQBhAJEAqiAQoIFxADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFjLAAgoFZW4tSUUSBWVuLUlFGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VuLUlFL3YzMDAyL3NvZGEtZW4tSUUtdjMwMDIuemlwILoXKPTWAjIQc29kYS1lbi1JRS12MzAwMjg2QGRiQDgyODY3RDVFRTRGOUIzM0IwOEYyN0NCMkI1OEM4OEM5NDg1RTMzMTFBNzgxRTA3MzYyODYzRkIzRjRFMjQwMTh4AXgCeAN4BHgFeAZ4B4oBKDZBNTMyQzBENURDQzE3Rjk3Rjc0OTkzMzRERjdFRkU1N0RDRjdERkaiAQ4IFhADEAQQBRAGEAkQCqIBCggXEAMQBBAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWMsACCgVlbi1TRxIFZW4tU0caSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZW4tU0cvdjMwMDEvc29kYS1lbi1TRy12MzAwMS56aXAguRco9NYCMhBzb2RhLWVuLVNHLXYzMDAxODZAZGJANDRBMkY4MDNGRjE4NDhGQUUwNzdBQzhCM0I0RkFDRTM5MDFEOUZGNTQxOTg3RUNCRUFERkJGRkE5MEQyRDhCMXgBeAJ4A3gEeAV4BngHigEoNEUyRjg0RTY5NkVFQUU0ODNEMjA3QTI0NEJERThERTJFNUU0OTA4QaIBDggWEAMQBBAFEAYQCRAKogEKCBcQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBYywAIKBWphLUpQEgVqYS1KUBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9qYS1KUC92MzAwNC9zb2RhLWphLUpQLXYzMDA0LnppcCC8FyikyAMyEHNvZGEtamEtSlAtdjMwMDQ4NkBkYkA1MUU1M0U3MkU3REM1RjA2QzM0NzhBM0VEMDA1MTcwQjZCNEY3QTI5NjVGNUIyN0VCQ0YwOUM4ODJCOENFRjlCeAF4AngDeAR4BXgGeAeKASgyOEQzOTQ1RTBCQ0IyNkJDNUUzNzZGNzZBRDc5OEY4MTlFMThBMEM0ogEMCBYQAxAEEAUQCRAKogEMCBcQAxAEEAUQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFjLLAgoFZGUtQVQSBWRlLUFUGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2RlLUFUL3YzMDU0L3NvZGEtZGUtQVQtdjMwNTQuemlwIO4XKMDCAzIQc29kYS1kZS1BVC12MzA1NDg2QGRiQDE3RkE3OUNERkNBRDIyRjJBRjJGRTU2REQ1QjgyMDc0MTkzQUNEQzc4NDQwMzNGQzQxOEFBQzUzMjJDQkE5RUF4AXgCeAN4BHgFeAZ4B4oBKDU3MUJGQzU0NkRBMTA4OTc3NTgyRTc4MTU5NzI4NzQ5RTI5RTA2QjKiAQ4IFhACEAMQBBAFEAkQCqIBDggXEAIQAxAEEAUQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBWRlLUJFEgVkZS1CRRpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9kZS1CRS92MzA1NC9zb2RhLWRlLUJFLXYzMDU0LnppcCDuFyjAwgMyEHNvZGEtZGUtQkUtdjMwNTQ4NkBkYkA2NEYyQTM3NjhBQ0Y5QkU0MDk5NzVGNzQzQzRENEFDRjNFMjM4MTdFRDJCQzdCRUNCQUFGN0E3MTlEMTIwOTU1eAF4AngDeAR4BXgGeAeKAShCQ0QwRDEwOTI5RjVGOTE2M0M5MDVERURCMEU0MzUyQkE4QUUwMzgwogEOCBYQAhADEAQQBRAJEAqiAQ4IFxACEAMQBBAFEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVkZS1DSBIFZGUtQ0gaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZGUtQ0gvdjMwNTQvc29kYS1kZS1DSC12MzA1NC56aXAg7hcowMIDMhBzb2RhLWRlLUNILXYzMDU0ODZAZGJANEFCMDFDMUQ2REFGMkYwMDJCMzEwRUU5RTk0RUJFMTkxODQxRDRDQ0Q0MjkxNEIzMzY3NUM5NUU5QkEyMjcwQXgBeAJ4A3gEeAV4BngHigEoNzNGQ0FEMzIxNUQ1MTdDOUY2MzIwMEVDQTAyMjgxMTZEREVEMjAxMqIBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLLAgoFZGUtREUSBWRlLURFGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2RlLURFL3YzMDU0L3NvZGEtZGUtREUtdjMwNTQuemlwIO4XKJ7DAzIQc29kYS1kZS1ERS12MzA1NDg2QGRiQEMwMUY1QkM3M0Q2RjYwMkNDQUNEMDIzMzlGQzlDNjk1NzU0MzQ0MDI0NzcyRTcyMUM4RUY0QkYyM0E3MzE5RTZ4AXgCeAN4BHgFeAZ4B4oBKDk5QjVERUVDM0FFQzNBMTg0RDEyNjBGRjBGMzE0RjQ1QkFCOEM2M0SiAQ4IFhACEAMQBBAFEAkQCqIBDggXEAIQAxAEEAUQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYy1wIKBWVuLUFVEgVlbi1BVRpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9lbi1BVS92MzA1NC9zb2RhLWVuLUFVLXYzMDU0LnppcCDuFyiyiAMyEHNvZGEtZW4tQVUtdjMwNTQ4NkBkYkBGNkZGRTlFODRDRTBDNkU2N0E1RTg0NjJDQjAwNjdCQkJFN0E3OEY1QUI5MkMwMjUxODM5QTdCODcyNTcyRUI0eAF4AngDeAR4BXgGeAeKAShCN0Q3MDZFNTA4MkE5NjBBN0UxMURDOUFFNjBBQjE2ODlBNEJDMEIwogEUCBYQAhADEAQQBRAJEAoQDRAOEA+iARQIFxACEAMQBBAFEAkQChANEA4QD6oBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMt8CCgVlbi1DQRIFZW4tQ0EaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZW4tQ0EvdjMwNTQvc29kYS1lbi1DQS12MzA1NC56aXAg7hco5aEDMhBzb2RhLWVuLUNBLXYzMDU0ODZAZGJAMTg4NUY4NzYxQkIxRTJDNDc5MTg2OTg5NjUwRjJDQ0NDQTc4QjNDRTM5Rjk3MUZCRDFBNjFCMzQzRUQ0NzlCQngBeAJ4A3gEeAV4BngHigEoMjYxMThBRkZDMDQ1REQzRTI5ODgxN0M5QzA2QThCQzM1OTkwQjBFMaIBGggWEAIQAxAEEAUQBhAHEAgQCRAKEA0QDhAPogEWCBcQAhADEAQQBRAGEAkQChANEA4QD6oBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMtcCCgVlbi1HQhIFZW4tR0IaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZW4tR0IvdjMwNTQvc29kYS1lbi1HQi12MzA1NC56aXAg7hcotokDMhBzb2RhLWVuLUdCLXYzMDU0ODZAZGJAM0E4M0JGRjdFMDE3REFBOTdENTVBOTIxNTE4QjEwQ0I5RjJDMDE2MDQ4NTdFODc1NUJFN0M1NjAxQjg2MDlBNHgBeAJ4A3gEeAV4BngHigEoMjMzMUVGRjUwNzZDRTMyNjVDREE4RUE5NjJCNUJENDY3QTBDNjM4QqIBFAgWEAIQAxAEEAUQCRAKEA0QDhAPogEUCBcQAhADEAQQBRAJEAoQDRAOEA+qAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLXAgoFZW4tSUUSBWVuLUlFGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VuLUlFL3YzMDU0L3NvZGEtZW4tSUUtdjMwNTQuemlwIO4XKMSJAzIQc29kYS1lbi1JRS12MzA1NDg2QGRiQDQzREU4N0UwMDFBQjU5MTg1RkRDODhFNzQ3QUI0MzBCNEZCQ0U1MDkzNTI2NEI3M0JEMkIwQkVCQjIwQUUyQUN4AXgCeAN4BHgFeAZ4B4oBKDA3NEI4RjU5MEYwQUY2Qzc4QjI3OEQ3NjlFN0JBMjE1QTYxNzU4OEWiARQIFhACEAMQBBAFEAkQChANEA4QD6IBFAgXEAIQAxAEEAUQCRAKEA0QDhAPqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyzwIKBWVuLUlOEgVlbi1JThpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9lbi1JTi92MzA1NC9zb2RhLWVuLUlOLXYzMDU0LnppcCDuFyja+AYyEHNvZGEtZW4tSU4tdjMwNTQ4NkBkYkAxM0U3OTY5NkM2QjVCNjk5RTgyQkU5M0VGM0FEQTVBNDkyNzE0MDREQjMzNTNBQTNCODJGQTc4REU5MzExRkJGeAF4AngDeAR4BXgGeAeKAShGN0NCMTI4RTI0NjAwRUMwOTkzQzI3MEFDQ0JDNUU3OTRFMjFGNzMwogEQCBYQAhADEAQQBRAGEAkQCqIBEAgXEAIQAxAEEAUQBhAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLXAgoFZW4tU0cSBWVuLVNHGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VuLVNHL3YzMDU0L3NvZGEtZW4tU0ctdjMwNTQuemlwIO4XKMSJAzIQc29kYS1lbi1TRy12MzA1NDg2QGRiQDIwNjJCOEEwRTRFOTg4NzEzM0U5QzE5NTVBNzlEQkVEQTU3NjY3NTZEODA0M0JFNEMxQTZDRDZEOEU0MkE5RUR4AXgCeAN4BHgFeAZ4B4oBKDIyODYxOTcyM0VEMERDQTQyNzBENzhEMjFDMjU4ODhFQzkyRkRERTmiARQIFhACEAMQBBAFEAkQChANEA4QD6IBFAgXEAIQAxAEEAUQCRAKEA0QDhAPqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYy4wIKBWVuLVVTEgVlbi1VUxpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9lbi1VUy92MzA1NC9zb2RhLWVuLVVTLXYzMDU0LnppcCDuFyj67gMyEHNvZGEtZW4tVVMtdjMwNTQ4NkBkYkBCQTAxNDZFODRGRUFDRDRFMUQ2NkU3RjdDNzM5N0JFODA0QTZENTY1NEY5OTIzRjA3MDIxMjg0NEY5NjM2OURFeAF4AngDeAR4BXgGeAeKASgzOUUwMTFGQkQxMkIxNkQzOTA4QUVGNzc3NTM0NEI1REQzNzQ3NzNGogEcCBYQAhADEAQQBRAGEAcQCBAJEAoQDBANEA4QD6IBGAgXEAIQAxAEEAUQBhAJEAoQDBANEA4QD6oBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMs8CCgVlcy1FUxIFZXMtRVMaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZXMtRVMvdjMwNTQvc29kYS1lcy1FUy12MzA1NC56aXAg7hco8IADMhBzb2RhLWVzLUVTLXYzMDU0ODZAZGJAOTMwRTUyNzVENjIwQjhBQTc1MENERERDMTEyNjM0QzQ1QTU0MTU1Mzc4OUUxMDM3OUFCNjg3NEYyMURGRDg2MngBeAJ4A3gEeAV4BngHigEoRTI1OTc5QkFEMEI2N0QwQ0RGMEJGNjc1MDZCOEUwM0I1RjUzMUVGOKIBEAgWEAIQAxAEEAUQBhAJEAqiARAIFxACEAMQBBAFEAYQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBWVzLVVTEgVlcy1VUxpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9lcy1VUy92MzA1NC9zb2RhLWVzLVVTLXYzMDU0LnppcCDuFyi35AIyEHNvZGEtZXMtVVMtdjMwNTQ4NkBkYkA1Mjc4QURCQzdGNDk1RUM4NDRDMDI2ODgwMzhCQkU1MzJEQ0JDODlGRDNDQjE5NERDMjJDNzg1NzZGRDNBMTRDeAF4AngDeAR4BXgGeAeKAShCNTU3NzIxQzQzODdFNDIzN0I2RTM0QjkwNUI4QkMxRUNDQjZEQkY1ogEOCBYQAhADEAQQBhAJEAqiAQ4IFxACEAMQBBAGEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMs8CCgVmci1CRRIFZnItQkUaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZnItQkUvdjMwNTQvc29kYS1mci1CRS12MzA1NC56aXAg7hco/LsDMhBzb2RhLWZyLUJFLXYzMDU0ODZAZGJARjg2RTJCQjA1RDQwMjJGNDM2RUVCMEU3NUI4MkM0QkE0Njk2NThFRUJBRUI1QzhGRDhBMUQ4MUE2MEIxNDgwMngBeAJ4A3gEeAV4BngHigEoQjg1NjdBOTVDMDBENjY5MkY5RTVDNDcyRjY4NTFEMDM5REJGM0YyOaIBEAgWEAIQAxAEEAUQBhAJEAqiARAIFxACEAMQBBAFEAYQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBWZyLUNBEgVmci1DQRpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9mci1DQS92MzA1NC9zb2RhLWZyLUNBLXYzMDU0LnppcCDuFyjBtQMyEHNvZGEtZnItQ0EtdjMwNTQ4NkBkYkA5RUQ2NDlCNzc3NzUyNTBCMzc2M0VDM0M3OUE0N0Y1QzVGQjkzOUFCREU5MzVGNjI2MUJBMUU4RjI3NEE1NERFeAF4AngDeAR4BXgGeAeKAShDMzlBMDBDN0I2ODAyNzA3RjY3NjAwRDdCRDE2M0Y1ODc4RkFEQzQyogEOCBYQAhADEAQQBRAJEAqiAQ4IFxACEAMQBBAFEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMs8CCgVmci1DSBIFZnItQ0gaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZnItQ0gvdjMwNTQvc29kYS1mci1DSC12MzA1NC56aXAg7hco/LsDMhBzb2RhLWZyLUNILXYzMDU0ODZAZGJAQjNDOUE1Rjk2MUUzODZGRTAyMDU0QjQ3QUE0NUY1MURDMjFCNUY3RUZCQjBEMjJGMEI4RTBDOUJBOUYxN0E2MHgBeAJ4A3gEeAV4BngHigEoMzk2NzkzNzRGOTQxRUE2NTkwQzNENTIzMTE3QzZCMDE5Qzk1NEQ1M6IBEAgWEAIQAxAEEAUQBhAJEAqiARAIFxACEAMQBBAFEAYQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyzwIKBWZyLUZSEgVmci1GUhpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9mci1GUi92MzA1NC9zb2RhLWZyLUZSLXYzMDU0LnppcCDuFyjYvAMyEHNvZGEtZnItRlItdjMwNTQ4NkBkYkAxMEEwNDQ1MUFBMjZGMkNCOTA3QUQ3QjlDQjYyOUYxRERBNjNCQThFOTRCQzQ1NDhFNkJFMDJCMzNGNzExREJDeAF4AngDeAR4BXgGeAeKASg2NTE0NjFDMDNCRTVENDkwRThBNkE5NkUxMTA0NzRDODlGQkNGN0E1ogEQCBYQAhADEAQQBRAGEAkQCqIBEAgXEAIQAxAEEAUQBhAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLHAgoFaGktSU4SBWhpLUlOGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2hpLUlOL3YzMDU0L3NvZGEtaGktSU4tdjMwNTQuemlwIO4XKMTyBjIQc29kYS1oaS1JTi12MzA1NDg2QGRiQEU2QUIzMDJDQUM3ODhGNDk4M0JFREJBMTBERDlFRTlGNTcyRUJCQzkxQjcxREVBRjBCOUM0NERCRDExNjVCNzd4AXgCeAN4BHgFeAZ4B4oBKDg3OEYxOENBRUIxNDA5Mzg2QjBFNkJFQjNEOTMwNkZGRjA0NjJDMjSiAQwIFhACEAMQBBAJEAqiAQwIFxACEAMQBBAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLHAgoFaWQtSUQSBWlkLUlEGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2lkLUlEL3YzMDU0L3NvZGEtaWQtSUQtdjMwNTQuemlwIO4XKMmyAjIQc29kYS1pZC1JRC12MzA1NDg2QGRiQDNBNUVGQTA2NUY4QzEwRjNERDg3RjE5NjcwNzc5MDZBNjA5NDQ2MEEzMDE1MTVGRTM5NDdFOTlCRDBENzU0QTJ4AXgCeAN4BHgFeAZ4B4oBKEY4NEE3MTU3MjIyNzdCQjdCRUQyREI4NDhFNzU2MDFCQTlGN0Y5QjCiAQwIFhACEAMQBBAJEAqiAQwIFxACEAMQBBAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLLAgoFaXQtQ0gSBWl0LUNIGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2l0LUNIL3YzMDU0L3NvZGEtaXQtQ0gtdjMwNTQuemlwIO4XKOK0AzIQc29kYS1pdC1DSC12MzA1NDg2QGRiQDRDOUE4NjdFMkRGNUM5RDM0Q0QzQTI5MTdFMjM2MDk4QzczOEM1MDUyNEEyNEU3QzA4QzM5QzlFQzZGODIzMjN4AXgCeAN4BHgFeAZ4B4oBKDEyOTI1NEEzRDEyRTczNjg3OUY4MzMxMEQyRjAzMTZDRDJFMzhFRTmiAQ4IFhACEAMQBBAFEAkQCqIBDggXEAIQAxAEEAUQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBWl0LUlUEgVpdC1JVBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9pdC1JVC92MzA1NC9zb2RhLWl0LUlULXYzMDU0LnppcCDuFyiHtQMyEHNvZGEtaXQtSVQtdjMwNTQ4NkBkYkBDMkQ3RkFFQzc3MDQ1QUZCREEwMjI0QkE5RERFRDVEN0Q5RTAzMTcxOEZGNjRGMjg3QjI4Mjc3NjcxODkxOERDeAF4AngDeAR4BXgGeAeKAShDMjc4NUI0MTVBRDAxMTlDNkRCRUNDMEM4OEM2MTcxOEQzMUU4RUIxogEOCBYQAhADEAQQBRAJEAqiAQ4IFxACEAMQBBAFEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMqkCCgVqYS1KUBIFamEtSlAaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvamEtSlAvdjMwNTQvc29kYS1qYS1KUC12MzA1NC56aXAg7hco7pIDMhBzb2RhLWphLUpQLXYzMDU0ODZAZGJAMDQ3RTFGQ0UyMDk2RERFMkFBNDQ2OUM3RkU4RTAxNTk2MDE5RjA0MjJDREQyQzE1MUIyRjdGN0JCM0I1MjYxNHgBeAJ4A3gEeAV4BngHigEoNDhGQkRCM0I0QkJEMTRDNTQwRjZDMjlBRkNFQzM0RUQ1RTQyMzI1NqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMscCCgVrby1LUhIFa28tS1IaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEva28tS1IvdjMwNTQvc29kYS1rby1LUi12MzA1NC56aXAg7hco0KACMhBzb2RhLWtvLUtSLXYzMDU0ODZAZGJANENDNjU1MEJFRDVGQkMxMDI3NDA1NDczQjYwOTA3Q0IwOUZBNEQ3MDA4MzZDQzRFNEQwNDQwNTUzRTk1NzZDOHgBeAJ4A3gEeAV4BngHigEoODE0ODUxNUNBMjUyM0YyNkE1NzdFNDY4NzA0QUFGNzU0OUQ4NzRDRqIBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVwdC1CUhIFcHQtQlIaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvcHQtQlIvdjMwNTQvc29kYS1wdC1CUi12MzA1NC56aXAg7hcojt0CMhBzb2RhLXB0LUJSLXYzMDU0ODZAZGJARDNGODgxN0REQzc0N0EyNzU4MTQ3MDIzODBFNjYwRjIwREM3RTY3ODU4RTdCQkU4QjY2REUxMkY1NUNDQzMyQngBeAJ4A3gEeAV4BngHigEoMDg5MTJGREQ0RTE1RDNDN0MyQTEzMjNFODIxQUFEQjkwMUI5N0Y1NqIBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLDAgoFdGgtVEgSBXRoLVRIGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL3RoLVRIL3YzMDU0L3NvZGEtdGgtVEgtdjMwNTQuemlwIO4XKK+kAjIQc29kYS10aC1USC12MzA1NDg2QGRiQEE4RkUzMEY5MUExM0E2OTczMzEyMzY1MjcwNUU2QzI4ODIzOTUyMDVFRjcwRUM1OTEyNzAzRjBGQkZFMTIwQUV4AXgCeAN4BHgFeAZ4B4oBKEY4NjNFMTg2QzUzQzc5QjY0ODBCNzZDMjAwRjJCQTc0NkM1MjM4MTWiAQoIFhACEAMQCRAKogEKCBcQAhADEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMuUCCgtjbW4tSGFucy1DThILY21uLUhhbnMtQ04aVWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvY21uLUhhbnMtQ04vdjMwNTYvc29kYS1jbW4tSGFucy1DTi12MzA1Ni56aXAg8Bco7J0DMhZzb2RhLWNtbi1IYW5zLUNOLXYzMDU2ODZAZGJANkFCQjBFREE0MDRCMUZDNTZGOUFCRTE2QjM1QUM1RTE2QzYzMzgwNkVENkRGNjYyQUVCOTM5MEY3RDc1MkJFQXgBeAJ4A3gEeAV4BngHigEoMTU5QTE5QkQ3NDhEQzZFMDA5RTU5RjE5QkU2NzZCODU5MTAyQzM2OaIBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMuUCCgtjbW4tSGFudC1UVxILY21uLUhhbnQtVFcaVWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvY21uLUhhbnQtVFcvdjMwNTYvc29kYS1jbW4tSGFudC1UVy12MzA1Ni56aXAg8Bco2bkDMhZzb2RhLWNtbi1IYW50LVRXLXYzMDU2ODZAZGJAM0I1QjVDRERGODg1N0EwNkM1MkJBNEZCQUUzQkU0NTM2NTZBN0ZEQzE2M0E1NzlGRUI5MEM0NzQxNjU3RUMxQ3gBeAJ4A3gEeAV4BngHigEoODVENkU0OTlFRjU4ODM3NTFCN0ZDQjRFNUJEMTNFRTY2OEYyOTlBMaIBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVkZS1BVBIFZGUtQVQaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZGUtQVQvdjMwNTYvc29kYS1kZS1BVC12MzA1Ni56aXAg8BcowsIDMhBzb2RhLWRlLUFULXYzMDU2ODZAZGJAMDkzNkQ3QzY2MjQwRDMxNjVCQjZFNDNFMzQ1ODM0QTdFRDQzQ0NFMzYxMjJBNEU2RTQ2NzQ3MkRGMTQwOEE5MXgBeAJ4A3gEeAV4BngHigEoQjQ4RkQxMUU0RjBEQzFGNzQxMjg5QzkwQ0FDRUQxQzcwMjYwNTk5MqIBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLLAgoFZGUtQkUSBWRlLUJFGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2RlLUJFL3YzMDU2L3NvZGEtZGUtQkUtdjMwNTYuemlwIPAXKMLCAzIQc29kYS1kZS1CRS12MzA1Njg2QGRiQDcxRDUzMzgzNUFCODU3ODZCMzhENUVGQzQ3RTgxOUE0MDY1MENEMTM0NDU0MDgxRUMzRTAxMTIyNDJFMEQzNzh4AXgCeAN4BHgFeAZ4B4oBKDhFN0VGQ0M0MkZCNkZBMUQ2NzAyRTJDNkIxRjMzNTNENDUwQ0MxMDWiAQ4IFhACEAMQBBAFEAkQCqIBDggXEAIQAxAEEAUQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBWRlLUNIEgVkZS1DSBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9kZS1DSC92MzA1Ni9zb2RhLWRlLUNILXYzMDU2LnppcCDwFyjCwgMyEHNvZGEtZGUtQ0gtdjMwNTY4NkBkYkA1QkExM0I4NUREMkMwMDdGQTUyOEU4Qzk0MEVBOUM2NTUyNzU0QzJGRTQwNzIxNkZDNEE0MEIxMTcyNjkwMTVDeAF4AngDeAR4BXgGeAeKASg0ODY5RUU5M0NGNjU1NzkzNTk4OTNEOEFDMTdCMjNBRTJEQTUzMTE0ogEOCBYQAhADEAQQBRAJEAqiAQ4IFxACEAMQBBAFEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVkZS1ERRIFZGUtREUaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZGUtREUvdjMwNTYvc29kYS1kZS1ERS12MzA1Ni56aXAg8Bcon8MDMhBzb2RhLWRlLURFLXYzMDU2ODZAZGJARTFBQjVCNDQzRDM0QzRFMzU1NDI4MDI2MDZFNkIzNkZGQTUzQUEyQkUyNkQ1QTU3Q0JCQkRERDU5OUYyNDAwRngBeAJ4A3gEeAV4BngHigEoNkI2NzQ3RkJDMzU5MEFEQ0FBNTk1RDUyMjc3MzFEMjIxMzk2NEYzRqIBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLfAgoFZW4tQ0ESBWVuLUNBGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VuLUNBL3YzMDU2L3NvZGEtZW4tQ0EtdjMwNTYuemlwIPAXKOShAzIQc29kYS1lbi1DQS12MzA1Njg2QGRiQEZGRjcyQzMzNzBGQkUyODhGNzE5MTJENTNEMzQ3NjFGRDYwMjQxODcwODZDOEYyMUY2OEQ5NEQwN0U4QTcwRER4AXgCeAN4BHgFeAZ4B4oBKDI4MzkwQzZFRjlBRENBNzg3RTgyNjM0OTQ2NDA5NUFERkZEQkQ4NzSiARoIFhACEAMQBBAFEAYQBxAIEAkQChANEA4QD6IBFggXEAIQAxAEEAUQBhAJEAoQDRAOEA+qAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLPAgoFZW4tSU4SBWVuLUlOGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VuLUlOL3YzMDU2L3NvZGEtZW4tSU4tdjMwNTYuemlwIPAXKPf4BjIQc29kYS1lbi1JTi12MzA1Njg2QGRiQEVCNjRCODg2QTlFN0I2RUE5QzYyRUVGMDUxQzdDRjE3QzBGNDkzNzAwRDA1MEI0ODAwMjY1RjA0OUY4RUY2MDV4AXgCeAN4BHgFeAZ4B4oBKEFBMjI1NEFEMkE1RDNFREIwMTY0MzU5MTFFQjk2QUJFODA3RTFBOESiARAIFhACEAMQBBAFEAYQCRAKogEQCBcQAhADEAQQBRAGEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMuMCCgVlbi1VUxIFZW4tVVMaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZW4tVVMvdjMwNTYvc29kYS1lbi1VUy12MzA1Ni56aXAg8BcogO8DMhBzb2RhLWVuLVVTLXYzMDU2ODZAZGJANzg2QjRDQjEwNDY0NDY4MjNDMkIwMUYyQUM5QzkwMDE1QjQyQjFEMTUzMUJDNDAwMUM2MzJDNzlERTkzN0IyMHgBeAJ4A3gEeAV4BngHigEoRkVFRkZFMDlBNEY4OENBNzdDNkYzNTE1RjdFMkI5OUNCRkVCNjg3M6IBHAgWEAIQAxAEEAUQBhAHEAgQCRAKEAwQDRAOEA+iARgIFxACEAMQBBAFEAYQCRAKEAwQDRAOEA+qAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLPAgoFZXMtRVMSBWVzLUVTGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2VzLUVTL3YzMDU2L3NvZGEtZXMtRVMtdjMwNTYuemlwIPAXKJ6BAzIQc29kYS1lcy1FUy12MzA1Njg2QGRiQDA0RTIxODM2MzRERTI5MTVDRkQxMERDOTFBOTZBQURCNDZGMzczOTdGNTBFNEE2NkFCRkM2MjBENjNEOTVBRTF4AXgCeAN4BHgFeAZ4B4oBKEIzRkE5NTg2OUI1RjU1QzcwMDk5MTgwQUIyMEE0RDE1Q0Q3MTUwQkaiARAIFhACEAMQBBAFEAYQCRAKogEQCBcQAhADEAQQBRAGEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVlcy1VUxIFZXMtVVMaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZXMtVVMvdjMwNTYvc29kYS1lcy1VUy12MzA1Ni56aXAg8Bco4+QCMhBzb2RhLWVzLVVTLXYzMDU2ODZAZGJAREIzNUUwOUY2OUFGNTJFNEE3QTk1NjM3MTdFRjM2QTU3NDQ5QUZBRjkzNjM3MDMyRTA1ODVFMzUwQ0QwQjhCRXgBeAJ4A3gEeAV4BngHigEoNDQwMDMzREE3QjI2NEI2QkE3MEY3N0EwRjI2QkQwN0VERjk0ODcwQaIBDggWEAIQAxAEEAYQCRAKogEOCBcQAhADEAQQBhAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLPAgoFZnItQkUSBWZyLUJFGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2ZyLUJFL3YzMDU2L3NvZGEtZnItQkUtdjMwNTYuemlwIPAXKKa8AzIQc29kYS1mci1CRS12MzA1Njg2QGRiQDNFNDgwQzIwRkIwRjE2NjRDQ0YzNjM0MzZEMTg1RTZGQ0RERUEyRENGQTY1Q0U1QkYyMkU2MzdBRkVDQTY4MkV4AXgCeAN4BHgFeAZ4B4oBKEUxNUQ3QjY3NkZBOTJBNjMxRDA2OEJGQjdBNDhFMzhBQzY3NUNFNDiiARAIFhACEAMQBBAFEAYQCRAKogEQCBcQAhADEAQQBRAGEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVmci1DQRIFZnItQ0EaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZnItQ0EvdjMwNTYvc29kYS1mci1DQS12MzA1Ni56aXAg8BcowLUDMhBzb2RhLWZyLUNBLXYzMDU2ODZAZGJANUI0MENENTIwMDVGQUIzMzg2RERBRUUyRDU1MjBDOEI0ODg3MzU2NDg1RDBDRTk2NzQ2QkFGRUE5MDY4QjQyNXgBeAJ4A3gEeAV4BngHigEoMkY0RkExQjBCOTZFQzA0ODY0MzNBNDI1OUQ2NEQ1NjQ2NDc2MUU4RaIBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLPAgoFZnItQ0gSBWZyLUNIGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2ZyLUNIL3YzMDU2L3NvZGEtZnItQ0gtdjMwNTYuemlwIPAXKKa8AzIQc29kYS1mci1DSC12MzA1Njg2QGRiQDQ2RkI3NUIwRDIyNjAzQzNGMTlDQUI2NjI5N0MzNDk4ODAwQUMzOTBFRTYxQzUyRjVFNjMwNzIxNEU0QTg0NkZ4AXgCeAN4BHgFeAZ4B4oBKDVGNDI1M0YzODU2MTFBRjIzMjM3NkI5MTdFMjhDRTRDODNBMDQ1NjeiARAIFhACEAMQBBAFEAYQCRAKogEQCBcQAhADEAQQBRAGEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMs8CCgVmci1GUhIFZnItRlIaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvZnItRlIvdjMwNTYvc29kYS1mci1GUi12MzA1Ni56aXAg8Bcog70DMhBzb2RhLWZyLUZSLXYzMDU2ODZAZGJANzBGREM0NTdGMEI2MDdGMEQ5QUM4QzE4NTA1MzZFRkMwQ0I3RDJEQjUwQzdEMjYwOURFMTk5NkU2QTYwNzU1NHgBeAJ4A3gEeAV4BngHigEoRkJBNDg1RjM4MDYwNDU0MDAwN0ZDRkNENTlDRTZENzI3NDdBQ0M4N6IBEAgWEAIQAxAEEAUQBhAJEAqiARAIFxACEAMQBBAFEAYQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyxwIKBWhpLUlOEgVoaS1JThpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9oaS1JTi92MzA1Ni9zb2RhLWhpLUlOLXYzMDU2LnppcCDwFyjB8gYyEHNvZGEtaGktSU4tdjMwNTY4NkBkYkA0QTZDOUM1RDdDRUFCRjlBMEYzQzk1NUI2MTdFOTI2NkE1OENEQjM1RDFGRjBBMzE3RjlCMkI2NTYxRTdBQUQ5eAF4AngDeAR4BXgGeAeKASgxRDdBRUU0NjY2MTNGMDZGQUI3QjM2RDU2MzA0QTUwQjBENTU2OTFFogEMCBYQAhADEAQQCRAKogEMCBcQAhADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyxwIKBWlkLUlEEgVpZC1JRBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9pZC1JRC92MzA1Ni9zb2RhLWlkLUlELXYzMDU2LnppcCDwFyjKsgIyEHNvZGEtaWQtSUQtdjMwNTY4NkBkYkA5NENENDYyNzM3NUZFNDhDNDg2MjA4MjQ1NjkzOTNBM0Q3OTdENzI4QTA2MTQ2RUFEMzZENTgzNjY4QTU0QjFCeAF4AngDeAR4BXgGeAeKAShENTI1RjFGOTgzMUEyMEZFMjE5Q0FFOUNCMURCNUVBQ0NFNDJDQThEogEMCBYQAhADEAQQCRAKogEMCBcQAhADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBWl0LUNIEgVpdC1DSBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9pdC1DSC92MzA1Ni9zb2RhLWl0LUNILXYzMDU2LnppcCDwFyjgtAMyEHNvZGEtaXQtQ0gtdjMwNTY4NkBkYkBFRkQzMzZBQzdGQTI1RkRBNUY2MUQ5QTZDOTYxN0Y1NjJBQUUzQzkxQzU5QzM1ODUzNzRCOTI5MjFGQjJENDI4eAF4AngDeAR4BXgGeAeKASg3QTQ5Qjk5M0QzRDFGODNBMDNFQjZBQjFEM0U1QzZFNjJGRTBDNjc4ogEOCBYQAhADEAQQBRAJEAqiAQ4IFxACEAMQBBAFEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVpdC1JVBIFaXQtSVQaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvaXQtSVQvdjMwNTYvc29kYS1pdC1JVC12MzA1Ni56aXAg8BcohrUDMhBzb2RhLWl0LUlULXYzMDU2ODZAZGJARTU0RjY1QUFEMzdGMjA1M0VGNjQxMTJEQTA0MTc5REU3MkU1QTJERUE2NTk0NUM3OTBCQTA1MDdFODdBQUU2RHgBeAJ4A3gEeAV4BngHigEoQkE4RUNCMzA2NzE5MDBERDczMzY4NkY5QTczNURCMUZGNkUwMDA4OKIBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjKpAgoFamEtSlASBWphLUpQGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2phLUpQL3YzMDU2L3NvZGEtamEtSlAtdjMwNTYuemlwIPAXKO6SAzIQc29kYS1qYS1KUC12MzA1Njg2QGRiQEU3RjFEOTUyMDVCODg0QzhDRkJFQkZBMkI1MkMxMkE5NjhFNjE0MUJCMTZGNkQwMDZFRjQ1Nzk3M0JGNTFCRjF4AXgCeAN4BHgFeAZ4B4oBKDI3OTQyMUQyMDhCRjc4QkE2NEVBOUNBQzk3NjZDRjAzODk2NjVGOEaqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLDAgoFa28tS1ISBWtvLUtSGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2tvLUtSL3YzMDU2L3NvZGEta28tS1ItdjMwNTYuemlwIPAXKNCgAjIQc29kYS1rby1LUi12MzA1Njg2QGRiQEI0MTZGNEYxMkQwNjI0NjQzNzU3REYwOUQ4NDc1Qzk0MjUwQUMzQTAxRTNFQjI1NjQ3NEFCREIwRjM2MkFGRjR4AXgCeAN4BHgFeAZ4B4oBKEYxODAwRkFFNEMwOTg4Qzc0NTRGN0E0NEE4MERBNTY5OTcxNTVDREWiAQoIFhACEAMQCRAKogEKCBcQAhADEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMscCCgVwbC1QTBIFcGwtUEwaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvcGwtUEwvdjMwNTYvc29kYS1wbC1QTC12MzA1Ni56aXAg8BcojbsCMhBzb2RhLXBsLVBMLXYzMDU2ODZAZGJAOTNCNEU0OEI3OTcyMzNGOTEyQUE2OTlFNzM4MUJFNzY3MkE0QTA2RkEzODFCN0I5Qzg4QzhGMDMzOURBMDY0NngBeAJ4A3gEeAV4BngHigEoRjlFRkE5NUYyQTA2MDNFNTAyMThFNEIyMjI0MDVDQUZEQzE3MDkwN6IBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMssCCgVwdC1CUhIFcHQtQlIaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvcHQtQlIvdjMwNTYvc29kYS1wdC1CUi12MzA1Ni56aXAg8Bcojt0CMhBzb2RhLXB0LUJSLXYzMDU2ODZAZGJANDJFNTU3QkU5RjRDQjM3QTA2RUE4N0I1MjU5NDRGMEQ4RUI0NjNGQzY2NDc5QURDOUEzRkEyNEZFODNEODBGQXgBeAJ4A3gEeAV4BngHigEoRDQyNUNBODIyRjJCNUUxQTk4NzE1MkI4NDRGM0I5ODIwNjJBMUQwM6IBDggWEAIQAxAEEAUQCRAKogEOCBcQAhADEAQQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLHAgoFcnUtUlUSBXJ1LVJVGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL3J1LVJVL3YzMDU2L3NvZGEtcnUtUlUtdjMwNTYuemlwIPAXKPXsAjIQc29kYS1ydS1SVS12MzA1Njg2QGRiQEJEM0REQ0I2ODYzNUJBMTM5NEY5QURGRUY1Qjc4MDBGQzRBNDFGODhGNkQ3MTgyM0ZBNjEwOTIyNDI2NDNFOEF4AXgCeAN4BHgFeAZ4B4oBKDUxMEI2RDcxN0E4OTJFNjg1MTgyREU5NEY4QTMyMTNEMkM2QkFFQkKiAQwIFhACEAMQBRAJEAqiAQwIFxACEAMQBRAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLDAgoFdGgtVEgSBXRoLVRIGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL3RoLVRIL3YzMDU2L3NvZGEtdGgtVEgtdjMwNTYuemlwIPAXKK+kAjIQc29kYS10aC1USC12MzA1Njg2QGRiQDJGNkY5RTE4RUFDNEIxN0U4M0JDNEE4MzY5NDUzMEY3MjQyQjIwMjgwNjlFNUVFQjQ3OEIzQzk5MDM3Qjk0Rjd4AXgCeAN4BHgFeAZ4B4oBKEQ5RDg1OTdFNkVGNEE1Q0JEMjQ0QUQ2RjBBNzJGNTBCQzgyMzY0MDWiAQoIFhACEAMQCRAKogEKCBcQAhADEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMsMCCgV0ci1UUhIFdHItVFIaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvdHItVFIvdjMwNTYvc29kYS10ci1UUi12MzA1Ni56aXAg8Bco6bACMhBzb2RhLXRyLVRSLXYzMDU2ODZAZGJANDBDNzdCODBEOTIzRDVGNzAxMzU2Njg0ODFCMzYwQUNEQTkyRDE4OUNDQUZDRDVEMEVFMzBBNDBDRjc3MDNBQ3gBeAJ4A3gEeAV4BngHigEoOUMxMzQ5ODA2M0VFRUE3QkU3QUQ3RDVEN0JGREZGMjM5QkVFQzVFRqIBCggWEAIQAxAJEAqiAQoIFxACEAMQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYywwIKBXZpLVZOEgV2aS1WThpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS92aS1WTi92MzA1Ni9zb2RhLXZpLVZOLXYzMDU2LnppcCDwFyjXoQIyEHNvZGEtdmktVk4tdjMwNTY4NkBkYkBFMURDNTY3RTRDRjgxMjVCOUI5RUE0OTYyMTE3OURCNTQxQ0Q4ODZDRENCMDFDNzAxMTEzQzhDRTRFNjBDRDJGeAF4AngDeAR4BXgGeAeKASgxRjA2MTA0NjkwMjlDMEIyODBBMTdCMjU2NDE2NkY3Q0QzMjZEQzI4ogEKCBYQAhADEAkQCqIBCggXEAIQAxAJEAqqAQQIARAXqgEECAIQFqoBBAgDEBeqAQQIBBAWqgEECAUQF6oBBAgGEBaqAQQIBxAWqgEECAsQFjLLAgoFamEtSlASBWphLUpQGklodHRwczovL2RsLmdvb2dsZS5jb20vYW5kcm9pZC92b2ljZS9zb2RhL2phLUpQL3YzMDU5L3NvZGEtamEtSlAtdjMwNTkuemlwIPMXKMWSAzIQc29kYS1qYS1KUC12MzA1OTg2QGRiQDRFREE2RTc1NDZCNDk2NzVCMjA2RjZEQ0NFOUVGNTJDMUFFNUY0RUU2QUQzQTBGMjg3NkI4ODczNDk0MDhBOUF4AXgCeAN4BHgFeAZ4B4oBKDZDQzM0RjA0MkMxNzAxOEExOUVFMDZBQUJGREM0NzlDREEyRkU5QTKiAQ4IFhACEAMQBBAFEAkQCqIBDggXEAIQAxAEEAUQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyxwIKBWlkLUlEEgVpZC1JRBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9pZC1JRC92MzA1OS9zb2RhLWlkLUlELXYzMDU5LnppcCDzFyi9qAIyEHNvZGEtaWQtSUQtdjMwNTk4NkBkYkBGMzQ0QTcwREU0NEQ3NkYwMDZFNDMyQTgwNUIxRDdGMzgxODQ3QzVDQkE1Q0QxNDVCMDU4MkI2RjYwMjE4ODgxeAF4AngDeAR4BXgGeAeKASg2Q0E5MjIzNTVCRkM3MDE5QkE0MENCMEQ4QzA3MzI0QkQyNThDMkIzogEMCBYQAhADEAQQCRAKogEMCBcQAhADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyxwIKBWtvLUtSEgVrby1LUhpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9rby1LUi92MzA2MS9zb2RhLWtvLUtSLXYzMDYxLnppcCD1FyjApQIyEHNvZGEta28tS1ItdjMwNjE4NkBkYkBCMjg3OUJDMzNCRTRDMjdFNjJERTdERDY4NkVCMTIwMEUzRUUwN0E1MDkzOEJFRjIzODExQUU2NzAwQzJFRDdFeAF4AngDeAR4BXgGeAeKAShEQ0MwNzU4ODcwQUJGNkFBMTJDNTVDMjQwRDM5RDQ0NDMzNDUzRThEogEMCBYQAhADEAQQCRAKogEMCBcQAhADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyxwIKBXBsLVBMEgVwbC1QTBpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9wbC1QTC92MzA1OS9zb2RhLXBsLVBMLXYzMDU5LnppcCDzFyi3sgIyEHNvZGEtcGwtUEwtdjMwNTk4NkBkYkBDNDNFQThGMDY0NjQxQjNFN0QyODFBOUFBMkM2NDI0Qjc0ODVDREM2MkVDOUI4NTg3NjFEQzM0RTU3ODBBNTgweAF4AngDeAR4BXgGeAeKASg1NjMyMThFMTFENjMzREYxRjhDNkQ3OUM4MzZEQzJCRTMyODA0MzU5ogEMCBYQAhADEAQQCRAKogEMCBcQAhADEAQQCRAKqgEECAEQF6oBBAgCEBaqAQQIAxAXqgEECAQQFqoBBAgFEBeqAQQIBhAWqgEECAcQFqoBBAgLEBYyywIKBXJ1LVJVEgVydS1SVRpJaHR0cHM6Ly9kbC5nb29nbGUuY29tL2FuZHJvaWQvdm9pY2Uvc29kYS9ydS1SVS92MzA1OS9zb2RhLXJ1LVJVLXYzMDU5LnppcCDzFyjK8QIyEHNvZGEtcnUtUlUtdjMwNTk4NkBkYkA3QzQyMTdENDk3MThDNjQzMDJDRUZDMTlFN0JEMTM1RDJFQjk0MTVFMDQ2REY2MDJDNUE4NUNCQjM0QkU5RURBeAF4AngDeAR4BXgGeAeKASgwNUFFRkVEMDFGOTIzRDg2MjcxODg3QzE5NkUxOUI0MDVCNjNBRDhDogEOCBYQAhADEAQQBRAJEAqiAQ4IFxACEAMQBBAFEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMscCCgV0aC1USBIFdGgtVEgaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvdGgtVEgvdjMwNTkvc29kYS10aC1USC12MzA1OS56aXAg8xcohqQCMhBzb2RhLXRoLVRILXYzMDU5ODZAZGJAMTQ5RjQ1QkYyQURGRDE1QkFFMzc4QUIzQkI0MjQzMTRERDYwRjk3MUVERTA4OUM0QTREMTExNTNERjBEQzA2MHgBeAJ4A3gEeAV4BngHigEoREFBNzE3OTg3Mzk5MzJGQzUwQkYzODBGRjUzM0Y5NkExMDA5NDZDRaIBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMscCCgV0ci1UUhIFdHItVFIaSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvdHItVFIvdjMwNTkvc29kYS10ci1UUi12MzA1OS56aXAg8xcolbUCMhBzb2RhLXRyLVRSLXYzMDU5ODZAZGJAMUMzNkFBQzMxNDBFMzc2RENCRkEzMzg3NkJGQ0I1OUU5RENBM0ZFNjZBRjZEM0ZEQzhGQzI2RUU1MTE3OEVCQngBeAJ4A3gEeAV4BngHigEoRkIzRkJGQkEyNjU0REYxQkU0N0ZENUEwMDdBNTAyQzg0RjhFNDM0M6IBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAWMscCCgV2aS1WThIFdmktVk4aSWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9hbmRyb2lkL3ZvaWNlL3NvZGEvdmktVk4vdjMwNTkvc29kYS12aS1WTi12MzA1OS56aXAg8xcorqYCMhBzb2RhLXZpLVZOLXYzMDU5ODZAZGJANjdDQjI3Q0IyNzYyNjIxQkU0RDhCQzZEOUQ3ODVDMUNEQzA5RjRBQTRFQzRENEFFMzY0MjNCQUIzNjRBNkQ3NngBeAJ4A3gEeAV4BngHigEoMEQ3RDgzMTBFMUE5Mzk4RkFDOTRBMkM2OEMyRjk4QjNFQ0QyN0IwNqIBDAgWEAIQAxAEEAkQCqIBDAgXEAIQAxAEEAkQCqoBBAgBEBeqAQQIAhAWqgEECAMQF6oBBAgEEBaqAQQIBRAXqgEECAYQFqoBBAgHEBaqAQQICxAW</item>
+        <item>device_personalization_services/SpeechPack__enable_mdd_download_notifications=true</item>
+        <item>device_personalization_services/SpeechPack__speech_recognition_service_settings_enabled=true</item>
+        <item>device_personalization_services/SpeechPack__use_mdd_download_system=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__bias_name_options=CAA</item>
+        <item>device_personalization_services/SpeechRecognitionService__clear_logging_events_if_too_much_memory=false</item>
+        <item>device_personalization_services/SpeechRecognitionService__diarization_context_alignment_enabled=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__enable_best_effort_switch_upon_final_for_multilang=false</item>
+        <item>device_personalization_services/SpeechRecognitionService__enable_context_biasing_for_multilang=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__enable_locale_validation=false</item>
+        <item>device_personalization_services/SpeechRecognitionService__max_concurrent_recognition_sessions=1</item>
+        <item>device_personalization_services/SpeechRecognitionService__multilang_max_number_of_switches_per_final=1</item>
+        <item>device_personalization_services/SpeechRecognitionService__multilang_no_switch_after_ms_per_final=5000</item>
+        <item>device_personalization_services/SpeechRecognitionService__multilang_session_rewind_enabled=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__on_device_biasing_params=</item>
+        <item>device_personalization_services/SpeechRecognitionService__recognition_session_logging_uses_lang_id_events=false</item>
+        <item>device_personalization_services/SpeechRecognitionService__recognition_session_logging_uses_word_separator=false</item>
+        <item>device_personalization_services/SpeechRecognitionService__resumable_diarization_enabled=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__skip_model_download_user_confirmation=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__tng_transcription_soda_ttl_sec=10</item>
+        <item>device_personalization_services/SpeechRecognitionService__trigger_model_download_listener_enabled=true</item>
+        <item>device_personalization_services/SpeechRecognitionService__trigger_model_download_timeout_sec=10</item>
+        <item>device_personalization_services/SpeechRecognitionService__word_level_confidence_version=0</item>
+
+        <!-- Gboard -->
+        <item>device_personalization_services/SmartDictation__enable_alternatives_from_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_alternatives_from_speech_hypotheses=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_commands=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contact_fields=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_contacts_learned_from_past_corrections=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_interests_model=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_past_correction=true</item>
+        <item>device_personalization_services/SmartDictation__enable_biasing_for_screen_context=true</item>
+        <item>device_personalization_services/SmartDictation__enable_personalized_biasing_on_locked_device=false</item>
+        <item>device_personalization_services/SmartDictation__enable_selection_filtering=true</item>
+        <item>device_personalization_services/SmartDictation__enable_stronger_boost_for_generic_phrases_biasing=false</item>
+        <item>device_personalization_services/SmartRecCompose__enable_aiai_tc_generator=true</item>
+        <item>device_personalization_services/SmartRecCompose__enable_compose_action_filter=true</item>
+        <item>device_personalization_services/SmartRecCompose__enable_compose_tc=true</item>
+        <item>device_personalization_services/SmartRecCompose__enable_deep_clu_model=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_action_boost_generator=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_assistant_geller_data_index=false</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_matchmaker_generator=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_reflection_generator=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_settings_card_generator=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__enable_smartrec_for_overview_chips=true</item>
+        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_url=https://www.gstatic.com/nasa/apps/pack_enus_10062022/22100618/2/en-us/superpacks_manifest.zip</item>
+        <item>device_personalization_services/SmartRecOverviewChips__nasa_superpacks_manifest_ver=2022100601</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_aiai_tc_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_all_fallbacks=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_appaction_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_assistant_geller_data_index=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_assistant_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_assistant_personalized_deeplinks=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_assistant_vertical_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_chrometab_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_corpora_via_search_context=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_entity_annotation_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_entity_based_action_generation=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_feedback_ranking=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_gboard_suggestion=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_nasa_for_search=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_navigational_sites_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_screenshot_generator=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_screenshot_thumbnail_cache=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_search_on_contacts=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_search_on_files=false</item>
+        <item>device_personalization_services/SmartRecPixelSearch__enable_spelling_correction=true</item>
+        <item>device_personalization_services/SmartRecPixelSearch__spelling_checker_frequency_score_overrides_map={\"8\":-7}</item>
+
+        <!-- Pixel Launcher -->
+        <item>launcher/enable_keyboard_transition_sync=true</item>
+        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/ENABLE_WIDGETS_PICKER_AIAI_SEARCH=true</item>
+        <item>launcher/ENABLE_QUICK_LAUNCH_V2=true</item>
+        <item>launcher/GBOARD_UPDATE_ENTER_KEY=true</item>
+        <item>launcher/enable_quick_search=true</item>
+        <item>launcher/enable_one_search=true</item>
+        <item>launcher/enable_quick_launch_v2=true</item>
+        <item>launcher/enable_rich_answer=true</item>
+        <item>launcher/ENABLE_SEARCH_HAPTIC_HINT=true</item>
+        <item>launcher/enable_web_suggest_on_default_browser=true</item>
+        <item>launcher/long_press_home_button_to_search=true</item>
+        <item>launcher/long_press_home_button_to_search_mpr=true</item>
+        <item>launcher/press_hold_nav_handle_to_search=true</item>
+        <item>launcher/press_hold_nav_handle_to_search_mpr=true</item>
+        <item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE=true</item>
+        <item>launcher/ENABLE_LONG_PRESS_NAV_HANDLE_MPR=true</item>
+        <item>launcher/ENABLE_SETTINGS_OSE_CUSTOMIZATIONS=true</item>
+        <item>launcher/INVOKE_OMNI_LPH=true</item>
+        <item>launcher/INVOKE_OMNI_LPH_MPR=true</item>
+        <item>launcher/LPNH_SLOP_PERCENTAGE=71</item>
+        <item>launcher/LPNH_TIMEOUT_MS=400</item>
+        <item>launcher/ANIMATE_LPNH=true</item>
+        <item>launcher/SHRINK_NAV_HANDLE_ON_PRESS=true</item>
+        <item>launcher/show_search_educard_qsb=true</item>
+        <item>launcher/show_three_dot_menu_qsb=true</item>
+        <item>launcher/use_app_search_for_web=true</item>
+        <item>launcher/use_fallback_app_search=true</item>
+        <item>launcher/PSB_RESKIN=true</item>
+
+        <!-- Pixel Launcher (Recents) -->
+        <item>device_personalization_services/Overview__enable_barcode_detection=false</item>
+        <item>device_personalization_services/Overview__enable_image_search=false</item>
+        <item>device_personalization_services/Overview__enable_image_selection=true</item>
+        <item>device_personalization_services/Overview__enable_japanese_ocr=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_long_press=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_select_mode=true</item>
+        <item>device_personalization_services/Overview__enable_lens_r_overview_translate_action=true</item>
+        <item>device_personalization_services/Overview__enable_overview=true</item>
+        <item>device_personalization_services/Overview__enable_pir_clearcut_logging=true</item>
+        <item>device_personalization_services/Overview__enable_pir_westworld_logging=true</item>
+        <item>device_personalization_services/Overview__enable_proactive_hints=false</item>
+        <item>device_personalization_services/Overview__enable_superpacks_pir_protocol=true</item>
+        <item>device_personalization_services/Overview__min_lens_agsa_app_version=301084649</item>
+
+        <!-- Disable federated learning -->
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_fa=false</item>
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_min_training_interval=false</item>
+        <item>device_personalization_services/OverviewFederatedAnalytics__enable_non_synthetic_logs=false</item>
+
+        <!-- Disable unused AiAi features -->
+        <item>device_personalization_services/Autofill__enable=false</item>
+        <item>device_personalization_services/Autofill__enable_fa=false</item>
+        <item>device_personalization_services/Fedex__enable_fedex=false</item>
+        <item>device_personalization_services/Logging__enable_aiai_clearcut_logging=false</item>
+        <item>device_personalization_services/NotificationAssistant__enable_service=false</item>
+        <item>device_personalization_services/VisualCortex__enable=false</item>
+
+        <!-- System Ui -->
+        <item>systemui/clipboard_overlay_show_actions=true</item>
+        <item>systemui/enable_screenshot_corner_flow=true</item>
+        <item>systemui/enable_screenshot_notification_smart_actions=true</item>
+        <item>systemui/enable_screenshot_scrolling=true</item>
+        <item>systemui/quick_access_wallet_enabled=true</item>
+        <item>systemui/tap_to_edit=true</item>
+        <item>systemui/volume_separate_notification=true</item>
+
+        <!-- Privacy -->
+        <item>privacy/discrete_history_cutoff_millis=604800000</item>
+        <item>privacy/permissions_hub_enabled=true</item>
+        <item>privacy/permissions_hub_2_enabled=true</item>
+        <item>privacy/privacy_dashboard_7_day_toggle=true</item>
+        <item>privacy/warning_banner_enabled=true</item>
+        <item>privacy/safety_center_is_enabled=true</item>
+        <item>privacy/safety_protection_enabled=true</item>
+
+        <!-- Media Provider -->
+        <item>mediaprovider/allowed_cloud_providers=com.google.android.apps.photos.cloudpicker</item>
+        <item>mediaprovider/cloud_media_feature_enabled=true</item>
+
+        <!-- Wallpaper Effects -->
+        <item>device_personalization_services/WallpaperEffects__cinematic_models_mdd_manifest_config=Ct4IEtsICiF3YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMSwgESdWh0dHBzOi8vZGwuZ29vZ2xlLmNvbS9tZGktc2VydmluZy9haWFpLXdhbGxwYXBlcmVmZmVjdHMtY2luZW1hdGljLW1vZGVscy83NDYvNTk2NDgzNDA1MzljOGU2OWRmZGZlYjkzNTk0OTIzYWJmZDBmMGQwNyCM4JQFKig1OTY0ODM0MDUzOWM4ZTY5ZGZkZmViOTM1OTQ5MjNhYmZkMGYwZDA3OhJkZXB0aF9tb2RlbC50ZmxpdGV4AKIBAKoBABLIARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni84NmE3MWYwYTIwYjFhMjhiNTY4MTMwZTliYTZjMTYzZTdhZjQzMTg5IKzsyQQqKDg2YTcxZjBhMjBiMWEyOGI1NjgxMzBlOWJhNmMxNjNlN2FmNDMxODk6GHBlcnNvbl9wb3NlX21vZGVsLnRmbGl0ZXgAogEAqgEAEs0BEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2I2NTQxNDFiOTUwNjY3OTVlYjBlNjNlZDRkNzFiZjQxZDQyYjFhNmMgyPPNAiooYjY1NDE0MWI5NTA2Njc5NWViMGU2M2VkNGQ3MWJmNDFkNDJiMWE2YzodcGVyc29uX3NlZ21lbnRlcl9tb2RlbC50ZmxpdGV4AKIBAKoBABLLARJ1aHR0cHM6Ly9kbC5nb29nbGUuY29tL21kaS1zZXJ2aW5nL2FpYWktd2FsbHBhcGVyZWZmZWN0cy1jaW5lbWF0aWMtbW9kZWxzLzc0Ni9lOTllZWJlMDQ2NDk4ZmU2N2MzMzdjZmZkMzkzODM4NTVkMjE0NjM5INCXrwIqKGU5OWVlYmUwNDY0OThmZTY3YzMzN2NmZmQzOTM4Mzg1NWQyMTQ2Mzk6G3JnYmRfaW5wYWludGVyX21vZGVsLnRmbGl0ZXgAogEAqgEAEsQBEnVodHRwczovL2RsLmdvb2dsZS5jb20vbWRpLXNlcnZpbmcvYWlhaS13YWxscGFwZXJlZmZlY3RzLWNpbmVtYXRpYy1tb2RlbHMvNzQ2L2ExNjQ4ZjQ2NDYyZDVmMTExOTVjNmEyYTBhN2M0MTMyZTEwNzJjMDIgsLo6KihhMTY0OGY0NjQ2MmQ1ZjExMTk1YzZhMmEwYTdjNDEzMmUxMDcyYzAyOhVzYWxpZW5jeV9tb2RlbC50ZmxpdGV4AKIBAKoBABgAUABYAGoECAEQAHAAogEAqAEAuAHqBdIBB2RlZmF1bHTaAQDiARsKBwgBEJ+xjRcKBwgCEKCxjRcKBwgDEKGxjRc</item>
+        <item>device_personalization_services/WallpaperEffects__enable_allow_fg_download_on_cellular=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_effect=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_cinematic_mdd=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_foreground_model_download=true</item>
+        <item>device_personalization_services/WallpaperEffects__enable_person_segment_tpu=false</item>
+        <item>device_personalization_services/WallpaperEffects__return_texturedmesh_with_error_status=true</item>
+        <item>device_personalization_services/WallpaperEffects__use_gpu=true</item>
+        <item>device_personalization_services/WallpaperEffects__use_tpu=false</item>
+
+        <!-- Settings -->
+        <item>settings_ui/bt_advanced_header_enabled=true</item>
+        <item>settings_ui/bt_le_audio_contact_sharing_enabled=true</item>
+        <item>settings_ui/bt_near_by_suggestion_enabled=true</item>
+        <item>settings_ui/bt_slice_settings_enabled=true</item>
+
+        <!-- Window Manager splash screen exemption -->
+        <item>window_manager/splash_screen_exception_list=com.facebook.lite,com.facebook.mlite,com.instagram.android,tv.twitch.android.app,tv.twitch.android.viewer,org.iggymedia.periodtracker,com.ohmgames.cheatandrun,com.skgames.trafficracer,com.skgames.trafficrider,com.skgames.wingsonfiregame,com.microblink.photomath,com.cam001.selfie,com.soundcloud.android,com.skype.raider,com.phonepe.app,jp.naver.line.android,com.facebook.stella,in.startv.hotstar,in.startv.hotstar.dplus,ru.yandex.yandexnavi,com.google.android.apps.nbu.paisa.user,net.one97.paytm,com.viber.voip,com.king.candycrushsaga,com.roblox.client,com.picsart.studio,com.jio.myjio,in.mohalla.sharechat,com.imo.android.imoim,com.discord,com.meesho.supply,com.kiloo.subwaysurf,com.booking,com.jio.media.jiobeats,com.nexstreaming.app.kinemasterfree,com.nhn.android.navercafe,br.com.gabba.Caixa,com.nu.production,com.funnypuri.client,com.gaana,com.graymatrix.did,com.canva.editor,com.mercadopago.wallet,com.overdrive.mobile.android.libby,com.duolingo,com.taxis99,br.com.bb.android,id.dana,com.wix.android,com.bigwinepot.nwdn.international,com.lazygeniouz.saveit,com.instagram.lite,com.picpay,com.tv.v18.viola,com.bradesco,org.iggymedia.periodtracker,com.didiglobal.passenger,com.iqiyi.i18n,com.naver.linewebtoon,com.sonyliv,ru.dublgis.dgismobile,com.itau,tr.gov.turkiye.edevlet.kapisi,com.mcdonalds.mobileapp,com.pandora.android,com.ixigo.train.ixitrain,com.realme.link,com.videoeditorpro.android,br.gov.caixa.fgts.trabalhador,com.bancomer.mbanking,br.gov.serpro.cnhe,de.zalando.mobile,com.agoda.mobile.consumer,photoeditor.layout.collagemaker,com.heytap.quickgame,photo.editor.photoeditor.photoeditorpro,video.reface.app,sortpuz.water.sort.puzzle.game,in.cricketexchange.app.cricketexchange,me.zepeto.main,com.axis.mobile,br.com.santander.way,com.novapontocom.casasbahia,pdf.tap.scanner,com.mic.bluezone,instagram.photo.video.downloader.repost.insta,com.bankofbaroda.mconnect,media.music.musicplayer,org.jw.jwlibrary.mobile,com.superbinogo.jungleboyadventure,br.com.intermedium,com.indiaBulls,com.traveloka.android,com.portonics.mygp,com.unicostudio.braintest,com.unicostudio.braintest2new,com.pedidosya,com.naver.vapp,com.microsoft.xboxone.smartglass,com.mind.quiz.brain.out,th.co.truemoney.wallet,com.itaucard.activity,com.ubercab.driver,in.gov.umang.negd.g2c,com.Dominos,omegle.tv,com.chase.sig.android,com.rockstargames.gtasa,com.snowcorp.vita,com.forshared.files,com.bpjstku,com.taxsee.taxsee,com.wallapop,puzzle.blockpuzzle.cube.relax,com.dd.doordash,com.nvt.cs,com.garanti.cepsubesi,com.inditex.zara,net.telewebion,com.fogg.photovideomaker,naukriApp.appModules.login,com.nttdocomo.android.dmenu2,com.emeint.android.myservices,com.fundevs.app.mediaconverter,com.mobikwik_new.bajajfinserv,com.scores365,com.themausoft.wpsapp,com.mcdo.mcdonalds,com.ge.capital.konysbiapp,com.glovo,com.picmax.wemoji,com.oyo.consumer,com.funcamerastudio.videomaker,com.comuto,my.com.tngdigital.ewallet,com.instagram.layout,com.ykb.android,br.com.mobicare.minhaoi,com.citibanamex.banamexmobile,com.nhn.android.webtoon,com.evernote,com.lyxoto.master.forminecraftpe,com.tripadvisor.tripadvisor,jp.co.mcdonalds.android,com.lguplus.mobile.cs,app.trell,com.infraware.office.link,com.iqoption,com.jazz.jazzworld,com.lomotif.android,glitchvideoeditor.videoeffects.glitchvideoeffect,videoplayer.videodownloader.hdvideoplayer,com.tmobile.pr.mytmobile,com.swifthawk.picku.free</item>
+
+        <!-- Autofill compatibility apps -->
+        <item>autofill/compat_mode_allowed_packages=com.android.chrome[url_bar]:com.brave.browser[url_bar]:com.brave.browser_beta[url_bar]:com.brave.browser_nightly[url_bar]:com.chrome.beta[url_bar]:com.chrome.dev[url_bar]:com.chrome.canary[url_bar]:com.microsoft.emmx[url_bar]:com.microsoft.emmx.beta[url_bar]:com.microsoft.emmx.canary[url_bar]:com.microsoft.emmx.dev[url_bar]:com.opera.browser[url_field]:com.opera.browser.beta[url_bar]:com.opera.mini.native[url_bar]:com.opera.mini.native.beta[url_bar]:com.sec.android.app.sbrowser[location_bar_edit_text]:com.sec.android.app.sbrowser.beta[location_bar_edit_text]:org.mozilla.fennec_aurora[url_bar]:org.mozilla.firefox[url_bar]:org.mozilla.firefox_beta[url_bar]:org.chromium.chrome[url_bar]</item>
+   </string-array>
 
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>

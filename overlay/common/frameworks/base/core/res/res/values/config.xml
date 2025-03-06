@@ -310,7 +310,6 @@
         <item>device_personalization_services/Echo__smartspace_outlook_event_source_of_truth=TEXT_ONLY</item>
         <item>device_personalization_services/Echo__smartspace_package_delivery_card_delay_seconds=0</item>
         <item>device_personalization_services/Echo__smartspace_show_cross_device_timer_label=true</item>
-        <item>device_personalization_services/Echo__smartspace_use_flashlight_action_chip=true</item>
         <item>device_personalization_services/Echo_smartspace__enable_flight_landing_smartspace_aiai=true</item>
         <item>device_personalization_services/Echo_smartspace__enable_hotel_smartspace_aiai=true</item>
         <item>device_personalization_services/Echo_smartspace__smartspace_enable_daily_forecast=true</item>
@@ -343,6 +342,10 @@
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_timely_reminder=true</item>
         <item>device_personalization_services/EchoSmartspace__smartspace_enable_tomorrow_forecast=true</item>
         <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
+
+        <!-- Nearby -->
+        <item>nearby/nearby_enable_presence_broadcast_legacy=false</item>
+        <item>nearby/nearby_support_test_app=false</item>
 
         <!-- Notification Assistant (DPS) -->
         <item>notification_assistant/generate_actions=true</item>
@@ -607,7 +610,7 @@
         <!-- Autofill compatibility apps -->
         <item>autofill/compat_mode_allowed_packages=com.android.chrome[url_bar]:com.brave.browser[url_bar]:com.brave.browser_beta[url_bar]:com.brave.browser_nightly[url_bar]:com.chrome.beta[url_bar]:com.chrome.dev[url_bar]:com.chrome.canary[url_bar]:com.microsoft.emmx[url_bar]:com.microsoft.emmx.beta[url_bar]:com.microsoft.emmx.canary[url_bar]:com.microsoft.emmx.dev[url_bar]:com.opera.browser[url_field]:com.opera.browser.beta[url_bar]:com.opera.mini.native[url_bar]:com.opera.mini.native.beta[url_bar]:com.sec.android.app.sbrowser[location_bar_edit_text]:com.sec.android.app.sbrowser.beta[location_bar_edit_text]:org.mozilla.fennec_aurora[url_bar]:org.mozilla.firefox[url_bar]:org.mozilla.firefox_beta[url_bar]:org.chromium.chrome[url_bar]</item>
     </string-array>
-    
+
     <!-- Flag indicating which package name can access DeviceConfig table -->
     <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
 

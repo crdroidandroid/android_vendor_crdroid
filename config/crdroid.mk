@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
-    MatLog \
     OmniJaws \
     OmniStyle
+
+ifneq ($(TARGET_DISABLE_MATLOG),true)
+PRODUCT_PACKAGES += \
+    MatLog
+endif

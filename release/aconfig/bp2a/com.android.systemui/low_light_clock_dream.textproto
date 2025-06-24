@@ -1,6 +1,0 @@
-flag_value {
-  package: "com.android.systemui"
-  name: "low_light_clock_dream"
-  state: ENABLED
-  permission: READ_ONLY
-}

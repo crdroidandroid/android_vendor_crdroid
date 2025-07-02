@@ -1,6 +1,6 @@
 flag_value {
   package: "com.android.systemui"
-  name: "lockscreen_custom_clocks"
+  name: "disable_blurred_shade_visible"
   state: ENABLED
   permission: READ_ONLY
 }

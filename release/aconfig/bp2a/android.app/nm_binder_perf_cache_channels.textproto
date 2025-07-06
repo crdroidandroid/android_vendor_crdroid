@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "nm_binder_perf_cache_channels"
+  state: ENABLED
+  permission: READ_ONLY
+}

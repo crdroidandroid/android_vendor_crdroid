@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "nm_binder_perf_permission_check"
+  state: ENABLED
+  permission: READ_ONLY
+}

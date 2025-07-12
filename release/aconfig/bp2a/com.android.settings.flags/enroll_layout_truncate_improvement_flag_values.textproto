@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.settings.flags"
+  name: "enroll_layout_truncate_improvement"
+  state: DISABLED
+  permission: READ_ONLY
+}

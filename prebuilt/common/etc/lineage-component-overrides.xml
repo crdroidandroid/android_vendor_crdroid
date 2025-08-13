@@ -20,15 +20,26 @@
         <component class=".systemupdate.SystemUpdateSettingsContentProvider" enabled="false" />
     </component-override>
 
+    <component-override package="com.google.android.dialer">
+        <component class=".rtt.settings.impl.gateway.RttSettingsDeepLink" enabled="false" />
+    </component-override>
+
     <component-override package="com.google.android.gms">
+        <component class=".chimera.GmsIntentOperationService$GmsExternalReceiver" enabled="false" />
+        <component class=".stats.service.DropBoxEntryAddedReceiver" enabled="false" />
         <component class=".update.control.NotificationControl" enabled="false" />
         <component class=".update.OtaSuggestionActivity" enabled="false" />
         <component class=".update.OtaSuggestionSummaryProvider" enabled="false" />
         <component class=".update.phone.PopupDialog" enabled="false" />
         <component class=".update.SystemUpdateActivity" enabled="false" />
+        <component class=".update.SystemUpdateV2Activity" enabled="false" />
         <component class=".update.SystemUpdateGcmTaskService" enabled="false" />
         <component class=".update.SystemUpdatePersistentListenerService" enabled="false" />
         <component class=".update.SystemUpdateService" enabled="false" />
+        <component class=".update.SystemUpdateService.ActiveReceiver" enabled="false" />
+        <component class=".update.SystemUpdateService.Receiver" enabled="false" />
+        <component class=".update.SystemUpdateService.SecretCodeReceiver" enabled="false" />
+        <component class=".update.control.NotificationControl" enabled="false" />
     </component-override>
 
     <component-override package="com.google.android.setupwizard">

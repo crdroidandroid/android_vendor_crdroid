@@ -1,6 +1,0 @@
-flag_value {
-  package: "android.app"
-  name: "nm_binder_perf_log_nm_throttling"
-  state: ENABLED
-  permission: READ_ONLY
-}

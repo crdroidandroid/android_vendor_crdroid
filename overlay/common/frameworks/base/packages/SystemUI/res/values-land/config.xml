@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether to use the split 2-column notification shade -->
+    <bool name="config_use_split_notification_shade">true</bool>
+</resources>

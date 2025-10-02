@@ -45,4 +45,12 @@
     <component-override package="com.google.android.setupwizard">
         <component class=".update.OtaUpdateActivity" enabled="false" />
     </component-override>
+
+    <component-override package="com.google.android.settings.intelligence">
+        <component class="com.google.android.settings.intelligence.modules.battery.impl.chargingoptimization.ChargingOptimizationActivity" enabled="false" />
+        <component class="com.google.android.settings.intelligence.modules.battery.impl.chargingoptimization.ChargingOptimizationActivityInject" enabled="false" />
+        <component class="com.google.android.settings.intelligence.modules.battery.impl.health.BHSettingsActivity" enabled="false" />
+        <component class="com.google.android.settings.intelligence.modules.batterywidget.impl.BatteryWidgetPromoActivity" enabled="false" />
+        <component class="com.google.android.settings.intelligence.modules.routines.impl.settings.RoutinesSettingsActivity" enabled="false" />
+    </component-override>
 </config>

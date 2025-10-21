@@ -233,11 +233,11 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
+ifeq ($(WITH_SU),true)
 # Root
 PRODUCT_PACKAGES += \
     adb_root
 
-ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     su
 

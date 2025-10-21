@@ -6,7 +6,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.setupwizard.rotation_locked=true \
     ro.com.google.ime.theme_id=5 \
     ro.opa.eligible_device=true \
     ro.com.android.wifi-watchlist=GoogleGuest \

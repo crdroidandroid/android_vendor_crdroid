@@ -34,6 +34,7 @@
         <item>com.android.systemui.clocks.metro</item>
         <item>com.android.systemui.clocks.numoverlap</item>
         <item>com.android.systemui.clocks.weather</item>
+        <item>com.libremobileos.clock</item>
     </string-array>
 
     <string-array name="config_pluginWhitelist">

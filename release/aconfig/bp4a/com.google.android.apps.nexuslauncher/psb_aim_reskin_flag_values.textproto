@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.google.android.apps.nexuslauncher"
+  name: "psb_aim_reskin"
+  state: ENABLED
+  permission: READ_ONLY
+}

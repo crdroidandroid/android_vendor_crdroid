@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "modes_ui"
+  state: ENABLED
+  permission: READ_ONLY
+}

@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.providers.media.flags"
+  name: "fetch_cloud_albums_as_categories"
+  state: ENABLED
+  permission: READ_ONLY
+}

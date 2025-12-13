@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "notification_channel_vibration_effect_api"
+  state: ENABLED
+  permission: READ_ONLY
+}

@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.view.accessibility"
+  name: "force_invert_color"
+  state: ENABLED
+  permission: READ_ONLY
+}

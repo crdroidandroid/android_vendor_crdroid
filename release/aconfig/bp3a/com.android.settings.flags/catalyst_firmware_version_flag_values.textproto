@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.settings.flags"
+  name: "catalyst_firmware_version"
+  state: DISABLED
+  permission: READ_ONLY
+}

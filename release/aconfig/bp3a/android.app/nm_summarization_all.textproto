@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "nm_summarization_all"
+  state: ENABLED
+  permission: READ_ONLY
+}

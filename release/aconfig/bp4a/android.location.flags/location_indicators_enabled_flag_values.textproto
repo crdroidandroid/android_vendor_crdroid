@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.location.flags"
+  name: "location_indicators_enabled"
+  state: ENABLED
+  permission: READ_ONLY
+}

@@ -1,4 +1,4 @@
-// Copyright 2025 Google Inc. All rights reserved.
+// Copyright 2024 Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,6 +16,6 @@ aconfig_values {
     name: "aconfig-values-lineage-bp4a-android.view.accessibility-all",
     package: "android.view.accessibility",
     srcs: [
-        "*_flag_values.textproto",
+        "*.textproto",
     ],
 }

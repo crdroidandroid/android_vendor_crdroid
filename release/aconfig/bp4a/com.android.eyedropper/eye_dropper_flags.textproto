@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.eyedropper"
+  name: "enable_eye_dropper_api"
+  state: ENABLED
+  permission: READ_ONLY
+}

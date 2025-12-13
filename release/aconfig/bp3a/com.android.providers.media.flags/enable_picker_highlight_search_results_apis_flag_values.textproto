@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.providers.media.flags"
+  name: "enable_picker_highlight_search_results_apis"
+  state: ENABLED
+  permission: READ_ONLY
+}

@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "hide_status_bar_notification"
+  state: ENABLED
+  permission: READ_ONLY
+}

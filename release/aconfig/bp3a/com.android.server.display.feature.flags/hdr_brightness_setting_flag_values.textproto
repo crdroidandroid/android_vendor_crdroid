@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.server.display.feature.flags"
+  name: "hdr_brightness_setting"
+  state: ENABLED
+  permission: READ_ONLY
+}

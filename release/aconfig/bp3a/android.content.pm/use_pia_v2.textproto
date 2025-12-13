@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.content.pm"
+  name: "use_pia_v2"
+  state: ENABLED
+  permission: READ_ONLY
+}

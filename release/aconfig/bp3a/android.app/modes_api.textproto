@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.app"
+  name: "modes_api"
+  state: ENABLED
+  permission: READ_ONLY
+}

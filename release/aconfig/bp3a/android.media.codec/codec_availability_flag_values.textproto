@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.media.codec"
+  name: "codec_availability"
+  state: DISABLED
+  permission: READ_ONLY
+}

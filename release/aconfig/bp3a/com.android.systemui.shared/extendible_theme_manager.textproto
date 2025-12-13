@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.systemui.shared"
+  name: "extendible_theme_manager"
+  state: ENABLED
+  permission: READ_ONLY
+}

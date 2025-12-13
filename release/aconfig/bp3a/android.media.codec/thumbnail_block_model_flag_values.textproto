@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.media.codec"
+  name: "thumbnail_block_model"
+  state: DISABLED
+  permission: READ_ONLY
+}

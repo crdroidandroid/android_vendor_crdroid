@@ -54,6 +54,9 @@
          screenshot has been saved to work profile. If blank, a default icon will be shown. -->
     <string name="config_sceenshotWorkProfileFilesApp" translatable="false">com.android.documentsui/.files.LauncherActivity</string>
 
+    <!-- Whether or not to show the UMO on the glanceable hub when media is playing. -->
+    <bool name="config_showUmoOnHub">true</bool>
+
     <!-- Whether or not lockscreen shortcuts can be customized -->
     <bool name="custom_lockscreen_shortcuts_enabled" translatable="false">true</bool>
 

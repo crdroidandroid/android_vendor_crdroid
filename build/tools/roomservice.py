@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# Copyright (C) 2023-2025 crDroid Android Project
+#!/usr/bin/env python3
+# Copyright (C) 2023-2026 crDroid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import print_function
 
 import base64
 import json
@@ -23,20 +22,9 @@ import sys
 
 from xml.etree import ElementTree
 
-try:
-    # For python3
-    import urllib.error
-    import urllib.parse
-    import urllib.request
-except ImportError:
-    # For python2
-    import imp
-    import urllib2
-    import urlparse
-    urllib = imp.new_module('urllib')
-    urllib.error = urllib2
-    urllib.parse = urlparse
-    urllib.request = urllib2
+import urllib.request
+import urllib.error
+import urllib.parse
 
 DEBUG = False
 
@@ -68,7 +56,7 @@ def add_auth(g_req):
         if auth:
             github_auth = base64.b64encode(
                 ('%s:%s' % (auth[0], auth[2])).encode()
-            )
+            ).decode()
         else:
             github_auth = ""
     if github_auth:
@@ -167,6 +155,19 @@ def add_to_manifest(repos, fallback_branch=None):
 _fetch_dep_cache = []
 
 
+def validate_repository(repo_name, target_path):
+    repo_lower = repo_name.lower()
+    target_lower = target_path.lower()
+
+    if not any(x in repo_lower for x in ('crdroidandroid', 'themuppets', 'lineageos')):
+        return False, "Unsupported repository org"
+
+    if 'lineageos' in repo_lower:
+        if ('hardware' not in target_lower) and ('sepolicy' not in target_lower):
+            return False, "LineageOS repositories allowed only with 'hardware' or 'sepolicy' repos"
+
+    return True, None
+
 def fetch_dependencies(repo_path, fallback_branch=None):
     global _fetch_dep_cache
     if repo_path in _fetch_dep_cache:
@@ -174,29 +175,54 @@ def fetch_dependencies(repo_path, fallback_branch=None):
     _fetch_dep_cache.append(repo_path)
 
     print('Looking for dependencies')
+    print()
 
     dep_p = '/'.join((repo_path, custom_dependencies))
     if os.path.exists(dep_p):
-        with open(dep_p) as dep_f:
-            dependencies = json.load(dep_f)
+        try:
+            with open(dep_p) as dep_f:
+                raw = dep_f.read()
+                dependencies = json.loads(raw)
+        except Exception as e:
+            print("Error: Invalid dependencies formatting in %s" % (dep_p))
+            print()
+            sys.exit(1)
     else:
-        dependencies = {}
+        dependencies = []
         print('%s has no additional dependencies.' % repo_path)
 
     fetch_list = []
     syncable_repos = []
+    invalid_dependency = False
 
     for dependency in dependencies:
-        if not is_in_manifest(dependency['target_path']):
+        repo = dependency.get('repository')
+        target = dependency.get('target_path')
+        if not repo or not target:
+            print("Skipping dependency with missing 'repository' or 'target_path': %r" % dependency)
+            continue
+
+        ok, reason = validate_repository(repo, target)
+        if not ok:
+            print("Error for dependency '%s' => '%s': %s" % (repo, target, reason))
+            invalid_dependency = True
+            continue
+
+        if not is_in_manifest(target):
             if not dependency.get('branch'):
                 dependency['branch'] = custom_default_revision
-
             fetch_list.append(dependency)
-            syncable_repos.append(dependency['target_path'])
+            syncable_repos.append(target)
         else:
-            print("Dependency already present in manifest: %s => %s" % (dependency['repository'], dependency['target_path']))
+            print("Dependency already present in manifest: %s => %s" % (repo, target))
+
+    if invalid_dependency:
+        print("Aborting: one or more dependencies are not valid; not syncing repositories.")
+        print()
+        sys.exit(1)
 
     if fetch_list:
+        print()
         print('Adding dependencies to manifest\n')
         add_to_manifest(fetch_list, fallback_branch)
 

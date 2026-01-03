@@ -163,6 +163,8 @@ def validate_repository(repo_name, target_path):
         return False, "Unsupported repository org"
 
     if 'lineageos' in repo_lower:
+        if 'kernels' in repo_lower:
+            return True, None
         if ('hardware' not in target_lower) and ('sepolicy' not in target_lower):
             return False, "LineageOS repositories allowed only with 'hardware' or 'sepolicy' repos"
 

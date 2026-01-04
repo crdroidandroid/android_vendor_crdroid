@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.providers.media.flags"
+  name: "cloud_provider_albums_as_category_api"
+  state: ENABLED
+  permission: READ_ONLY
+}

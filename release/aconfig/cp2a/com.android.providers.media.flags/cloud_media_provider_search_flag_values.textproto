@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.providers.media.flags"
+  name: "cloud_media_provider_search"
+  state: ENABLED
+  permission: READ_ONLY
+}

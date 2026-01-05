@@ -18,7 +18,10 @@ import base64
 import json
 import netrc
 import os
+import socket
+import ssl
 import sys
+import time
 
 from xml.etree import ElementTree
 
@@ -248,8 +251,12 @@ def detect_revision(repo):
     print("Checking branch info")
     githubreq = urllib.request.Request(
         repo['branches_url'].replace('{/branch}', ''))
-    add_auth(githubreq)
-    result = json.loads(urllib.request.urlopen(githubreq, timeout=5).read().decode())
+    try:
+        with github_urlopen(githubreq, timeout=15) as resp:
+            result = json.loads(resp.read().decode())
+    except Exception as e:
+        print("Failed to retrieve branch information from GitHub: %s" % e)
+        sys.exit(1)
 
     print("Calculated revision: %s" % custom_default_revision)
 
@@ -258,6 +265,29 @@ def detect_revision(repo):
 
     print("Branch %s not found" % custom_default_revision)
     sys.exit()
+
+
+def github_urlopen(g_req, timeout=15, retries=3, backoff=2):
+    add_auth(g_req)
+    try:
+        g_req.add_header("User-Agent", "%s roomservice/1.0" % org_display)
+    except Exception:
+        pass
+    g_req.add_header("Accept", "application/vnd.github.v3+json")
+
+    attempt = 0
+    while True:
+        try:
+            debug("Opening URL:", g_req.full_url, "attempt", attempt+1)
+            return urllib.request.urlopen(g_req, timeout=timeout)
+        except (urllib.error.URLError, socket.timeout, TimeoutError, ssl.SSLError) as e:
+            attempt += 1
+            if attempt > retries:
+                print("Error: failed to contact GitHub after %d attempts: %s" % (attempt, e))
+                raise
+            wait = backoff ** attempt
+            print("Network error contacting GitHub (attempt %d/%d): %s. Retrying in %ds..." % (attempt, retries, e, wait))
+            time.sleep(wait)
 
 
 def main():
@@ -288,18 +318,21 @@ def main():
     githubreq = urllib.request.Request(
         "https://api.github.com/search/repositories?"
         "q={0}+user:{1}+in:name+fork:true".format(device, org_manifest))
-    add_auth(githubreq)
-
-    repositories = []
-
     try:
-        result = json.loads(urllib.request.urlopen(githubreq, timeout=10).read().decode())
+        with github_urlopen(githubreq, timeout=15) as resp:
+            result = json.loads(resp.read().decode())
     except urllib.error.URLError:
-        print("Failed to search GitHub")
+        print("Failed to search GitHub (network error)")
         sys.exit(1)
     except ValueError:
         print("Failed to parse return data from GitHub")
         sys.exit(1)
+    except Exception as e:
+        print("Unexpected error querying GitHub: %s" % e)
+        sys.exit(1)
+
+    repositories = []
+
     for res in result.get('items', []):
         repositories.append(res)
 

@@ -22,6 +22,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.input.video_enabled=false
 
+# BCR
+ifeq ($(WITH_BCR), true)
+    $(call inherit-product, vendor/bcr/bcr.mk)
+endif
+
 # Blur
 ifneq ($(TARGET_SUPPORTS_BLUR),false)
 PRODUCT_PRODUCT_PROPERTIES += ro.surface_flinger.supports_background_blur=1

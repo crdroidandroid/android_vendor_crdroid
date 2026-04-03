@@ -34,6 +34,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     AxSandbox \
+    AxThemeStore \
     BatteryStatsViewer \
     GameSpace \
     LMOFreeform \

@@ -258,6 +258,7 @@ endif
 endif
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
+    AppLocker \
     GameSpace \
     CarSystemUI \
     SystemUI

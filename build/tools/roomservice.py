@@ -228,8 +228,8 @@ def fetch_dependencies(repo_path):
     verify_repos = []
 
     if os.path.exists(dependencies_path):
-        dependencies_file = open(dependencies_path, 'r')
-        dependencies = json.loads(dependencies_file.read())
+        with open(dependencies_path, 'r') as dependencies_file:
+            dependencies = json.load(dependencies_file)
         fetch_list = []
 
         for dependency in dependencies:
@@ -249,8 +249,6 @@ def fetch_dependencies(repo_path):
 
             if not os.path.isdir(dependency['target_path']):
                 syncable_repos.append(dependency['target_path'])
-
-        dependencies_file.close()
 
         if len(fetch_list) > 0:
             print('Adding dependencies to manifest')

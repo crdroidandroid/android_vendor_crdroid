@@ -40,7 +40,7 @@ else:
 
 try:
     device = product[product.index('_') + 1 :]
-except:
+except IndexError:
     device = product
 
 if not depsonly:
@@ -123,7 +123,7 @@ def get_from_manifest(devicename):
         try:
             lm = ElementTree.parse(path)
             lm = lm.getroot()
-        except:
+        except Exception:
             lm = ElementTree.Element('manifest')
 
         for localpath in lm.findall('project'):
@@ -140,7 +140,7 @@ def is_in_manifest(projectpath):
         try:
             lm = ElementTree.parse(path)
             lm = lm.getroot()
-        except:
+        except Exception:
             lm = ElementTree.Element('manifest')
 
         for localpath in lm.findall('project'):
@@ -151,7 +151,7 @@ def is_in_manifest(projectpath):
     try:
         lm = ElementTree.parse(get_manifest_path())
         lm = lm.getroot()
-    except:
+    except Exception:
         lm = ElementTree.Element('manifest')
 
     for localpath in lm.findall('project'):
@@ -162,7 +162,7 @@ def is_in_manifest(projectpath):
     try:
         lm = ElementTree.parse('.repo/manifests/snippets/lineage.xml')
         lm = lm.getroot()
-    except:
+    except Exception:
         lm = ElementTree.Element('manifest')
 
     for localpath in lm.findall('project'):
@@ -179,7 +179,7 @@ def add_to_manifest(repositories):
     try:
         lm = ElementTree.parse('.repo/local_manifests/roomservice.xml')
         lm = lm.getroot()
-    except:
+    except Exception:
         lm = ElementTree.Element('manifest')
 
     for repository in repositories:
@@ -290,7 +290,7 @@ def get_default_or_fallback_revision(repo_name):
             stderr=subprocess.PIPE,
         ).stdout.decode()
         branches = [x.split('refs/heads/')[-1] for x in stdout.splitlines()]
-    except:
+    except Exception:
         return ''
 
     if default_revision in branches:

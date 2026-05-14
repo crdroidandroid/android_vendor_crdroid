@@ -267,7 +267,7 @@ def fetch_dependencies(repo_path):
     if len(syncable_repos) > 0:
         print('Syncing dependencies')
         if not dryrun:
-            os.system('repo sync --force-sync %s' % ' '.join(syncable_repos))
+            subprocess.run(['repo', 'sync', '--force-sync'] + syncable_repos)
 
     for deprepo in verify_repos:
         fetch_dependencies(deprepo)
@@ -352,7 +352,7 @@ else:
             add_to_manifest([device_repository])
 
             print('Syncing repository to retrieve project.')
-            os.system('repo sync --force-sync %s' % repo_path)
+            subprocess.run(['repo', 'sync', '--force-sync', repo_path])
             print('Repository synced!')
 
             fetch_dependencies(repo_path)

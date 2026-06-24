@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.os"
+  name: "material_colors_2026_03"
+  state: ENABLED
+  permission: READ_ONLY
+}

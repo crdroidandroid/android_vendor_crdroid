@@ -80,3 +80,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
 endif
+
+SOONG_CONFIG_NAMESPACES += libgui
+SOONG_CONFIG_libgui += support_mtk_ged_kpi
+
+ifeq ($(TARGET_ENABLE_MTK_GED_KPI),true)
+SOONG_CONFIG_libgui_support_mtk_ged_kpi := true
+endif

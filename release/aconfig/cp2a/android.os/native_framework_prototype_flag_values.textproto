@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.os"
+  name: "native_framework_prototype"
+  state: DISABLED
+  permission: READ_ONLY
+}

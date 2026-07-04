@@ -1,0 +1,6 @@
+flag_value {
+  package: "android.os"
+  name: "native_app_zygote"
+  state: DISABLED
+  permission: READ_ONLY
+}

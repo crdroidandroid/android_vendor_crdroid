@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2019-2025 crDroid Android Project
+# Copyright (C) 2019-2026 crDroid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # You may not use this file except in compliance with the License.
@@ -59,6 +59,7 @@ VERSION="$V_MAX.$V_MIN"
 
 BUILDPROP="$2/system/build.prop"
 TIMESTAMP=$(grep "ro.system.build.date.utc" "$BUILDPROP" | cut -d'=' -f2)
+OS_SDK_LEVEL=$(grep -m1 "^ro.build.version.sdk=" "$BUILDPROP" | cut -d'=' -f2)
 MD5=$(md5sum "$2/$3" | cut -d' ' -f1)
 SHA256=$(sha256sum "$2/$3" | cut -d' ' -f1)
 SIZE=$(stat -c "%s" "$2/$3")
@@ -78,6 +79,7 @@ cat <<EOF >$output
             "sha256": "$SHA256",
             "size": $SIZE,
             "version": "$VERSION",
+            "os_sdk_level": ${OS_SDK_LEVEL:-0},
             "buildtype": "${BUILDTYPE:-}",
             "forum": "${FORUM:-}",
             "gapps": "${GAPPS:-}",

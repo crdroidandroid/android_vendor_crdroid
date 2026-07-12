@@ -59,6 +59,7 @@ VERSION="$V_MAX.$V_MIN"
 
 BUILDPROP="$2/system/build.prop"
 TIMESTAMP=$(grep "ro.system.build.date.utc" "$BUILDPROP" | cut -d'=' -f2)
+OS_PATCH_LEVEL=$(grep -m1 "^ro.build.version.security_patch=" "$BUILDPROP" | cut -d'=' -f2)
 OS_SDK_LEVEL=$(grep -m1 "^ro.build.version.sdk=" "$BUILDPROP" | cut -d'=' -f2)
 MD5=$(md5sum "$2/$3" | cut -d' ' -f1)
 SHA256=$(sha256sum "$2/$3" | cut -d' ' -f1)
@@ -79,6 +80,7 @@ cat <<EOF >$output
             "sha256": "$SHA256",
             "size": $SIZE,
             "version": "$VERSION",
+            "os_patch_level": "${OS_PATCH_LEVEL:-}",
             "os_sdk_level": ${OS_SDK_LEVEL:-0},
             "buildtype": "${BUILDTYPE:-}",
             "forum": "${FORUM:-}",

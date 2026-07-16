@@ -749,6 +749,13 @@ endif # FULL_KERNEL_BUILD
 
 ifneq ($(TARGET_KERNEL_PLATFORM_TARGET),)
 KERNEL_PATH := $(abspath $(BUILD_TOP)/kernel/platform/kernel-$(TARGET_KERNEL_VERSION))
+
+ifeq ($(call is-version-lower-or-equal,$(TARGET_KERNEL_VERSION),6.1),true)
+KERNEL_REPO_MANIFEST := $(abspath $(KERNEL_OUT)/manifest.xml)
+else
+KERNEL_REPO_MANIFEST := $(abspath $(KERNEL_PATH)):$(abspath $(KERNEL_OUT)/manifest.xml)
+endif
+
 $(TARGET_PREBUILT_INT_KERNEL): $(DEPMOD) $(KERNEL_MODULES_PARTITION_FILE_LIST) $(SYSTEM_KERNEL_MODULES_PARTITION_FILE_LIST)
 	@echo "Building $(BOARD_KERNEL_IMAGE_NAME)"
 	@mkdir -p $(KERNEL_OUT)
@@ -762,7 +769,17 @@ $(TARGET_PREBUILT_INT_KERNEL): $(DEPMOD) $(KERNEL_MODULES_PARTITION_FILE_LIST) $
 			                       { print } \
 		' \
 		> $(abspath $(KERNEL_OUT))/manifest.xml
-	$(hide) cd $(KERNEL_PATH) && ./tools/bazel --output_user_root=$(abspath $(KERNEL_OUT)/bazel-out) --output_root=$(abspath $(KERNEL_OUT)/bazel-out) run --experimental_convenience_symlinks=ignore --cpu=$(KERNEL_ARCH) --repo_manifest $(abspath $(KERNEL_PATH)):$(abspath $(KERNEL_OUT)/manifest.xml) --config=stamp //$(KERNEL_SRC):$(TARGET_KERNEL_PLATFORM_TARGET)_dist -- --destdir=$(abspath $(KERNEL_OUT))
+	$(hide) cd $(KERNEL_PATH) && \
+		./tools/bazel \
+			--output_user_root=$(abspath $(KERNEL_OUT)/bazel-out) \
+			--output_root=$(abspath $(KERNEL_OUT)/bazel-out) \
+			run \
+			--experimental_convenience_symlinks=ignore \
+			--cpu=$(KERNEL_ARCH) \
+			--repo_manifest $(KERNEL_REPO_MANIFEST) \
+			--config=stamp \
+			//$(KERNEL_SRC):$(TARGET_KERNEL_PLATFORM_TARGET)_dist \
+			-- --destdir=$(abspath $(KERNEL_OUT))
 	$(if $(BOOT_KERNEL_MODULES),\
 		$(call build-image-kernel-modules-lineage,$(addprefix $(KERNEL_OUT)/,$(BOOT_KERNEL_MODULES)),$(KERNEL_VENDOR_RAMDISK_MODULES_OUT),,$(KERNEL_VENDOR_RAMDISK_DEPMOD_STAGING_DIR),$(KERNEL_VENDOR_RAMDISK_KERNEL_MODULES_LOAD),,,)\
 	)

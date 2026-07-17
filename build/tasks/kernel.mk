@@ -796,8 +796,12 @@ $(TARGET_PREBUILT_INT_KERNEL): $(DEPMOD) $(KERNEL_MODULES_PARTITION_FILE_LIST) $
 ifeq ($(BOARD_INCLUDE_DTB_IN_BOOTIMG),true)
 $(INSTALLED_DTBIMAGE_TARGET): $(TARGET_PREBUILT_INT_KERNEL)
 	@rm -f $@
-	$(foreach dtb,$(TARGET_DTB_LIST_WILDCARD),\
-		cat `find $(abspath $(KERNEL_OUT))/$(dir $(dtb)) -maxdepth 1 -type f -name "$(notdir $(dtb)).dtb" | sort` >> $@;)
+	$(hide) if [ -f $(KERNEL_OUT)/dtb.img ]; then \
+		cp $(KERNEL_OUT)/dtb.img $@; \
+	else \
+		$(foreach dtb,$(TARGET_DTB_LIST_WILDCARD),\
+			cat `find $(abspath $(KERNEL_OUT))/$(dir $(dtb)) -maxdepth 1 -type f -name "$(notdir $(dtb)).dtb" | sort` >> $@;) \
+	fi
 endif
 
 ifeq ($(BOARD_KERNEL_SEPARATED_DTBO),true)

@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.systemui"
+  name: "qs_tiles_reveal_animation"
+  state: ENABLED
+  permission: READ_ONLY
+}

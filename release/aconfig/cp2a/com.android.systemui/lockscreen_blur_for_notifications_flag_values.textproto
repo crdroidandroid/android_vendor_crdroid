@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.systemui"
+  name: "lockscreen_blur_for_notifications"
+  state: ENABLED
+  permission: READ_ONLY
+}

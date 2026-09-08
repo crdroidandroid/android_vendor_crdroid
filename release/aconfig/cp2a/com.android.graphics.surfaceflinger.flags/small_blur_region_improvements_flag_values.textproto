@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.graphics.surfaceflinger.flags"
+  name: "small_blur_region_improvements"
+  state: ENABLED
+  permission: READ_ONLY
+}

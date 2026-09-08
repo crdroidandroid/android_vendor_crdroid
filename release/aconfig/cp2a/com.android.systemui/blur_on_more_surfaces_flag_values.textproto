@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.systemui"
+  name: "blur_on_more_surfaces"
+  state: ENABLED
+  permission: READ_ONLY
+}

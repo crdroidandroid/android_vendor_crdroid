@@ -1,0 +1,6 @@
+flag_value {
+  package: "com.android.window.flags"
+  name: "app_compat_enable_blur_wallpaper_in_shell"
+  state: ENABLED
+  permission: READ_ONLY
+}

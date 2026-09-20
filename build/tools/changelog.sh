@@ -45,9 +45,11 @@ fi
 
 REPO_LIST="$(cat .repo/project.list | sed '\?^vendor/crDroidOTA?d')"
 for i in $(seq $changelog_days); do
-    After_Date=`date --date="$i days ago" +%m-%d-%Y`
+    After_Epoch=$(( $(date +%s) - (i * 86400) ))
+    After_Date=$(date -d "@$After_Epoch" +%m-%d-%Y)
     k=$(expr $i - 1)
-    Until_Date=`date --date="$k days ago" +%m-%d-%Y`
+    Until_Epoch=$(( $(date +%s) - (k * 86400) ))
+    Until_Date=$(date -d "@$Until_Epoch" +%m-%d-%Y)
 
     # Line with after --- until was too long for a small ListView
     echo '====================' >> $Changelog

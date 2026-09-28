@@ -101,7 +101,7 @@ EOF
 
 if [ ! -f $existingOTAjson ]; then
     echo "There is no official support for this device yet"
-    echo "Consider adding official support by reading the documentation at https://github.com/crdroidandroid/android_vendor_crDroidOTA/blob/16.0/README.md"
+    echo "Consider adding official support by reading the documentation at https://github.com/crdroidandroid/android_vendor_crDroidOTA/blob/17.0/README.md"
 fi
 
 echo "JSON file generation completed"

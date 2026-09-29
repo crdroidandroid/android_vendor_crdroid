@@ -38,7 +38,7 @@ if dryrun:
     print('Dry run roomservice, no change will be made.')
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision = "16.0"
+custom_default_revision = "17.0"
 custom_dependencies = "crdroid.dependencies"
 org_manifest = "crdroidandroid"  # leave empty if org is provided in manifest
 org_display = "crDroid Android"  # needed for displaying
@@ -349,7 +349,7 @@ def git_ls_remote_branches(repo_name):
 
 
 def get_default_or_fallback_revision(repo_name):
-    """Prefer custom_default_revision (e.g. 16.0); otherwise try the
+    """Prefer custom_default_revision (e.g. 17.0); otherwise try the
     space-separated branches in ROOMSERVICE_BRANCHES env var.
     Returns '' if nothing matches."""
     print("Checking branch info for %s" % repo_name)

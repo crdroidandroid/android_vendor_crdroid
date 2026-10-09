@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-Changelog=Changelog.txt
+Changelog="/tmp/Changelog.txt"
 
 DEVICE=$1
 

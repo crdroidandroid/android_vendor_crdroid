@@ -65,7 +65,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
 endif
 
-ifneq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     FaceUnlock
 

@@ -41,7 +41,7 @@
     <string name="config_bodyFontFamily" translatable="false">google-sans-flex</string>
 
     <!-- Name of a font family to use for medium body text. -->
-    <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-flex</string>
+    <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-flex-medium</string>
 
     <!-- Name of a font family to use as light font. For theming purpose. -->
     <string name="config_lightFontFamily" translatable="false">google-sans-flex</string>
@@ -51,6 +51,6 @@
 
     <!-- Name of a font family to use for headlines. If empty, falls back to platform default -->
     <string name="config_headlineFontFamily">google-sans-flex</string>
-    <string name="config_headlineFontFamilyMedium">google-sans-flex</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-flex-medium</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
 </resources>

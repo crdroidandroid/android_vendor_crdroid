@@ -38,6 +38,11 @@ preserve_addon_d() {
 
     chmod 755 /postinstall/tmp/addon.d/*.sh
   fi
+  if [ -d /product/addon.d/ ]; then
+    mkdir -p /postinstall/tmp/product_addon.d/
+    cp -a /product/addon.d/* /postinstall/tmp/product_addon.d/
+    chmod 755 /postinstall/tmp/product_addon.d/*.sh
+  fi
 }
 
 # Restore /postinstall/system/addon.d from /postinstall/tmp/addon.d
@@ -46,6 +51,11 @@ restore_addon_d() {
     mkdir -p /postinstall/system/addon.d/
     cp -a /postinstall/tmp/addon.d/* /postinstall/system/addon.d/
     rm -rf /postinstall/tmp/addon.d/
+  fi
+  if [ -d /postinstall/tmp/product_addon.d/ ]; then
+    mkdir -p /postinstall/product/addon.d/
+    cp -a /postinstall/tmp/product_addon.d/* /postinstall/product/addon.d/
+    rm -rf /postinstall/tmp/product_addon.d/
   fi
 }
 
@@ -65,8 +75,9 @@ return 0
 
 # Execute /system/addon.d/*.sh scripts with each $@ parameter
 run_stages() {
-if [ -d /postinstall/tmp/addon.d/ ]; then
-  for script in $(find /postinstall/tmp/addon.d/ -name '*.sh' |sort -n); do
+if [ -d /postinstall/tmp/addon.d/ ] || [ -d /postinstall/tmp/product_addon.d/ ]; then
+  for script in $(find /postinstall/tmp/addon.d/ /postinstall/tmp/product_addon.d/ \
+      -name '*.sh' 2>/dev/null | sort -n); do
     # we have no /sbin/sh in android, only recovery
     # use /system/bin/sh here instead
     sed -i '0,/#!\/sbin\/sh/{s|#!/sbin/sh|#!/system/bin/sh|}' $script

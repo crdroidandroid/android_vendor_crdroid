@@ -30,6 +30,11 @@ preserve_addon_d() {
     cp -a $S/addon.d/* /tmp/addon.d/
     chmod 755 /tmp/addon.d/*.sh
   fi
+  if [ -d /product/addon.d/ ]; then
+    mkdir -p /tmp/product_addon.d/
+    cp -a /product/addon.d/* /tmp/product_addon.d/
+    chmod 755 /tmp/product_addon.d/*.sh
+  fi
 }
 
 # Restore /system/addon.d from /tmp/addon.d
@@ -38,6 +43,11 @@ restore_addon_d() {
     mkdir -p $S/addon.d/
     cp -a /tmp/addon.d/* $S/addon.d/
     rm -rf /tmp/addon.d/
+  fi
+  if [ -d /tmp/product_addon.d/ ]; then
+    mkdir -p /product/addon.d/
+    cp -a /tmp/product_addon.d/* /product/addon.d/
+    rm -rf /tmp/product_addon.d/
   fi
 }
 
@@ -64,8 +74,8 @@ return 0
 
 # Execute /system/addon.d/*.sh scripts with each $@ parameter
 run_stages() {
-if [ -d /tmp/addon.d/ ]; then
-  for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
+if [ -d /tmp/addon.d/ ] || [ -d /tmp/product_addon.d/ ]; then
+  for script in $(find /tmp/addon.d/ /tmp/product_addon.d/ -name '*.sh' 2>/dev/null | sort -n); do
     v=$(get_script_version $script)
     if [ $v -ge 3 ]; then
       mount_extra $all_V3_partitions

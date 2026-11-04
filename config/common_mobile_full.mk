@@ -9,8 +9,12 @@ PRODUCT_PACKAGES += \
     Etar \
     Profiles \
     Recorder \
-    Seedvault \
     Twelve
+
+ifneq ($(TARGET_EXCLUDES_SEEDVAULT),true)
+PRODUCT_PACKAGES += \
+    Seedvault
+endif
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \

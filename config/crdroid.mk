@@ -45,16 +45,24 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
 # Extra packages
+ifneq ($(TARGET_EXCLUDES_AX_QUICK_LOOK),true)
 PRODUCT_PACKAGES += \
-    AxQuickLook \
+    AxQuickLook
+endif
+
+PRODUCT_PACKAGES += \
     AxSandbox \
     AxThemeStore \
     BatteryStatsViewer \
     GameSpace \
     LMOFreeform \
     LMOFreeformSidebar \
-    OmniJaws \
     OmniStyle
+
+ifneq ($(TARGET_EXCLUDES_OMNIJAWS),true)
+PRODUCT_PACKAGES += \
+    OmniJaws
+endif
 
 ifneq ($(TARGET_DISABLE_MATLOG),true)
 PRODUCT_PACKAGES += \

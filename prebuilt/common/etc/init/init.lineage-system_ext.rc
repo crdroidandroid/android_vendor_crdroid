@@ -2,6 +2,10 @@
 on init
     export TERMINFO /system_ext/etc/terminfo
 
+on post-fs-data
+    # Custom emoji font, written by FontManagerService
+    mkdir /data/fonts/emoji 0771 system system
+
 # bugreport is triggered by holding down volume down, volume up and power
 service lineage-bugreport /system/bin/dumpstate -d -p -z
     socket dumpstate stream 0660 shell log

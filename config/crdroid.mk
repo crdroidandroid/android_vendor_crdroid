@@ -54,6 +54,10 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_DISABLE_MATLOG),true)
 PRODUCT_PACKAGES += \
     MatLog
+
+# Enable kernel buffer for Matlog
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.logd.kernel=true
 endif
 
 # DeviceAsWebcam
